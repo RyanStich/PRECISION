@@ -1,29 +1,23 @@
 /*# sourceMappingURL=style.css.map 
-
-
 nav bar should be sticky? 
-
 i made the nav bar and hero width 100% with : 
     width: 100vw;
     margin-left: 50%;
     transform: translateX(-50%);
 
-not sure if thats a total hack or not
-
-
-i duno why the favicons arent working, they were and then decided to just dissapear
+    not sure if thats a total hack or not
 
 hover on nav bar needs to be dialed in a bit more, should only show text below when u actually hover on the word, not around it -
 inside of #navigationBar > ul > li > a
 
 box shadow on nav bar is being hidden, i assume it has something to do with the 'z-index' on it and or the hero image? not sure tho
 
+my css is clearly fucked i mean look at this page in mobile view... 
 
-the page loads kinda fucked sometimes - just hit refresh a bunch of times, is that something u can fix with html/css or is it js? 
+for 'email' in the nav bar, should i route in a page with an email form on it? or is the 'mailto:' link + the free quote page enough? 
+i cant decide
 
-my css is clearly fucked i mean look at this page in mobile view... im just gonna leave it at this point for u and continue
-onto nekked/our website/learning more back end
-
+refrences:
 http://www.precisionappraisalgroup.ca/
 https://campbell-pound.com/
 */
@@ -78,7 +72,7 @@ a {
 
 
 /* all the hovers in nav bar - i know this is super bad 
-they were top: 6% to begin with
+they were top: 6% to begin with before i made the nav bar and hero img actual 100%
 */
 
  
@@ -200,8 +194,9 @@ they were top: 6% to begin with
   display: block;
   margin: 0 auto;
   width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  filter: brightness(80%);
 }
 
 #hero {
@@ -213,14 +208,33 @@ they were top: 6% to begin with
 #content{
   z-index: 100;
   position: absolute;
-  color: black;
+  color: white;
   font-size: 24px;
   font-weight: bold;
   left: 150px;
-  top: 300px;
+  top: 250px;
 }
 
 
+#free-quotes {
+  padding: 14px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.3s;
+  /* float: right; */
+  margin-left: 67%;       /* bad center */
+  margin-top: 360px;      /* this worked when it was a button, but i changed it to a link and now it wont position properly */
+} 
+
+#free-quotes:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
 /*=============================================================* 
                             3 box flex
@@ -234,7 +248,7 @@ they were top: 6% to begin with
   /* margin-top: -160px; LAP OVER TOP OF HERO IMAGE A BIT??????? might look nice if done properly */ 
   z-index: 100;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 50px;
   
 }
 
@@ -253,12 +267,13 @@ they were top: 6% to begin with
 }
 
 .h3 {
-  margin-top: 20px; 
-  /* why wont this work???? */
+  padding-top: 20px; 
+
+  
 }
 
 .img {
-  margin-top: 30px;
+  margin-top: 22px;
   width: 75%;
   height: auto;
  

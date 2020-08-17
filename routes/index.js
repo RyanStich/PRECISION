@@ -33,6 +33,18 @@ router.get('/services/consulting', services_controller.services_consulting);
 
 
 
+///////////// FREE QUOTE /////////////
+
+
+// GET free qoute
+router.get('/free-appraisal-quote', services_controller.free_quote_get);
+
+// POST free quote
+router.post('/free-appraisal-quote', services_controller.free_quote_post);
+
+
+
+
 
 
 module.exports = router;

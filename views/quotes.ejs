@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="icon" type="image/png" href="/public/images/logo.png" />
+    <title>Precision Appraisal |</title>
+  </head>
+  <body>
+    <nav id="navigationBar">
+      <ul>
+        <li id="email">
+          <a href="mailto:precisionappraisalgroup@shaw.ca" class="link"
+            >Email</a
+          >
+          <span class="tooltiptext">precisionappraisalgroup@shaw.ca</span>
+        </li>
+        <li id="phone">
+          <a href="tel:+1-250-897-5046" class="link">Phone</a>
+          <span class="tooltiptext">250-897-5046</span>
+        </li>
+        <li>
+          <a href="/" class="link">PRECISION </a>
+          <!-- BELOW 'appraisal group' -->
+        </li>
+        <li id="services">
+          <a href="javascript:void(0)" class="link">Services</a>
+          <span class="tooltiptext"
+            ><a href="/services/residential">Residential</a></span
+          >
+          <span class="tooltiptext2"
+            ><a href="/services/consulting">Consulting</a></span
+          >
+        </li>
+        <li id="about">
+          <a href="javascript:void(0)" class="link">About</a>
+          <span class="tooltiptext"
+            ><a href="/about/municipalities">Municipalities</a></span
+          >
+          <span class="tooltiptext2"><a href="/about/company">Company</a></span>
+        </li>
+      </ul>
+    </nav>
+
+    <h2>Request a free Appraisal Quote</h2>
+    <div><%= locals.sent %></div>
+    <!-- u can style/place this  -->
+    <form method="POST">
+      <section>
+        <h3>Please enter your name</h3>
+        <label for="firstName">First name*</label> <br />
+        <input
+          name="firstName"
+          type="text"
+          value="<%= locals.form? form.firstName : '' %>"
+        />
+        <br />
+
+        <label for="lastName">Last name*</label> <br />
+        <input
+          name="lastName"
+          type="text"
+          value="<%= locals.form? form.lastName : '' %>"
+        />
+      </section>
+
+      <section>
+        <h3>Contact information</h3>
+        <label for="email">Email*</label> <br />
+        <input
+          name="email"
+          type="text"
+          value="<%= locals.form? form.email : '' %>"
+        />
+        <br />
+
+        <label for="phone">Phone</label> <br />
+        <input
+          name="phone"
+          type="text"
+          value="<%= locals.form? form.phone : '' %>"
+        />
+      </section>
+
+      <section>
+        <h3>Property information</h3>
+        <label for="unit">Unit</label> <br />
+        <input
+            name="unit"
+            type="text"
+            value="<%= locals.form? form.unit : '' %>"
+        /> <br />
+
+        <label for="address">Address</label> <br />
+        <input
+            name="address"
+            type="text"
+            value="<%= locals.form? form.address : '' %>"
+        /> <br />
+
+        <label for="postal">Postal Code</label> <br />
+        <input
+            name="postal"
+            type="text"
+            value="<%= locals.form? form.postal : '' %>"
+        /> <br />
+
+<%= locals.form? form.propertyType : '' %>
+        <label for="propertyType">Type of Property*</label> <br />
+        <select  name="propertyType">
+         
+          <!-- req.body.propertyType -->
+          
+
+          
+          <option  value="Building Lot">Building Lot</option>
+          <option  value="Condo - Appartment">Condo - Appartment</option>
+          <option  value="Co-op">Co-op (Owned)</option>
+          <option  value="Duplex">Duplex</option>
+          <option  value="Single Family Home">Single Family Home</option>
+          <option value="Townhouse">Townhouse</option>
+          <!-- NEED TO RE RENDER SELECT LIST WITH SELECTED OPTION IF THERE ARE ERRORS
+            <option  <%# if (locals.errors) { %>  selected="<%#-  yes %>"     <%# } %>>MY HOUSE</option> -->
+
+        </select>
+        <br />
+
+        <label for="purpose">Purpose of Appraisal*</label> <br />
+
+        <select name="purpose">
+          <option value="Capital Gains">Capital Gains</option>
+          <option value="Depreciation Report">Depreciation Report</option>
+          <option value="Division">Division of Assets</option>
+          <option value="Estate">Estate / Probate / Will</option>
+          <option value="For Sale">For Sale / Pre-listing / Market Value</option>
+          <option value="Insurance">Insurance Appraisal</option>
+          <option value="Litigation">Litigation</option>
+          <option value="Market Rent">Market Rent</option>
+          <option value="Mortgage">Mortgage Financing</option>
+          <option value="Purchase">Purchase</option>
+        </select>
+      </section>
+
+      <label for="info">Additional Information</label> <br />
+      <textarea name="info" id="info" cols="30" rows="10"></textarea> <br />
+
+      <button type="submit">Sumbit</button>
+
+      <div class="errors">
+        <% if (locals.errors) { %>
+        <ul>
+          <% errors.forEach(error => { %>
+          <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+        <% } %>
+      </div>
+    </form>
+  </body>
+</html>
