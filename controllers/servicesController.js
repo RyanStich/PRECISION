@@ -4,18 +4,17 @@ require("dotenv").config();
 const validator = require("express-validator");
 const { body, sanitizeBody, validationResult } = require("express-validator");
 
+// get residential page
 exports.services_residential = function (req, res) {
   res.render("residential.html");
 };
 
-exports.services_consulting = function (req, res) {
-  res.render("consulting.html");
-};
-
+// get free quote
 exports.free_quote_get = function (req, res) {
   res.render("quotes", { title: "Free Quotes" });
 };
 
+// post free quote 
 exports.free_quote_post = [
   body("firstName")
     .isLength({ min: 1 })
@@ -58,13 +57,13 @@ exports.free_quote_post = [
   // validator.sanitizeBody("purpose").escape(),
   // validator.sanitizeBody("info").escape(),
 
-
+// console.log(errors); // need to acces param from each object inside of the array so i can display the seperately
   (req, res, next) => {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
       console.log(req.body.propertyType)
-      // console.log(errors); // need to acces param from each object inside of the array so i can display the seperately
+      
       res.render("quotes", {
         form: req.body,
         errors: errors.array(),
@@ -125,3 +124,5 @@ exports.free_quote_post = [
     }
   },
 ];
+
+

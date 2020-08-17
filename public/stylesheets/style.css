@@ -85,16 +85,19 @@ they were top: 6% to begin with before i made the nav bar and hero img actual 10
     border-radius: 6px;
     position: absolute;
     z-index: 1;
+    margin-top: 5px;
 }
 
 #phone:hover .tooltiptext {
   visibility: visible;
   top: 50%;
-  left: 37.5%;
+  left: 37.8%;
   transition: color 0.3s ease-in;
 
 
 }
+
+
 
 #email .tooltiptext {
   visibility: hidden;
@@ -105,6 +108,7 @@ they were top: 6% to begin with before i made the nav bar and hero img actual 10
   border-radius: 6px;
   position: absolute;
   z-index: 1;
+  margin-top: 5px;
 }
 
 #email:hover .tooltiptext {
@@ -113,39 +117,25 @@ they were top: 6% to begin with before i made the nav bar and hero img actual 10
   left: 27%;
 }
 
+
+
 #services .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  color: grey;
+  width: 200px;
+  margin-top: 5px;
   text-align: center;
   padding: 5px 0;
-  border-radius: 6px;
   position: absolute;
   z-index: 1;
+  margin-left: -100px;
 }
 
 #services:hover .tooltiptext  {
   visibility: visible;
   top: 50%;
-  left: 60%;
+  left: 60.5%;
 }
 
-#services .tooltiptext2 {
-  visibility: hidden;
-  width: 120px;
-  color: grey;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-}
-
-#services:hover .tooltiptext2  {
-  visibility: visible;
-  top: 50%;
-  left: 53%;
-}
 
 #about .tooltiptext {
   visibility: hidden;
@@ -153,33 +143,19 @@ they were top: 6% to begin with before i made the nav bar and hero img actual 10
   color: grey;
   text-align: center;
   padding: 5px 0;
+  margin-top: 5px;
   border-radius: 6px;
   position: absolute;
   z-index: 1;
+  margin-left: 49px;
 }
 
 #about:hover .tooltiptext  {
   visibility: visible;
   top: 50%;
-  left: 61%;
+  left: 61.1%;
 }
 
-#about .tooltiptext2 {
-  visibility: hidden;
-  width: 120px;
-  color: grey;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-}
-
-#about:hover .tooltiptext2  {
-  visibility: visible;
-  top: 50%;
-  left: 68%;
-}
 
 
 

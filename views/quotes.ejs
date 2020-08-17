@@ -11,35 +11,33 @@
     <nav id="navigationBar">
       <ul>
         <li id="email">
-          <a href="mailto:precisionappraisalgroup@shaw.ca" class="link"
-            >Email</a
-          >
+          <a href="/email-us" class="link">Email</a>
           <span class="tooltiptext">precisionappraisalgroup@shaw.ca</span>
         </li>
+
         <li id="phone">
           <a href="tel:+1-250-897-5046" class="link">Phone</a>
           <span class="tooltiptext">250-897-5046</span>
         </li>
+
         <li>
           <a href="/" class="link">PRECISION </a>
-          <!-- BELOW 'appraisal group' -->
+          <!-- BELOW 'appraisal group' might be a super easy logo to create? 
+            just a nice font with the PRECISION ontop of APPRAISAL GROUP -->
         </li>
         <li id="services">
           <a href="javascript:void(0)" class="link">Services</a>
-          <span class="tooltiptext"
-            ><a href="/services/residential">Residential</a></span
-          >
-          <span class="tooltiptext2"
-            ><a href="/services/consulting">Consulting</a></span
-          >
+          <span class="tooltiptext">
+            <a href="/services/residential">Residential Appraisals</a>
+          </span>
         </li>
+
         <li id="about">
           <a href="javascript:void(0)" class="link">About</a>
-          <span class="tooltiptext"
-            ><a href="/about/municipalities">Municipalities</a></span
-          >
-          <span class="tooltiptext2"><a href="/about/company">Company</a></span>
+          <span class="tooltiptext">
+          <a href="/about/company">Our Company</a></span>
         </li>
+        
       </ul>
     </nav>
 
@@ -104,25 +102,20 @@
             name="postal"
             type="text"
             value="<%= locals.form? form.postal : '' %>"
-        /> <br />
+        /> 
+        
+        
+        <br />
 
-<%= locals.form? form.propertyType : '' %>
+  
         <label for="propertyType">Type of Property*</label> <br />
-        <select  name="propertyType">
-         
-          <!-- req.body.propertyType -->
+        <select name="propertyType">
+          <option value="Building Lot">Building Lot</option>
+          <option value="Condo - Appartment">Condo - Appartment</option>
+          <option value="Co-op">Co-op (Owned)</option>
+          <option value="Duplex">Duplex</option>
           
-
-          
-          <option  value="Building Lot">Building Lot</option>
-          <option  value="Condo - Appartment">Condo - Appartment</option>
-          <option  value="Co-op">Co-op (Owned)</option>
-          <option  value="Duplex">Duplex</option>
-          <option  value="Single Family Home">Single Family Home</option>
-          <option value="Townhouse">Townhouse</option>
-          <!-- NEED TO RE RENDER SELECT LIST WITH SELECTED OPTION IF THERE ARE ERRORS
-            <option  <%# if (locals.errors) { %>  selected="<%#-  yes %>"     <%# } %>>MY HOUSE</option> -->
-
+          <option selected value="<%= locals.form? form.propertyType : '' %>"><%= locals.form? form.propertyType : '' %></option>
         </select>
         <br />
 
@@ -159,3 +152,6 @@
     </form>
   </body>
 </html>
+
+
+<%#= locals.form? form.propertyType : '' %>
