@@ -38,6 +38,8 @@ router.post('/free-appraisal-quote', services_controller.free_quote_post);
 // GET email page
 router.get('/email-us', email_controller.email_page_get);
 
+// POST email 
+router.post('/email-us', email_controller.email_page_post);
 
 
 module.exports = router;

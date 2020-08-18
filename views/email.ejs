@@ -1,72 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="icon" type="image/png" href="/public/images/logo.png" />
     <title>Precision Appraisal | Email us</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav id="navigationBar">
-        <ul>
-          <li id="email">
-            <a href="/email-us" class="link">Email</a>
-            <span class="tooltiptext">precisionappraisalgroup@shaw.ca</span>
-          </li>
-  
-          <li id="phone">
-            <a href="tel:+1-250-897-5046" class="link">Phone</a>
-            <span class="tooltiptext">250-897-5046</span>
-          </li>
-  
-          <li>
-            <a href="/" class="link">PRECISION </a>
-            <!-- BELOW 'appraisal group' might be a super easy logo to create? 
-              just a nice font with the PRECISION ontop of APPRAISAL GROUP -->
-          </li>
-          <li id="services">
-            <a href="javascript:void(0)" class="link">Services</a>
-            <span class="tooltiptext">
-              <a href="/services/residential">Residential Appraisals</a>
-            </span>
-          </li>
-  
-          <li id="about">
-            <a href="javascript:void(0)" class="link">About</a>
-            <span class="tooltiptext">
-            <a href="/about/company">Our Company</a></span>
-          </li>
-          
-        </ul>
-    </nav> <br>
+      <ul>
+        <li id="email">
+          <a href="/email-us" class="link">Email</a>
+          <span class="tooltiptext">precisionappraisalgroup@shaw.ca</span>
+        </li>
 
+        <li id="phone">
+          <a href="tel:+1-250-897-5046" class="link">Phone</a>
+          <span class="tooltiptext">250-897-5046</span>
+        </li>
+
+        <li>
+          <a href="/" class="link">PRECISION </a>
+          <!-- BELOW 'appraisal group' might be a super easy logo to create? 
+              just a nice font with the PRECISION ontop of APPRAISAL GROUP -->
+        </li>
+        <li id="services">
+          <a href="javascript:void(0)" class="link">Services</a>
+          <span class="tooltiptext">
+            <a href="/services/residential">Residential Appraisals</a>
+          </span>
+        </li>
+
+        <li id="about">
+          <a href="javascript:void(0)" class="link">About</a>
+          <span class="tooltiptext">
+            <a href="/about/company">Our Company</a></span
+          >
+        </li>
+      </ul>
+    </nav>
+    <br />
 
     <section id="hire">
-        <h1>Contact Us</h1>
-        
-        <form>
-              <div class="field name-box">
-                    <input type="text" id="name" placeholder="Who Are You?"/>
-                    <label for="name">Name</label>
-                    <span class="ss-icon">check</span>
-              </div>
+      <h1>Contact Us</h1>
+      <div><%= locals.sent %></div>
+
+      <form method="POST">
+        <div class="field name-box">
+          <input
+            name="name"
+            type="text"
+            id="name"
+            placeholder="Who Are You?"
+            value="<%= locals.form? form.name : '' %>"
+          />
+          <label for="name">Name</label>
+          <span class="ss-icon">check</span>
+        </div>
+
+        <div class="field email-box">
+          <input
+            name="email"
+            type="text"
+            id="email"
+            placeholder="name@email.com"
+            value="<%= locals.form? form.email : '' %>"
+          />
+          <label for="email">Email</label>
+          <span class="ss-icon">check</span>
+        </div>
+
+        <div class="field phone-box">
+          <input
+            name="phone"
+            type="text"
+            id="phone"
+            placeholder="Phone number..."
+            value="<%= locals.form? form.phone : '' %>"
+          />
+          <label for="phone">Phone</label>
+          <span class="ss-icon">check</span>
+        </div>
+
+        <div class="field msg-box">
+          <textarea
+            name="msg"
+            id="msg"
+            rows="4"
+            placeholder="Your message..."
+          ><%= locals.form? form.msg : '' %></textarea>
+          <label for="msg">Msg</label>
+          <span class="ss-icon">check</span>
+        </div>
     
-              <div class="field email-box">
-                    <input type="text" id="email" placeholder="name@email.com"/>
-                    <label for="email">Email</label>
-                    <span class="ss-icon">check</span>
-              </div>
-    
-              <div class="field msg-box">
-                    <textarea id="msg" rows="4" placeholder="Your message goes here..."/></textarea>
-                    <label for="msg">Msg</label>
-                    <span class="ss-icon">check</span>
-              </div>
-    
-              <input class="button" type="submit" value="Send" />
+
+
+        <button class="button" type="submit">Send</button>
+
+        <% if (locals.errors) { %>
+        <ul>
+          <% errors.forEach(error => { %>
+          <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+        <% } %>
       </form>
     </section>
     <script src="/javascripts/email.js"></script>
-</body>
+  </body>
 </html>
