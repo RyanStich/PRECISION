@@ -35,9 +35,9 @@
         <li id="about">
           <a href="javascript:void(0)" class="link">About</a>
           <span class="tooltiptext">
-          <a href="/about/company">Our Company</a></span>
+            <a href="/about/company">Our Company</a></span
+          >
         </li>
-        
       </ul>
     </nav>
 
@@ -45,6 +45,7 @@
     <div><%= locals.sent %></div>
     <!-- u can style/place this  -->
     <form method="POST">
+     
       <section>
         <h3>Please enter your name</h3>
         <label for="firstName">First name*</label> <br />
@@ -54,6 +55,8 @@
           value="<%= locals.form? form.firstName : '' %>"
         />
         <br />
+        <!-- <%# if (locals.errors) { %> <li> <%#= error1 %></li> <%# } %> <br> -->
+
 
         <label for="lastName">Last name*</label> <br />
         <input
@@ -61,6 +64,7 @@
           type="text"
           value="<%= locals.form? form.lastName : '' %>"
         />
+     
       </section>
 
       <section>
@@ -85,48 +89,47 @@
         <h3>Property information</h3>
         <label for="unit">Unit</label> <br />
         <input
-            name="unit"
-            type="text"
-            value="<%= locals.form? form.unit : '' %>"
-        /> <br />
+          name="unit"
+          type="text"
+          value="<%= locals.form? form.unit : '' %>"
+        />
+        <br />
 
         <label for="address">Address</label> <br />
         <input
-            name="address"
-            type="text"
-            value="<%= locals.form? form.address : '' %>"
-        /> <br />
+          name="address"
+          type="text"
+          value="<%= locals.form? form.address : '' %>"
+        />
+        <br />
 
         <label for="postal">Postal Code</label> <br />
         <input
-            name="postal"
-            type="text"
-            value="<%= locals.form? form.postal : '' %>"
-        /> 
-        
-        
+          name="postal"
+          type="text"
+          value="<%= locals.form? form.postal : '' %>"
+        />
+
         <br />
 
-  
         <label for="propertyType">Type of Property*</label> <br />
-        <select name="propertyType">
+        <select id="types" name="propertyType">
           <option value="Building Lot">Building Lot</option>
           <option value="Condo - Appartment">Condo - Appartment</option>
-          <option value="Co-op">Co-op (Owned)</option>
           <option value="Duplex">Duplex</option>
-          
-          <option selected value="<%= locals.form? form.propertyType : '' %>"><%= locals.form? form.propertyType : '' %></option>
+          <option value="Co-op">Co-op (Owned)</option>
         </select>
         <br />
 
         <label for="purpose">Purpose of Appraisal*</label> <br />
-
-        <select name="purpose">
+        <select id="purpose" name="purpose">
           <option value="Capital Gains">Capital Gains</option>
           <option value="Depreciation Report">Depreciation Report</option>
           <option value="Division">Division of Assets</option>
           <option value="Estate">Estate / Probate / Will</option>
-          <option value="For Sale">For Sale / Pre-listing / Market Value</option>
+          <option value="For Sale"
+            >For Sale / Pre-listing / Market Value</option
+          >
           <option value="Insurance">Insurance Appraisal</option>
           <option value="Litigation">Litigation</option>
           <option value="Market Rent">Market Rent</option>
@@ -138,10 +141,30 @@
       <label for="info">Additional Information</label> <br />
       <textarea name="info" id="info" cols="30" rows="10"></textarea> <br />
 
-      <button type="submit">Sumbit</button>
+      <button id="sub" type="submit">Sumbit</button>
 
       <div class="errors">
         <% if (locals.errors) { %>
+    <!-- script to save selected option -->
+        <script>
+          var selectedInput = "<%= selected %>";
+          var options = document.querySelector('[name="propertyType"]');
+          for (var i = 0; i < options.length; i++) {
+            if (selectedInput === options[i].value) {
+              options[i].selected = "selected";
+              break;
+            }
+          }
+
+          var selectedInput2 = "<%= selected2 %>";
+          var options = document.querySelector('[name="purpose"]');
+          for (var i = 0; i < options.length; i++) {
+            if (selectedInput2 === options[i].value) {
+              options[i].selected = "selected";
+              break;
+            }
+          }
+        </script>
         <ul>
           <% errors.forEach(error => { %>
           <li><%= error.msg %></li>
@@ -150,8 +173,11 @@
         <% } %>
       </div>
     </form>
+    
   </body>
 </html>
 
 
-<%#= locals.form? form.propertyType : '' %>
+
+  
+     

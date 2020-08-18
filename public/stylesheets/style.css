@@ -14,8 +14,12 @@ box shadow on nav bar is being hidden, i assume it has something to do with the 
 
 my css is clearly fucked i mean look at this page in mobile view... 
 
-for 'email' in the nav bar, should i route in a page with an email form on it? or is the 'mailto:' link + the free quote page enough? 
-i cant decide
+Layout was forced before the page was fully loaded. If stylesheets are not yet loaded
+ this may cause a flash of unstyled content - if u cant fix this with css, i can code some async/await in
+
+
+
+
 
 refrences:
 http://www.precisionappraisalgroup.ca/

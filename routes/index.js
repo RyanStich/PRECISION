@@ -36,7 +36,7 @@ router.post('/free-appraisal-quote', services_controller.free_quote_post);
 ///////////// EMAIL PAGE /////////////
 
 // GET email page
-router.get('/email-us', email_controller.email_page);
+router.get('/email-us', email_controller.email_page_get);
 
 
 

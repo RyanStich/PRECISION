@@ -2,7 +2,7 @@ var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
 require("dotenv").config();
 const validator = require("express-validator");
-const { body, sanitizeBody, validationResult } = require("express-validator");
+const { body, sanitizeBody, validationResult, Result } = require("express-validator");
 
 // get residential page
 exports.services_residential = function (req, res) {
@@ -46,28 +46,21 @@ exports.free_quote_post = [
     .optional(),
 
  sanitizeBody('*').escape(),
-  // validator.sanitizeBody("firstName").escape(),
-  // validator.sanitizeBody("lastName").escape(),
-  // validator.sanitizeBody("email").escape(),
-  // validator.sanitizeBody("phone").escape(),
-  // validator.sanitizeBody("unit").escape(),
-  // validator.sanitizeBody("address").escape(),
-  // validator.sanitizeBody("postal").escape(),
-  // validator.sanitizeBody("propertyType").escape(),
-  // validator.sanitizeBody("purpose").escape(),
-  // validator.sanitizeBody("info").escape(),
+//  error1: errors.array()[0].msg,
+//  error2: errors.array()[1].msg,
+//  error3: errors.array()[2].msg,
 
-// console.log(errors); // need to acces param from each object inside of the array so i can display the seperately
-  (req, res, next) => {
+  
+(req, res, next) => {
     const errors = validationResult(req);
-
+    console.log(errors)
     if (!errors.isEmpty()) {
-      console.log(req.body.propertyType)
-      
       res.render("quotes", {
         form: req.body,
         errors: errors.array(),
-        yes: 'selected' 
+        // error1: errors.array()[0].msg,
+        selected: req.body.propertyType,
+        selected2: req.body.purpose
       });
       return;
     } else {
