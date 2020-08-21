@@ -1,13 +1,21 @@
 /* 
+         
+to use sass, write it in the 'stylesheets/src/scss' file and then link the 'stylesheets/dist/style.css'
 
- im not gona spend a bunch of time for now trying to get good with sass
-you can leave the files separate or combine them.. ull know better than i do                         
-                          
+ i know its kinda fucked i have different files for my css but whatever
+
 we could display the erros under each invalid input like ive done on the 'quote inquiry' form, 
 but i feel like it looks better in a list at the bottom on this one? up 2 u tho                        
 
-when the spans shrink to 18% on hover and focus, the text floods out in mobile view.. ive got no idea how to fix that
+when the spans shrink to 18% on hover and focus, the text floods out in mobile view
 
+input for phone number should be 'type:tel', better for mobile users but itll be a bit of tinkering to get the css to act right
+
+we dont even have to use the orange color we can find something better
+
+  email form and quote form seem to be be like the slighest bit difference in size? or position? i think itd look good if
+ they were positioned in the same spot at the top? so if u go from one page to the other it doesnt feel like
+ the screen makesa a huge shift
 */
 
 /*=============================================================* 
@@ -184,6 +192,7 @@ form .field label + span {
 #phoner {
     margin-left: -1%;
 }
+
 form .field input[type="text"],
 form .field textarea {
   border: none;
@@ -197,6 +206,7 @@ form .field textarea {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+
 form .field input[type="text"]#msg,
 form .field textarea#msg {
   height: 27px;
@@ -207,12 +217,15 @@ form .field textarea#msg {
   -ms-transition: all 333ms ease-in-out;
   transition: all 333ms ease-in-out;
 }
+
+
 form .field input[type="text"]:focus,
 form .field input[type="text"].focused,
 form .field textarea:focus,
 form .field textarea.focused {
   outline: none;
 }
+
 form .field input[type="text"]:focus#msg,
 form .field input[type="text"].focused#msg,
 form .field textarea:focus#msg,
@@ -220,6 +233,7 @@ form .field textarea.focused#msg {
   height: 90px;
   font-size: 15px;  
 }
+
 form .field input[type="text"]:focus + label,
 form .field input[type="text"].focused + label,
 form .field textarea:focus + label,
@@ -229,6 +243,7 @@ form .field textarea.focused + label {
   background: #fd9638;
   color: #313a3d;
 }
+
 form .field input[type="text"].focused + label,
 form .field textarea.focused + label {
   color: #fd9638;
