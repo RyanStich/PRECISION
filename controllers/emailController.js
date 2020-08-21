@@ -5,11 +5,11 @@ const validator = require("express-validator");
 const { body, sanitizeBody, validationResult, Result } = require("express-validator");
 
 
-exports.email_page_get = function(req, res) {
-    res.render('email')
+exports.contact_get = function(req, res) {
+    res.render('contact')
 }
 
-exports.email_page_post = [
+exports.contact_post = [
     body("name")
     .isLength({ min: 1 })
     .trim()
@@ -31,7 +31,7 @@ exports.email_page_post = [
     (req, res, next) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-          res.render("email", {
+          res.render("contact", {
             form: req.body,
             errors: errors.array(),
           });
@@ -77,7 +77,7 @@ exports.email_page_post = [
               console.log("Error! Email was not sent :(");
             });
     
-          res.render("email", {sent: "Your E-mail was sent!" });
+          res.render("contact", {sent: "Your E-mail was sent!" });
         }
       },
 ]

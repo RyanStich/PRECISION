@@ -35,10 +35,10 @@ router.post('/free-appraisal-quote', services_controller.free_quote_post);
 ///////////// CONTACT /////////////
 
 // GET email form
-router.get('/contact', email_controller.email_page_get);
+router.get('/contact', email_controller.contact_get);
 
 // POST email form
-router.post('/contact', email_controller.email_page_post);
+router.post('/contact', email_controller.contact_post);
 
 
 module.exports = router;
