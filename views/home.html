@@ -3,85 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/src/home.css" />
     <link rel="icon" type="image/png" href="/public/images/logo.png" />
     <title>Precision Appraisal Group</title>
   </head>
+
+
+  <div class="container red topBotomBordersOut">
+    <a href="/">HOME</a>
+    <a href="/services">SERVICES</a>
+    <a href="/contact">CONTACT</a>
+    <a href="/about">ABOUT</a>
+    <a href="free-appraisal-quote">QUOTES</a>
+  </div> 
+
+
+  <a id="free-quotes" href="/free-appraisal-quote">Free Quotes</a>
+
+
+  <h1>
+    Trusted appraisals <br />
+    since 2006(placeholder)
+  </h1>
+  <p>
+    This & the h1 might look good positioned on a hero image? <br>  
+    Precision appraisal group is a real estate appraisal <br />
+    firm delivering quality property appraisal and consulting <br />
+    services to the Mid to North Vancouver Island regions.
+  </p>
+
+
   <body>
-   
-    <nav id="navigationBar">
-      <ul>
-        <li id="email">
-          <a href="/email-us" class="link">Email</a>
-          <span class="tooltiptext">precisionappraisalgroup@shaw.ca</span>
-        </li>
-
-        <li id="phone">
-          <a href="tel:+1-250-897-5046" class="link">Phone</a>
-          <span class="tooltiptext">250-897-5046</span>
-        </li>
-
-        <li>
-          <a href="/" class="link">PRECISION </a>
-          <!-- BELOW 'appraisal group' might be a super easy logo to create? 
-            just a nice font with the PRECISION ontop of APPRAISAL GROUP -->
-        </li>
-        <li id="services">
-          <a href="javascript:void(0)" class="link">Services</a>
-          <span class="tooltiptext">
-            <a href="/services/residential">Residential Appraisals</a>
-          </span>
-        </li>
-
-        <li id="about">
-          <a href="javascript:void(0)" class="link">About</a>
-          <span class="tooltiptext">
-          <a href="/about/company">Our Company</a></span>
-        </li>
-        
-      </ul>
-    </nav>
-
-    <div id="heroimage">
-      <img id="hero" src="/public/images/hero.jpg" alt="" />
-    </div>
-    <div id="content">
-      <h1>
-        Trusted appraisals <br />
-        since 2006(placeholder)
-      </h1>
-      <p>
-        Precision appraisal group is a real estate appraisal <br />
-        firm delivering quality property appraisal and consulting <br />
-        services to the Mid to North Vancouver Island regions.
-      </p>
-
-      <a id="free-quotes" href="/free-appraisal-quote">Free Quotes</a>
-    </div>
-
-    <div class="flex-container">
-      <a href="/services/residential">
-        <div class="box">
-          <h3 class="h3">Residential</h3>
-          <img class="img" src="/public/images/residential.png" alt="" /></div
-      ></a>
-
-      <a href="/about/municipalities">
-        <div class="box">
-          <h3 class="h3">Municipalities</h3>
-          <img
-            class="img"
-            id="island"
-            src="/public/images/island.png"
-            alt=""
-          /></div
-      ></a>
-
-      <a href="/services/consulting">
-        <div class="box">
-          <h3 class="h3">Consulting</h3>
-          <img class="img" src="/public/images/handshake.png" alt="" /></div
-      ></a>
-    </div>
+    <script src="/javascripts/home.js"></script>
   </body>
 </html>

@@ -2,11 +2,11 @@ var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
 require("dotenv").config();
 const validator = require("express-validator");
-const { body, sanitizeBody, validationResult, Result } = require("express-validator");
+const { body, sanitizeBody, validationResult, Result} = require("express-validator");
 
 // get residential page
-exports.services_residential = function (req, res) {
-  res.render("residential.html");
+exports.services = function (req, res) {
+  res.render("services.html");
 };
 
 // get free quote
@@ -14,7 +14,7 @@ exports.free_quote_get = function (req, res) {
   res.render("quotes", { title: "Free Quotes" });
 };
 
-// post free quote 
+// post free quote
 exports.free_quote_post = [
   body("firstName")
     .isLength({ min: 1 })
@@ -24,43 +24,39 @@ exports.free_quote_post = [
     .isLength({ min: 1 })
     .trim()
     .withMessage("Last name must be specified"),
-  body("email")
-    .isEmail()
-    .withMessage("Please enter a valid email"),
+  body("email").isEmail().withMessage("Please enter a valid email"),
   body("phone")
-    .optional({checkFalsy: true})
+    .optional({ checkFalsy: true })
     .isNumeric()
-    .withMessage('Invalid phone number'),
-  body("unit")
-    .optional(),
-  body("address")
-    .optional(),
-  body("postal")
-    .optional(),
-  body("propertyType")
-    .isString()
-    .withMessage('MUST BE STRING'),
-  body("purpose")
-    .isString(),
-  body("info")
-    .optional(),
+    .withMessage("Invalid phone number"),
+  body("unit").optional(),
+  body("address").optional(),
+  body("postal").optional(),
+  body("propertyType").isString(),
+  body("purpose").isString(),
+  body("info").optional(),
 
- sanitizeBody('*').escape(),
-//  error1: errors.array()[0].msg,
-//  error2: errors.array()[1].msg,
-//  error3: errors.array()[2].msg,
+  sanitizeBody("*").escape(),
 
-  
-(req, res, next) => {
+  (req, res, next) => {
     const errors = validationResult(req);
-    console.log(errors)
+    let errArray = errors.array()
+    
+    let errorsObj = {};
+    errArray.map((item) => {
+      const id = item.param;
+      delete item.param;
+      errorsObj[id] = item;
+    });
+    console.log(errorsObj)
+
     if (!errors.isEmpty()) {
       res.render("quotes", {
         form: req.body,
-        errors: errors.array(),
-        // error1: errors.array()[0].msg,
+        errors: errorsObj,
+        // errors.array(),
         selected: req.body.propertyType,
-        selected2: req.body.purpose
+        selected2: req.body.purpose,
       });
       return;
     } else {
@@ -117,5 +113,3 @@ exports.free_quote_post = [
     }
   },
 ];
-
-

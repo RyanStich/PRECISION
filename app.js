@@ -25,8 +25,8 @@ app.use(cookieParser());
 
 
 app.use(sassMiddleware({
-  src: path.join(__dirname, 'public/stylesheets/sass'),
-  dest: path.join(__dirname, 'public/stylesheets'),
+  src: path.join(__dirname, 'public/stylesheets/src'),
+  dest: path.join(__dirname, 'public/stylesheets/dist'),
   indentedSyntax: false, // true = .sass and false = .scss
   debug: true,
   sourceMap: true,
@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(__dirname + "/public"));
 
 
-
+app.use('/stylesheets', express.static('stylesheets'));
 
 // app.use('/public', express.static(path.join(__dirname, 'public')))
   

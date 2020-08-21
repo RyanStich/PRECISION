@@ -13,7 +13,7 @@ exports.email_page_post = [
     body("name")
     .isLength({ min: 1 })
     .trim()
-    .withMessage("First name must be specified"),
+    .withMessage("Name must be specified"),
   body("email")
     .isEmail()
     .withMessage("Please enter a valid email"),

@@ -3,48 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/src/email.css" />
     <link rel="icon" type="image/png" href="/public/images/logo.png" />
     <title>Precision Appraisal | Email us</title>
   </head>
   <body>
-    <nav id="navigationBar">
-      <ul>
-        <li id="email">
-          <a href="/email-us" class="link">Email</a>
-          <span class="tooltiptext">precisionappraisalgroup@shaw.ca</span>
-        </li>
 
-        <li id="phone">
-          <a href="tel:+1-250-897-5046" class="link">Phone</a>
-          <span class="tooltiptext">250-897-5046</span>
-        </li>
-
-        <li>
-          <a href="/" class="link">PRECISION </a>
-          <!-- BELOW 'appraisal group' might be a super easy logo to create? 
-              just a nice font with the PRECISION ontop of APPRAISAL GROUP -->
-        </li>
-        <li id="services">
-          <a href="javascript:void(0)" class="link">Services</a>
-          <span class="tooltiptext">
-            <a href="/services/residential">Residential Appraisals</a>
-          </span>
-        </li>
-
-        <li id="about">
-          <a href="javascript:void(0)" class="link">About</a>
-          <span class="tooltiptext">
-            <a href="/about/company">Our Company</a></span
-          >
-        </li>
-      </ul>
-    </nav>
+    <div class="container red topBotomBordersOut">
+      <a href="/">HOME</a>
+      <a href="/services">SERVICES</a>
+      <a href="/contact">CONTACT</a>
+      <a href="/about">ABOUT</a>
+      <a href="free-appraisal-quote">QUOTES</a>
+    </div>
     <br />
+
+    
 
     <section id="hire">
       <h1>Contact Us</h1>
-      <div><%= locals.sent %></div>
+      <div class="sent"><%= locals.sent %></div>
 
       <form method="POST">
         <div class="field name-box">
@@ -56,7 +35,7 @@
             value="<%= locals.form? form.name : '' %>"
           />
           <label for="name">Name</label>
-          <span class="ss-icon">check</span>
+          <span class="ss-icon">Name</span>
         </div>
 
         <div class="field email-box">
@@ -68,7 +47,7 @@
             value="<%= locals.form? form.email : '' %>"
           />
           <label for="email">Email</label>
-          <span class="ss-icon">check</span>
+          <span class="ss-icon">Email</span>
         </div>
 
         <div class="field phone-box">
@@ -80,7 +59,7 @@
             value="<%= locals.form? form.phone : '' %>"
           />
           <label for="phone">Phone</label>
-          <span class="ss-icon">check</span>
+          <span id="phoner" class="ss-icon">Phone</span>
         </div>
 
         <div class="field msg-box">
@@ -91,17 +70,17 @@
             placeholder="Your message..."
           ><%= locals.form? form.msg : '' %></textarea>
           <label for="msg">Msg</label>
-          <span class="ss-icon">check</span>
+          <span class="ss-iconn"> Msg</span>
         </div>
     
-
-
         <button class="button" type="submit">Send</button>
+
+ <!-- IF FORM IS RE-RENDERED , KEEP THE INPUT LOCKS ON -->
 
         <% if (locals.errors) { %>
         <ul>
           <% errors.forEach(error => { %>
-          <li><%= error.msg %></li>
+          <li class="error"><%= error.msg %></li>
           <% }) %>
         </ul>
         <% } %>

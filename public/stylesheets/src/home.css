@@ -1,0 +1,311 @@
+
+
+html, body {
+  margin: 0px;
+  font-family: "Lato", sans-serif;
+  height: 2000px;
+}
+
+#free-quotes {
+  padding: 14px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  float: right;
+  margin-top: 200px;
+  margin-right: 650px;
+}
+
+/*=============================================================* 
+                       pretend NAV BAR
+==============================================================*/
+div.container {
+  font-family: "Lato", sans-serif;
+  margin: 0 auto;
+  padding: 1.5em;
+  text-align: center;
+}
+
+div.container a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  height: 100px;
+}
+
+.red {
+  background: #313a3d;
+}
+
+/* Top and Bottom borders go out */
+div.topBotomBordersOut a:before,
+div.topBotomBordersOut a:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before {
+  top: 0px;
+  transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after {
+  bottom: 0px;
+  transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before,
+div.topBotomBordersOut a:hover:after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/*=============================================================* 
+                            free quotes form
+==============================================================*/
+
+h2 {
+    color: #fd9638;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 50;
+}
+
+h3 {
+  color: #fd9638;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 50;
+  margin-top: 10px;
+}
+
+h4 {
+  color: #fd9638;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 50;
+}
+
+
+body section {
+  background: white;
+  margin: 20px auto -20px;
+  text-align: center;
+  padding: 30px 0 0px;
+  width: 80%;
+  max-width: 1100px;
+}
+
+form {
+  width: 58.33333%;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  margin-top: 10px;
+}
+
+.error {
+  color: #fd9638;
+  margin-top: 15px;
+}
+
+.select {
+  color: #fd9638;
+  margin-top: 15px;
+  text-transform: uppercase;
+  border: 1px solid black;
+  margin-top: 100px;
+}
+
+.input {
+  margin-top: 15px;
+  width: 80.5%;
+  padding: 18px 0;
+  padding-left: 19.5%;
+  color: #313a3d;
+  background-color: #313a3d;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* border: 4px solid #313a3d; */
+  border: none;
+  transition: all 333ms ease-in-out;
+}
+
+.input:focus {
+  background-color: #e8e9ea;
+  color: #313a3d;
+  outline: none;
+  transition: all 333ms ease-in-out;
+}
+
+
+input.empty,
+textarea.empty {
+  background-color: #e8e9ea;
+}
+
+::placeholder {
+  color: #e8e9ea;
+}
+/* when placeholder is set to white, its still not actually white, 
+and then u can also see it on top of the focused bg color... might need some tinkering */
+
+.txt {
+    margin-top: 15px;
+    width: 80.5%;
+    padding: 18px 0;
+    padding-left: 19.5%;
+    color: #313a3d;
+    background-color: #313a3d;
+    font-size: 1.4em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 4px solid #313a3d;
+    resize: none;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+}
+
+.txt:focus {
+
+    height: 200px;
+    transition: 0.5s;
+    background-color: #e8e9ea;
+    border: none;
+}
+
+.txt:focused {
+    border: none;
+    transition: 0.5s
+} 
+
+
+
+
+.sub {
+    margin-top: 10px;
+    padding-bottom: 100px;
+    background: #313a3d;
+    color: white;
+    -webkit-appearance: none;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    padding: 13px 50px;
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+
+}
+
+.sub:hover {
+    background: #fd9638;
+    color: white;
+}
+
+.sub:focus {
+    outline: none;
+    background: #cd6302;
+} 
+
+
+
+
+/*=============================================================* 
+                            custom select menu
+==============================================================*/
+
+.custom-select {
+    position: relative;
+    margin-top: 15px;
+    width: 80.5%;
+    padding: 18px 0;
+    padding-left: 19.5%;
+    color: white;
+    background-color: #313a3d;
+    font-size: 1.4em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    /* border: 4px solid #313a3d; */
+    border: none;
+    transition: all 333ms ease-in-out;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }

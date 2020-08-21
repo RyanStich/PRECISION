@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-
 let about_controller = require('../controllers/aboutController');
 let services_controller = require('../controllers/servicesController');
 let email_controller = require('../controllers/emailController');
@@ -13,14 +12,14 @@ router.get('/', about_controller.index);
 ///////////// ABOUT ROUTES /////////////
 
 // GET about company
-router.get('/about/company', about_controller.about_company);
+router.get('/about', about_controller.about);
 
 
 
 ///////////// SERVICES ROUTES /////////////
 
 // GET residential services
-router.get('/services/residential', services_controller.services_residential);
+router.get('/services', services_controller.services);
 
 
 
@@ -33,13 +32,13 @@ router.get('/free-appraisal-quote', services_controller.free_quote_get);
 router.post('/free-appraisal-quote', services_controller.free_quote_post);
 
 
-///////////// EMAIL PAGE /////////////
+///////////// CONTACT /////////////
 
-// GET email page
-router.get('/email-us', email_controller.email_page_get);
+// GET email form
+router.get('/contact', email_controller.email_page_get);
 
-// POST email 
-router.post('/email-us', email_controller.email_page_post);
+// POST email form
+router.post('/contact', email_controller.email_page_post);
 
 
 module.exports = router;
