@@ -1,23 +1,6 @@
 /* 
          
-to use sass, write it in the 'stylesheets/src/scss' file and then link the 'stylesheets/dist/style.css'
 
-i know its kinda fucked i have different files for my css but whatever
-
-should we just include the email form on the home page @ the bottom? im just worried about too much white space 
-
-we could display the erros under each invalid input like ive done on the 'quote inquiry' form, 
-but i feel like it looks better in a list at the bottom on this one? up 2 u tho                        
-
-when the spans shrink to 18% on hover and focus, the text floods out in mobile view
-
-input for phone number should be 'type:tel', better for mobile users but itll be a bit of tinkering to get the css to act right
-
-we dont even have to use the orange color, im suyre we can find something better
-
-email form and quote form seem to be be like the slighest bit difference in size? or position? i think itd look good if
-they were positioned in the same spot at the top? so if u go from one page to the other it doesnt feel like
-the screen makesa a huge shift
 */
 
 /*=============================================================* 
