@@ -95,7 +95,7 @@
   }
   
   .btn_primary {
-    background: rgba(49, 49, 49, 0.9);
+    background: rgba(24, 24, 24, 0.9);
     -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   }
@@ -110,7 +110,7 @@
   
   .header {
     position: fixed;
-    background: rgba(49, 49, 49, 0.9);
+    background: rgba(24, 24, 24, 0.9);
     top: 0;
     left: 0;
     right: 0;
@@ -1102,7 +1102,7 @@
     transform: translateY(-2px);
   }
   footer {
-    background-color: rgba(49, 49, 49, 0.9);
+    background-color: rgba(24, 24, 24, 0.9);
     font-family: "Lato", sans-serif;
     padding: 85px 0 185px 0;
   }
