@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="70" viewBox="0 0 63 70">
+  <g fill="none" fill-rule="evenodd" stroke="#FFF" transform="translate(0 3)">
+    <path d="M16,18.5 L4,18.5 C3.03350169,18.5 2.15850169,18.8917508 1.52512627,19.5251263 C0.891750844,20.1585017 0.5,21.0335017 0.5,22 L0.5,62 C0.5,62.9664983 0.891750844,63.8414983 1.52512627,64.4748737 C2.15850169,65.1082492 3.03350169,65.5 4,65.5 L16,65.5 C16.9664983,65.5 17.8414983,65.1082492 18.4748737,64.4748737 C19.1082492,63.8414983 19.5,62.9664983 19.5,62 L19.5,22 C19.5,21.0335017 19.1082492,20.1585017 18.4748737,19.5251263 C17.8414983,18.8917508 16.9664983,18.5 16,18.5 Z"/>
+    <line x1="6" x2="14" y1="27" y2="27" stroke-linecap="square"/>
+    <line x1="6" x2="14" y1="37" y2="37" stroke-linecap="square"/>
+    <line x1="6" x2="14" y1="47" y2="47" stroke-linecap="square"/>
+    <line x1="6" x2="14" y1="57" y2="57" stroke-linecap="square"/>
+    <line x1="28" x2="36" y1="7" y2="7" stroke-linecap="square"/>
+    <line x1="44" x2="52" y1="7" y2="7" stroke-linecap="square"/>
+    <line x1="28" x2="36" y1="17" y2="17" stroke-linecap="square"/>
+    <line x1="44" x2="52" y1="17" y2="17" stroke-linecap="square"/>
+    <line x1="28" x2="36" y1="27" y2="27" stroke-linecap="square"/>
+    <line x1="44" x2="52" y1="27" y2="27" stroke-linecap="square"/>
+    <line x1="28" x2="36" y1="37" y2="37" stroke-linecap="square"/>
+    <line x1="44" x2="52" y1="37" y2="37" stroke-linecap="square"/>
+    <line x1="28" x2="36" y1="47" y2="47" stroke-linecap="square"/>
+    <line x1="44" x2="52" y1="47" y2="47" stroke-linecap="square"/>
+    <line x1="28" x2="36" y1="57" y2="57" stroke-linecap="square"/>
+    <line x1="44" x2="52" y1="57" y2="57" stroke-linecap="square"/>
+    <rect width="43" height="67" x="18.5" y="-1.5" stroke-width="3" rx="4"/>
+  </g>
+</svg>

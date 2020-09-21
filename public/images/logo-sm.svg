@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="logo-sm-a" x1="20.146%" x2="78.385%" y1="0%" y2="96.387%">
+      <stop offset="0%" stop-color="#0732A7"/>
+      <stop offset="51.112%" stop-color="#6845A0"/>
+      <stop offset="100%" stop-color="#F1815F"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="40" cy="40" r="40" fill="#373981" fill-opacity=".5" style="mix-blend-mode:color-burn"/>
+    <path fill="url(#logo-sm-a)" d="M40,0 C48.048801,0 55.5423613,2.37726816 61.8168414,6.46796504 L47.019032,21.2663384 C44.8350659,20.4476869 42.4698144,20 40,20 C28.954305,20 20,28.954305 20,40 C20,51.045695 28.954305,60 40,60 C42.3128048,60 44.5339186,59.607424 46.6003405,58.8852728 L61.4705894,73.7552472 C55.2674658,77.7090822 47.9012692,80 40,80 C17.90861,80 0,62.09139 0,40 C0,17.90861 17.90861,0 40,0 Z"/>
+  </g>
+</svg>

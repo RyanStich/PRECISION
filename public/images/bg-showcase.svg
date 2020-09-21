@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1663" viewBox="0 0 1920 1663">
+  <defs>
+    <linearGradient id="bg-showcase-a" x1="57.186%" x2="100%" y1="57.951%" y2="87.51%">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="100%" stop-color="#EDF4F7"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bg-showcase-a)" fill-rule="evenodd" d="M0,0 L1920,0 L1920,1303 C1800.76562,1543 1480.76562,1663 960,1663 C439.234375,1663 119.234375,1663 0,1663 L0,0 Z"/>
+</svg>

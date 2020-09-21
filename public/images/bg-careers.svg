@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1044" viewBox="0 0 1920 1044">
+  <defs>
+    <linearGradient id="bg-careers-a" x1="57.186%" x2="100%" y1="53.133%" y2="64.783%">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="100%" stop-color="#EDF4F7"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bg-careers-a)" fill-rule="evenodd" d="M0,0 L1920,0 L1920,684 C1800.76562,924 1480.76562,1044 960,1044 C439.234375,1044 119.234375,1044 0,1044 L0,0 Z" transform="rotate(180 960 522)"/>
+</svg>

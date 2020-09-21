@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var sassMiddleware = require('node-sass-middleware');
+
+// var sassMiddleware = require('node-sass-middleware');
 
 var indexRouter = require('./routes/index');
 
@@ -24,15 +25,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-app.use(sassMiddleware({
-  src: path.join(__dirname, 'public/stylesheets/src'),
-  dest: path.join(__dirname, 'public/stylesheets/dist'),
-  indentedSyntax: false, // true = .sass and false = .scss
-  debug: true,
-  sourceMap: true,
-  outputStyle: "compressed",
-  prefix: '/stylesheets' 
-}));
+// app.use(sassMiddleware({
+//   src: path.join(__dirname, 'public/stylesheets/src'),
+//   dest: path.join(__dirname, 'public/stylesheets/dist'),
+//   indentedSyntax: false, // true = .sass and false = .scss
+//   debug: true,
+//   sourceMap: true,
+//   outputStyle: "compressed",
+//   prefix: '/stylesheets' 
+// }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(__dirname + "/public"));
 
