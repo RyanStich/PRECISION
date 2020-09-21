@@ -35,8 +35,6 @@
         </div>
       </div>
 
-
-
       <div class="skills" id="services">
         <div class="skills__head">
           <div class="skills__center center">
@@ -46,10 +44,6 @@
                     <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
                   </svg></a>
               </div> 
-           
-
-
-
               <div data-aos="fade-up" class="skills__col" >
                 <div class="skills__info">We provide accurate appraisals to our clients across the mid to north Vancouver Island. We specialize in residential, insurance and legal & assessment appeals.</div>
               </div>
@@ -57,13 +51,11 @@
           </div>
         </div>
 
-
-
         <div class="skills__body">
           <div class="skills__center center">
             <div class="skills__list js-owl" data-items-mobile-portrait="1" data-items-mobile-album="1" data-autoheight>
               <div class="skills__item">
-                <div class="skills__details" data-aos="animation-scale-x">
+                <div data-aos="fade-right" class="skills__details">
                   <div class="skills__preview" data-aos>
                     <div class="skills__icon"><img class="skills__pic" src="/images/glober.png" alt=""></div>
                   </div>
@@ -72,7 +64,7 @@
                 </div>
               </div>
               <div class="skills__item">
-                <div class="skills__details" data-aos="animation-scale-x" data-aos-delay="150">
+                <div data-aos="fade-right" class="skills__details" data-aos="animation-scale-x" data-aos-delay="150">
                   <div class="skills__preview" data-aos>
                     <div class="skills__icon"><img class="skills__pic" src="images/shield.png" alt=""></div>
                   </div>
@@ -81,7 +73,7 @@
                 </div>
               </div>
               <div class="skills__item">
-                <div class="skills__details" data-aos="animation-scale-x" data-aos-delay="300">
+                <div data-aos="fade-right" class="skills__details" data-aos="animation-scale-x" data-aos-delay="300">
                   <div class="skills__preview" data-aos>
                     <div class="skills__icon"><img class="skills__pic" src="images/legal.png" alt=""></div>
                   </div>
@@ -96,7 +88,7 @@
       </div>
     </div>
     <div class="connect" id="contact">
-      <div class="connect__head" data-aos="animation-scale-x">
+      <div data-aos="fade-up" class="connect__head" >
         <div class="connect__center center">
           <h2 class="connect__title title">let’s connect</h2>
           <div class="connect__info">Fill in the form below and we'll be in touch with you shortly, <br> or call us at <a href="tel:1-250-897-5046">250-897-5046</a>.</div>
@@ -109,9 +101,9 @@
             <div class="connect__wrap">
               <div class="connect__box">
                 <div class="connect__fieldset">
-                  <div class="connect__field field">
+                  <div  class="connect__field field">
                     <div class="field__label">full name*</div>
-                    <div class="field__wrap"><input class="field__input" type="text" id="name" name="name" placeholder="Your name here..."></div>
+                    <div class="field__wrap"><input class="field__input" type="text" id="name" name="name" placeholder="Your name here..."  value="<%= locals.form? form.name : '' %>"></div>
                    <!-- name error message from server side validation -->
                    <% if (locals.errors && errors.name) { %>
                     <div class="error"><%= errors.name.msg %></div>
