@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+let jump = require('jump.js')
 
 // var sassMiddleware = require('node-sass-middleware');
 
@@ -43,6 +44,7 @@ app.use('/stylesheets', express.static('stylesheets'));
 // app.use('/public', express.static(path.join(__dirname, 'public')))
   
 app.use('/', indexRouter);
+
 
 
 // catch 404 and forward to error handler

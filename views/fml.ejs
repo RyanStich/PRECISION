@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/src/fml.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+
+    <form class="formn" action="" method="POST">
+      <div class="wrap">
+        <h1>Request a free quote</h1>
+        <h3>lorem ipsum bipsum lorem ipsum bipsum lorem ipsum. </h3>
+
+        <div>
+          <label for="fname">First Name*</label>
+          <input id="fname" type="text" class="cool" />
+        </div>
+
+        <div>
+          <label for="lname">Last Name*</label>
+          <input id="lname" type="text" class="cool" />
+        </div>
+
+        <div>
+          <label for="email">Your Email*</label>
+          <input id="email" type="text" class="cool" />
+        </div>
+
+        <div>
+          <label for="phone">Your Phone*</label>
+          <input id="phone" type="text" class="cool" />
+        </div>
+
+        <div>
+            <label for="address">Address*</label>
+            <input id="address" type="text" class="cool" />
+          </div>
+
+          <div>
+            <label for="postal">Postal Code*</label>
+            <input id="postal" type="text" class="cool" />
+          </div>
+
+        <div>
+          <select class="custom-select" id="types" name="propertyType">
+            <option value="">Property Type*</option>
+            <option value="Building Lot">Building Lot</option>
+            <option value="Condo - Appartment">Condo - Appartment</option>
+            <option value="Duplex">Duplex</option>
+            <option value="Co-op">Co-op (Owned)</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+            <select class="custom-select" id="purpose" name="purpose">
+                <option value="">Purpose Of Appraisal*</option>
+                <option value="Capital Gains">Capital Gains</option>
+                <option value="Depreciation Report">Depreciation Report</option>
+                <option value="Division">Division of Assets</option>
+                <option value="Estate">Estate / Probate / Will</option>
+                <option value="For Sale">For Sale / Pre-listing / Market Value</option>
+                <option value="Insurance">Insurance Appraisal</option>
+                <option value="Litigation">Litigation</option>
+                <option value="Market Rent">Market Rent</option>
+                <option value="Mortgage">Mortgage Financing</option>
+                <option value="Purchase">Purchase</option>
+                <option value="Other">Other</option>
+              </select>
+        </div>
+
+        <div>
+             <label for="info">Additional Infromation</label>
+            <textarea class="txt" class="txt" name="info" id="info"></textarea>
+        </div>
+        <button class="sub" type="submit">Sumbit</button>
+      </div>
+    </form>
+
+
+    <script>
+      $("input").on("focusin", function () {
+        $(this).parent().find("label").addClass("active");
+      });
+
+
+      $("input").on("focusout", function () {
+        if (!this.value) {
+          $(this).parent().find("label").removeClass("active");
+        }
+      });
+
+
+      $("textarea").on("focusin", function () {
+        $(this).parent().find("label").addClass("active");
+      });
+
+      $("textarea").on("focusout", function () {
+        if (!this.value) {
+          $(this).parent().find("label").removeClass("active");
+        }
+      });
+
+    </script>
+  </body>
+</html>

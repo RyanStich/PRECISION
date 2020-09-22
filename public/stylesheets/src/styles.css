@@ -116,7 +116,7 @@
     left: 0;
     right: 0;
     z-index: 20;
-    padding: 10px 0;
+    padding: 5px 0;
   }
   /*
   .header-onscroll
@@ -766,12 +766,12 @@
     outline-width: 0;
   }
 
-  .textBox {
+  /* .textBox {
       min-height: 100px;
       max-height: 200px;
       max-width: 600px;
      
-  }
+  } */
   
   .field__input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.5);
@@ -1113,6 +1113,7 @@
     background-color: rgba(24, 24, 24, 0.9);
     font-family: "Lato", sans-serif;
     padding: 85px 0 185px 0;
+    
   }
   
   .footer-inner {

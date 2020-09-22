@@ -7,7 +7,7 @@ const { body, sanitizeBody, validationResult, Result} = require("express-validat
 
 // get free quote
 exports.free_quote_get = function (req, res) {
-    res.render("quotes", { title: "Free Quotes" });
+    res.render("fml", { title: "Free Quotes" });
   };
   
 // post free quote

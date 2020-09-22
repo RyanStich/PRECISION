@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylesheets/src/styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>
   </head>
   <body>
 
@@ -15,7 +16,7 @@
         <div class="header js-header">
           <div class="header__center center"><a class="header__logo" href="#"><img class="header__pic" src="images/nice.png" alt=""></a>
             <div class="header__wrap js-header-wrap">
-              <nav class="header__nav"><a class="header__link js-link" href="#">home</a><a class="header__link js-link" href="#services">services</a><a class="header__link js-link" href="#services">our team</a><a class="header__link js-link contact" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
+              <nav class="header__nav"><a class="header__link js-link" id="homee" href="#">home</a><a class="header__link js-link" id="servicess" href="#services">services</a><a class="header__link js-link" id="team" href="#">our team</a><a class="header__link js-link contact" id="con" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
             </div><button class="header__burger js-header-burger"></button>
           </div>
           <div class="header__bg js-header-bg"></div>
@@ -41,7 +42,7 @@
           <div class="skills__center center">
             <div class="skills__row">
               <div data-aos="fade-up" data-aos-delay="250" class="skills__col">
-                <h2 class="skills__title title">What does Precision Appraisal Group do?</h2><a class="skills__link" href="#contact">contact us with any questions<svg class="icon icon-arrow-right">
+                <h2 class="skills__title title">What does Precision Appraisal Group do?</h2><a class="skills__link" id="arrow" href="#contact">contact us with any questions<svg class="icon icon-arrow-right">
                     <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
                   </svg></a>
               </div> 
@@ -128,7 +129,7 @@
                   </div>
                   <div class="connect__field field">
                     <div class="field__label">your message*</div>
-                    <div class="field__wrap"><textarea class="field__input textBox" type="text" name="message" placeholder="Your message here..."></textarea>
+                    <div class="field__wrap"><input class="field__input" type="text" name="message" placeholder="Your message here..."></input>
                     <!-- message error message from server side validation -->
                     <% if (locals.errors && errors.message) { %>
                       <div class="error"><%= errors.message.msg %></div>
@@ -143,9 +144,6 @@
         </form>
       </div>
     </div>
-
-
-
 
     <footer>
       <nav class="footer-inner">
@@ -185,17 +183,42 @@
       </nav>
     </footer>
   </div>
- 
- <script type="text/javascripts">
 
-   import jump from '../node_modules/jump.js/dist/jump.module.js'
+  
+<script>
+// jump scroll
+  let home = document.getElementById('homee');
+  let services = document.getElementById('servicess');
+  let team = document.getElementById('team');
+  let contact = document.getElementById('con');
+  let arrow = document.getElementById('arrow')
 
-  </script>
+home.addEventListener('click', () => {
+  Jump('#home')
+})
 
-  <script>
+servicess.addEventListener('click', () => {
+  Jump('#services')
+})
+
+arrow.addEventListener('click', () => {
+  Jump('#contact')
+})
+
+// team.addEventListener('click', () => {
+//   Jump('#team')
+// })
+
+contact.addEventListener('click', () => {
+  Jump('#contact')
+})
+
+</script>
+
+<script>
+    // text/element fade effect CDN init
   AOS.init();
-  </script>
-  <script src="javascripts/main.js"></script>
+</script>
+<script src="javascripts/main.js"></script>
 </body>
 </html>
-
