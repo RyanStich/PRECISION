@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-  
+
     <div class="page">
       <div class="main" id="home">
         <div class="header js-header">
@@ -22,7 +22,7 @@
         </div>
         <div class="main__center center">
           <div data-aos="fade-up" class="main__wrap">
-            <h1  class="main__title">PRECISION<br>APPRAISALS</h1>
+            <h1 class="main__title">PRECISION<br>APPRAISALS</h1>
             <div class="main__info">Proudly Serving The Comox Valley Since 2013 </div>
             <div class="main__btns"><a href="/free-quote" class="main__btn btn btn_primary">Free Quote</a><a href="#contact" class="main__btn btn btn_secondary">Contact Us</a></div>
           </div>
@@ -46,7 +46,7 @@
                   </svg></a>
               </div> 
               <div data-aos="fade-up" data-aos-delay="250" class="skills__col" >
-                <div class="skills__info">We provide accurate appraisals to our clients across the mid to north Vancouver Island. We specialize in residential, insurance and legal & assessment appeals.</div>
+                <div class="skills__info">We provide accurate real estate appraisals to our clients across the mid to north Vancouver Island. We specialize in residential, insurance and legal & assessment appeals.</div>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@
                   </div>
                   <div class="connect__field field">
                     <div class="field__label">email address*</div>
-                    <div class="field__wrap"><input class="field__input" type="text" name="email" placeholder="Your email here..."></div>
+                    <div class="field__wrap"><input class="field__input" type="text" name="email" placeholder="Your email here..." value="<%= locals.form? form.email : '' %>"></div>
                     <!-- name error message from server side validation -->
                     <% if (locals.errors && errors.email) { %>
                       <div class="error"><%= errors.email.msg %></div>
@@ -120,7 +120,7 @@
                   </div>
                   <div class="connect__field field">
                     <div class="field__label">phone number*</div>
-                    <div class="field__wrap"><input class="field__input" type="tel" name="phone" placeholder="Your number here..."></div>
+                    <div class="field__wrap"><input class="field__input" type="tel" name="phone" placeholder="Your number here..." value="<%= locals.form? form.phone : '' %>"></div>
                     <!-- phone error message from server side validation (its an optional field, but it checks that its numeric) -->
                     <% if (locals.errors && errors.phone) { %>
                       <div class="error"><%= errors.phone.msg %></div>
@@ -128,7 +128,7 @@
                   </div>
                   <div class="connect__field field">
                     <div class="field__label">your message*</div>
-                    <div class="field__wrap"><input class="field__input" type="text" name="message" placeholder="Your message here..."></div>
+                    <div class="field__wrap"><textarea class="field__input textBox" type="text" name="message" placeholder="Your message here..."></textarea>
                     <!-- message error message from server side validation -->
                     <% if (locals.errors && errors.message) { %>
                       <div class="error"><%= errors.message.msg %></div>
@@ -186,14 +186,15 @@
     </footer>
   </div>
  
- 
+ <script type="text/javascripts">
+
+   import jump from '../node_modules/jump.js/dist/jump.module.js'
+
+  </script>
+
   <script>
   AOS.init();
   </script>
-
-
-
-
   <script src="javascripts/main.js"></script>
 </body>
 </html>

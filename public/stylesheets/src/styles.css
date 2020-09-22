@@ -765,6 +765,13 @@
     transition: border-color 0.25s;
     outline-width: 0;
   }
+
+  .textBox {
+      min-height: 100px;
+      max-height: 200px;
+      max-width: 600px;
+     
+  }
   
   .field__input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.5);
