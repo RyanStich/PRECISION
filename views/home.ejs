@@ -6,6 +6,7 @@
     <title>Precision Appraisal Group - Comox Valley</title>
     <link rel="stylesheet" href="stylesheets/src/styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
   
@@ -14,16 +15,16 @@
         <div class="header js-header">
           <div class="header__center center"><a class="header__logo" href="#"><img class="header__pic" src="images/nice.png" alt=""></a>
             <div class="header__wrap js-header-wrap">
-              <nav class="header__nav"><a class="header__link js-link" href="#">home</a><a class="header__link js-link" href="#services">services</a><a class="header__link js-link" href="#services">our team</a><a class="header__link js-link" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
+              <nav class="header__nav"><a class="header__link js-link" href="#">home</a><a class="header__link js-link" href="#services">services</a><a class="header__link js-link" href="#services">our team</a><a class="header__link js-link contact" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
             </div><button class="header__burger js-header-burger"></button>
           </div>
           <div class="header__bg js-header-bg"></div>
         </div>
         <div class="main__center center">
           <div data-aos="fade-up" class="main__wrap">
-            <h1 class="main__title" data-aos="animation-scale-x">PRECISION<br>APPRAISALS</h1>
-            <div class="main__info" data-aos="animation-scale-x" data-aos-delay="200">Proudly Serving The Comox Valley Since 2013 </div>
-            <div class="main__btns" data-aos="animation-scale-x" data-aos-delay="400"><a href="/free-quote" class="main__btn btn btn_primary">Free Quote</a><a href="#contact" class="main__btn btn btn_secondary">Contact Us</a></div>
+            <h1  class="main__title">PRECISION<br>APPRAISALS</h1>
+            <div class="main__info">Proudly Serving The Comox Valley Since 2013 </div>
+            <div class="main__btns"><a href="/free-quote" class="main__btn btn btn_primary">Free Quote</a><a href="#contact" class="main__btn btn btn_secondary">Contact Us</a></div>
           </div>
         </div>
         <div class="main__circles">
@@ -39,12 +40,12 @@
         <div class="skills__head">
           <div class="skills__center center">
             <div class="skills__row">
-              <div  data-aos="fade-up" class="skills__col">
-                <h2 class="skills__title title">What does Precision Appraisal Group do?</h2><a class="skills__link" href="#connect">contact us with any questions<svg class="icon icon-arrow-right">
+              <div data-aos="fade-up" data-aos-delay="250" class="skills__col">
+                <h2 class="skills__title title">What does Precision Appraisal Group do?</h2><a class="skills__link" href="#contact">contact us with any questions<svg class="icon icon-arrow-right">
                     <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
                   </svg></a>
               </div> 
-              <div data-aos="fade-up" class="skills__col" >
+              <div data-aos="fade-up" data-aos-delay="250" class="skills__col" >
                 <div class="skills__info">We provide accurate appraisals to our clients across the mid to north Vancouver Island. We specialize in residential, insurance and legal & assessment appeals.</div>
               </div>
             </div>
@@ -88,7 +89,7 @@
       </div>
     </div>
     <div class="connect" id="contact">
-      <div data-aos="fade-up" class="connect__head" >
+      <div data-aos="fade-down"  data-aos-delay="250" class="connect__head" >
         <div class="connect__center center">
           <h2 class="connect__title title">let’s connect</h2>
           <div class="connect__info">Fill in the form below and we'll be in touch with you shortly, <br> or call us at <a href="tel:1-250-897-5046">250-897-5046</a>.</div>
@@ -177,13 +178,7 @@
             <p class="desktop"><a href="tel:1-250-897-5046">250-897-5046</a></p>
         </section>
         
-    
-        <!-- <section class="footer-item">
-        
-        </section> -->
-            
-      
-                
+       
         <section class="footer-item">
             <a href="/free-quote" class="footer-button">Free Quotes</a>
         </section>
@@ -191,10 +186,14 @@
     </footer>
   </div>
  
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ 
   <script>
-    AOS.init();
+  AOS.init();
   </script>
+
+
+
+
   <script src="javascripts/main.js"></script>
 </body>
 </html>
