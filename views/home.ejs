@@ -14,7 +14,7 @@
     <div class="page">
       <div class="main" id="home">
         <div class="header js-header">
-          <div class="header__center center"><a class="header__logo" href="#"><img class="header__pic" src="images/loggin.png" alt=""></a>
+          <div class="header__center center"><a class="header__logo" id="mainLogo" href="#"><img class="header__pic" src="images/loggin.png" alt=""></a>
             <div class="header__wrap js-header-wrap">
               <nav class="header__nav"><a class="header__link js-link" id="homee" href="#">home</a><a class="header__link js-link" id="servicess" href="#services">services</a><a class="header__link js-link" id="team" href="#details">our team</a><a class="header__link js-link contact" id="con" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
             </div><button class="header__burger js-header-burger"></button>
@@ -25,7 +25,7 @@
           <div data-aos="fade-up" class="main__wrap">
             <h1 class="main__title">PRECISION<br>APPRAISALS</h1>
             <div class="main__info">Proudly Serving The Comox Valley Since 2013 </div>
-            <div class="main__btns"><a href="/free-quote" class="main__btn btn btn_primary">Free Quote</a><a href="#contact" class="main__btn btn btn_secondary">Contact Us</a></div>
+            <div class="main__btns"><a href="/free-quote" class="main__btn btn btn_primary">Free Quote</a><a href="#contact" id="con2" class="main__btn btn btn_secondary">Contact Us</a></div>
           </div>
         </div>
         <div class="main__circles">
@@ -130,12 +130,6 @@ Meet Our CEO            </h2>
       </div>
     </div>
 
-
-
-
-
-
-
     <div class="connect" id="contact">
       <div data-aos="fade-down"  data-aos-delay="250" class="connect__head" >
         <div class="connect__center center">
@@ -176,13 +170,13 @@ Meet Our CEO            </h2>
                   </div>
                   <div class="connect__field field">
                     <div class="field__label">your message*</div>
-                    <div class="field__wrap"><input class="field__input" type="text" name="message" placeholder="Your message here..."></input>
+                    <div class="field__wrap"><input class="field__input" type="text" name="message" placeholder="Your message here..." value="<%= locals.form? form.message : '' %>"></input>
                     <!-- message error message from server side validation -->
                     <% if (locals.errors && errors.message) { %>
                       <div class="error"><%= errors.message.msg %></div>
                       <% } %>
                   </div>
-                </div><button type="submit" class="connect__btn btn btn_primary">send message</button>
+                </div><button type="submit" id="subButt" class="connect__btn btn btn_primary">send message</button>
               </div>
             </div>
             <div class="connect__map"><img class="connect__pic" src="images/map.png" alt="">
@@ -243,9 +237,13 @@ Meet Our CEO            </h2>
         let services = document.getElementById('servicess');
         let team = document.getElementById('team');
         let contact = document.getElementById('con');
+        let contact2 = document.getElementById('con2');
         let arrow = document.getElementById('arrow');
         let get = document.getElementById('get');
-      
+        let mainLogo = document.getElementById('mainLogo');
+       
+        // let subButt = document.getElementById('subButt');
+
       home.addEventListener('click', () => {
         Jump('#home')
       })
@@ -266,9 +264,21 @@ Meet Our CEO            </h2>
         Jump('#contact')
       })
 
+      contact2.addEventListener('click', () => {
+        Jump('#contact')
+      })
+
       get.addEventListener('click', () => {
         Jump('#contact')
       })
+
+      mainLogo.addEventListener('click', () => {
+        Jump('#home')
+      })
+      
+      // subButt.addEventListener('click', () => {
+      //   Jump('#subButt')
+      // })
       
       </script>
       

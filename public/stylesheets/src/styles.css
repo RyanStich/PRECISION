@@ -93,7 +93,7 @@ a.btn {
 }
 
 .btn_primary {
-  background: rgba(24, 24, 24, 0.9);
+  background: rgba(10, 10, 10, 0.9);
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
@@ -113,7 +113,7 @@ a.btn {
   left: 0;
   right: 0;
   z-index: 20;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 /*
   .header-onscroll
@@ -2517,3 +2517,8 @@ a:hover {
     color: #fff;
   }
 }
+
+/* .sent {
+  margin-top: 10px;
+} */
+

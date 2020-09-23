@@ -44,11 +44,10 @@ exports.home = function (req, res) {
           delete item.param;
           errorsObj[id] = item;
         });
-        
-
+        // if errors, rerender form 
         if (!errors.isEmpty()) {
           res.render("home", {
-            form: req.body,
+            form: req.body, 
             errors: errorsObj,
           });
           return;

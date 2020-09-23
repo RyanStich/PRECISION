@@ -3,49 +3,32 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-let jump = require('jump.js')
-
-// var sassMiddleware = require('node-sass-middleware');
+var compression = require('compression');
+var helmet = require('helmet');
 
 var indexRouter = require('./routes/index');
-
-
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-// allow html to be rendered
-app.engine('html', require('ejs').renderFile);
-
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+//  app.use(helmet()); 
+app.use(compression());
 
-
-// app.use(sassMiddleware({
-//   src: path.join(__dirname, 'public/stylesheets/src'),
-//   dest: path.join(__dirname, 'public/stylesheets/dist'),
-//   indentedSyntax: false, // true = .sass and false = .scss
-//   debug: true,
-//   sourceMap: true,
-//   outputStyle: "compressed",
-//   prefix: '/stylesheets' 
-// }));
+// serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(__dirname + "/public"));
-
-
 app.use('/stylesheets', express.static('stylesheets'));
 
-// app.use('/public', express.static(path.join(__dirname, 'public')))
-  
+
+// use routes
 app.use('/', indexRouter);
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
