@@ -14,9 +14,9 @@
     <div class="page">
       <div class="main" id="home">
         <div class="header js-header">
-          <div class="header__center center"><a class="header__logo" href="#"><img class="header__pic" src="images/nice.png" alt=""></a>
+          <div class="header__center center"><a class="header__logo" href="#"><img class="header__pic" src="images/loggin.png" alt=""></a>
             <div class="header__wrap js-header-wrap">
-              <nav class="header__nav"><a class="header__link js-link" id="homee" href="#">home</a><a class="header__link js-link" id="servicess" href="#services">services</a><a class="header__link js-link" id="team" href="#">our team</a><a class="header__link js-link contact" id="con" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
+              <nav class="header__nav"><a class="header__link js-link" id="homee" href="#">home</a><a class="header__link js-link" id="servicess" href="#services">services</a><a class="header__link js-link" id="team" href="#details">our team</a><a class="header__link js-link contact" id="con" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
             </div><button class="header__burger js-header-burger"></button>
           </div>
           <div class="header__bg js-header-bg"></div>
@@ -40,13 +40,13 @@
       <div class="skills" id="services">
         <div class="skills__head">
           <div class="skills__center center">
-            <div class="skills__row">
-              <div data-aos="fade-up" data-aos-delay="250" class="skills__col">
+            <div data-aos-delay="250"  class="skills__row">
+              <div data-aos="fade-up" class="skills__col">
                 <h2 class="skills__title title">What does Precision Appraisal Group do?</h2><a class="skills__link" id="arrow" href="#contact">contact us with any questions<svg class="icon icon-arrow-right">
                     <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
                   </svg></a>
               </div> 
-              <div data-aos="fade-up" data-aos-delay="250" class="skills__col" >
+              <div data-aos="fade-up" class="skills__col" >
                 <div class="skills__info">We provide accurate real estate appraisals to our clients across the mid to north Vancouver Island. We specialize in residential, insurance and legal & assessment appeals.</div>
               </div>
             </div>
@@ -89,6 +89,53 @@
       </div>
       </div>
     </div>
+
+    <div class="details" id="details">
+      <div   data-aos="fade-up" class="details__center center">
+        <div class="details__item">
+          <div class="details__preview"></div>
+        </div>
+        <div class="details__item">
+          <div class="details__wrap" data-aos="animation-scale-x">
+            <h2 class="details__title title">
+Meet Our CEO            </h2>
+            <div class="details__text">
+              Mike Mayhew
+              <br>
+              BCom || AACI
+              <br>
+              <br>
+              
+              Mike began his professional career as a Canadian Military Search and Rescue helicopter pilot. Upon retiring from this rewarding experience, 
+              Mike began his appraisal career in 2006 with a strong background in business (BCom) and a Post Graduate Certificate in Real Property Valuation from UBC.
+            </div>
+            <a class="details__more" id="get" href="#contact"
+              >get in contact<svg class="icon icon-arrow-right">
+                <use xlink:href="images/sprite.svg#icon-arrow-right"></use></svg></a>
+          </div>
+          <div class="details__preview">
+            <div class="details__photo">
+              <img  data-aos="fade-up" class="details__pic" src="images/miker.png" alt="" />
+            </div>
+            <div
+              class="details__bg"
+              data-aos="animation-custom"
+              data-aos-duration="1500"
+              data-aos-offset="0"
+            >
+              <img class="details__pic" src="images/photo-8.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
     <div class="connect" id="contact">
       <div data-aos="fade-down"  data-aos-delay="250" class="connect__head" >
         <div class="connect__center center">
@@ -158,7 +205,7 @@
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#team">Our Team</a></li>
+              <li><a href="#details">Our Team</a></li>
               <li><a href="#contact">Contact</a></li>
               <li><a href="/free-quote">Free Quote</a></li>
             </ul>
@@ -176,49 +223,59 @@
             <p class="desktop"><a href="tel:1-250-897-5046">250-897-5046</a></p>
         </section>
         
-       
+    
+        <!-- <section class="footer-item">
+        
+        </section> -->
+            
+      
+                
         <section class="footer-item">
             <a href="/free-quote" class="footer-button">Free Quotes</a>
         </section>
       </nav>
     </footer>
-  </div>
 
   
-<script>
-// jump scroll
-  let home = document.getElementById('homee');
-  let services = document.getElementById('servicess');
-  let team = document.getElementById('team');
-  let contact = document.getElementById('con');
-  let arrow = document.getElementById('arrow')
+    <script>
+      // jump scroll
+        let home = document.getElementById('homee');
+        let services = document.getElementById('servicess');
+        let team = document.getElementById('team');
+        let contact = document.getElementById('con');
+        let arrow = document.getElementById('arrow');
+        let get = document.getElementById('get');
+      
+      home.addEventListener('click', () => {
+        Jump('#home')
+      })
+      
+      servicess.addEventListener('click', () => {
+        Jump('#services')
+      })
+      
+      arrow.addEventListener('click', () => {
+        Jump('#contact')
+      })
+      
+      team.addEventListener('click', () => {
+        Jump('#details')
+      })
+      
+      contact.addEventListener('click', () => {
+        Jump('#contact')
+      })
 
-home.addEventListener('click', () => {
-  Jump('#home')
-})
-
-servicess.addEventListener('click', () => {
-  Jump('#services')
-})
-
-arrow.addEventListener('click', () => {
-  Jump('#contact')
-})
-
-// team.addEventListener('click', () => {
-//   Jump('#team')
-// })
-
-contact.addEventListener('click', () => {
-  Jump('#contact')
-})
-
-</script>
-
-<script>
-    // text/element fade effect CDN init
-  AOS.init();
-</script>
-<script src="javascripts/main.js"></script>
+      get.addEventListener('click', () => {
+        Jump('#contact')
+      })
+      
+      </script>
+      
+      <script>
+          // text/element fade effect CDN init
+        AOS.init();
+      </script>
+      <script src="javascripts/main.js"></script>
 </body>
 </html>
