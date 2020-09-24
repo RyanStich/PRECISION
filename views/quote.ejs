@@ -3,59 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/src/form.css">
+    <link rel="stylesheet" href="stylesheets/src/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Precision Appraisal Group - Comox Valley - Free Quote</title>
 </head>
-<body>
-    <section class="get-in-touch">
-        <h1 class="title">Get a free quote</h1>
-          <div class="error"><%= locals.sent %></div>
+<body class="poo">
+    <div class="header js-header">
+        <div class="header__center center"><a class="header__logo" id="mainLogo" href="/"><img class="header__pic" src="images/loggin.png" alt=""></a>
+          <div class="header__wrap js-header-wrap">
+            <nav class="header__nav"><a class="header__link js-link" id="homee" href="/">home</a><a class="header__link js-link" id="servicess" href="/#services">services</a><a class="header__link js-link" id="team" href="/#details">our team</a><a class="header__link js-link contact" id="con" href="/#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
+          </div><button class="header__burger js-header-burger"></button>
+        </div>
+        <div class="header__bg js-header-bg"></div>
+      </div>
+
+
+    <section data-aos="fade-up" data-aos-delay="300"  class="get-in-touch">
+        <p class="title">Get a free <br> quote</p>
+          <div class="sentty"><%= locals.sent %></div>
         <form method="POST" class="contact-form row">
 
-           <div class="form-field col x-50">
+
+           <div class="form-field col x-100">
               <input
-              name="firstName"
-              id="firstName"
+              name="name"
+              id="name"
               class="input-text js-input"
               type="text" 
-              value="<%= locals.form? form.firstName : '' %>">
-              <label class="label" for="firstName">First Name</label>
-          
+              value="<%= locals.form? form.name : '' %>">
+              <label class="label" for="name">Name*</label>
+             
             </div>
-
-            
-           <% if (locals.errors && errors.firstName) { %>
-            <div class="error"><%= errors.firstName.msg %></div>
+            <% if (locals.errors && errors.name) { %>
+            <div class="error2"><%= errors.name.msg %></div>
             <% } %>
-
-           <div class="form-field col x-50">
-              <input
-              name="lastName"
-              id="lastName"
-              class="input-text js-input"
-              type="text" 
-              value="<%= locals.form? form.lastName : '' %>">
-              <label class="label" for="lastName">Last Name</label>
-           
-            </div>
-
-          <% if (locals.errors && errors.lastName) { %>
-            <div class="error"><%= errors.lastName.msg %></div>
-            <% } %>
+        
 
            <div class="form-field col x-100">
               <input
               name="email"
               id="email"
               class="input-text js-input"
-              type="email"
+              type="text"
               value="<%= locals.form? form.email : '' %>">
-              <label class="label" for="email">Email</label>
+              <label class="label" for="email">Email*</label>
            </div>
 
            <% if (locals.errors && errors.email) { %>
-            <div class="error"><%= errors.email.msg %></div>
+            <div class="error2"><%= errors.email.msg %></div>
             <% } %>
 
            <div class="form-field col x-100">
@@ -65,11 +62,11 @@
             class="input-text js-input"
             type="tel"
             value="<%= locals.form? form.phone : '' %>">
-            <label class="label" for="phone">Phone</label>
+            <label class="label" for="phone">Phone*</label>
          </div>
 
          <% if (locals.errors && errors.phone) { %>
-            <div class="error"><%= errors.phone.msg %></div>
+            <div class="error2"><%= errors.phone.msg %></div>
             <% } %>
 
          <div class="form-field col x-100">
@@ -79,11 +76,11 @@
             class="input-text js-input"
             type="tel"
             value="<%= locals.form? form.address : '' %>">
-            <label class="label" for="address">Address</label>
+            <label class="label" for="address">Address*</label>
          </div>
 
          <% if (locals.errors && errors.address) { %>
-            <div class="error"><%= errors.address.msg %></div>
+            <div class="error2"><%= errors.address.msg %></div>
             <% } %>
 
          <div class="form-field col x-100">
@@ -99,13 +96,14 @@
 
          <div class="form-field col x-100">
             <select class="custom-select" id="types" name="propertyType">
-                <option value="Building Lot">Building Lot</option>
-                <option value="Condo - Appartment">Condo - Appartment</option>
+                <option value="Family Home">Family Home</option>
+                <option value="Building Lot / Acreage">Building Lot / Acreage</option>
+                <option value="Condo / Appartment">Condo / Appartment</option>
                 <option value="Duplex">Duplex</option>
                 <option value="Co-op">Co-op (Owned)</option>
                 <option value="Other">Other</option>
               </select>
-            <label class="label" for="propertyType">Type Of Property</label>
+            <label class="label" id="type" for="propertyType">Type Of Property*</label>
          </div>
 
 
@@ -113,32 +111,29 @@
             <select class="custom-select" id="purpose" name="purpose">
                 <option value="Capital Gains">Capital Gains</option>
                 <option value="Depreciation Report">Depreciation Report</option>
-                <option value="Division">Division of Assets</option>
-                <option value="Estate">Estate / Probate / Will</option>
-                <option value="For Sale">For Sale / Pre-listing / Market Value</option>
+                <option value="Division of Assests">Division of Assets</option>
+                <option value="Estate / Probate/ Will">Estate / Probate / Will</option>
+                <option value="For Sale / Pre-listing / Market Value">For Sale / Pre-listing / Market Value</option>
                 <option value="Insurance">Insurance Appraisal</option>
                 <option value="Litigation">Litigation</option>
                 <option value="Market Rent">Market Rent</option>
-                <option value="Mortgage">Mortgage Financing</option>
+                <option value="Mortgage Financing">Mortgage Financing</option>
                 <option value="Purchase">Purchase</option>
                 <option value="Other">Other</option>
               </select>
-            <label class="label" for="purpose">Purpose Of Appraisal</label>
+            <label class="label" id="purp" for="purpose">Purpose Of Appraisal*</label>
          </div>
 
 
          <div class="form-field col x-100">
-             
-            <textarea class="txt input-text js-input" name="info" id="info"></textarea> <br />
-            <label class="label" for="message">Additional Information</label>
+              <label class="l" for="info">Additional Information:</label>
+            <textarea class="input-text js-input" name="info" id="info"><%= locals.form? form.info : '' %></textarea> 
+           
          </div>
 
            <div class="form-field col x-100 align-center">
-              <input class="submit-btn" type="submit" value="Submit">
+              <input class="main__btn btn btn_primary" id="quotesub" type="submit" value="Submit">
            </div>
-
-
-
 
         </form>
      </section>
@@ -167,7 +162,8 @@
 
 
 <script src="javascripts/quote.js"></script>
-
-
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

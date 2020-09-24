@@ -850,6 +850,7 @@ a.btn {
 }
 
 .details__pic {
+  filter: brightness(90%);
   width: 100%;
   border-radius: 50%;
 }
@@ -1182,7 +1183,7 @@ a.btn {
   -ms-transform: scale(0.95);
   transform: scale(0.95);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(12, 12, 12, 0.1);
   -webkit-animation: marker 4s infinite;
   animation: marker 4s infinite;
 }
@@ -2522,3 +2523,167 @@ a:hover {
   margin-top: 10px;
 } */
 
+
+
+
+.row {
+  margin: -20px 0;
+}
+.row .col {
+  padding: 0 20px;
+  float: left;
+  box-sizing: border-box;
+}
+.row .col.x-50 {
+  width: 50%;
+}
+.row .col.x-100 {
+  width: 100%;
+}
+.content-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+.get-in-touch {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 10%;
+  /* transform: translateY(-50%); */
+}
+.get-in-touch .title {
+  color: #d1d1d1;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 36px;
+  line-height: 48px;
+  padding-bottom: 28px;
+}
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+  margin-top: 60px;
+
+}
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #000;     /*  BOTTOM BORDER HERE  */
+  font-family: Lusitana, serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
+  transform: translateY(-24px);
+}
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #d1d1d1;
+  cursor: text;
+  transition: transform 0.2s ease-in-out;
+}
+/* .contact-form .submit-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 43.5%;                 /*      IS THIS ACTUALLY CENTERED????    
+ }   */
+
+.note {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: Lusitana, serif;
+  font-size: 16px;
+  line-height: 21px;
+
+}
+.note .link {
+  color: #888;
+  text-decoration: none;
+}
+.note .link:hover {
+  text-decoration: underline;
+}
+
+.input-text {
+    background-color: transparent;
+    color: #d1d1d1;
+    /* -webkit-transition: border-color 0.25s;
+    -o-transition: border-color 0.25s;
+    transition: border-color 0.25s; */
+}
+
+
+.input-text:focus {
+  border-color: #fff;
+  /* transition: 0.25s; */
+}
+
+#info {
+    min-height: 100px;
+    max-height: 500px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.l {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #d1d1d1;
+  margin-bottom: 15px;
+}
+
+#type, #purp {
+  margin-bottom: 15px;
+}
+
+
+.error2 {
+  margin-left: 20px;
+  color: #ffffff;
+}
+
+.sentty {
+  text-align: center;
+  color: #ffffff;
+}
+
+.poo {
+  background-image:   linear-gradient(180deg, #373981 0%, #6d7dad 60%);
+}
+
+
+
+/*   THIS IS NOT ACTUALLY CENTERED    */
+
+#quotesub {
+  display: inline-block;
+                  
+} 

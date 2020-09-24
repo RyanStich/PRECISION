@@ -11,19 +11,15 @@ exports.free_quote_get = function (req, res) {
 
 // post free quote
 exports.free_quote_post = [
-  body("firstName")
+  body("name")
     .isLength({ min: 1 })
     .trim()
-    .withMessage("First name must be specified"),
-  body("lastName")
-    .isLength({ min: 1 })
-    .trim()
-    .withMessage("Last name must be specified"),
+    .withMessage("Please enter your name"),
   body("email").isEmail().withMessage("Please enter a valid email"),
   body("phone")
     // .optional({ checkFalsy: true })
     .isNumeric()
-    .withMessage("Invalid phone number"),
+    .withMessage("Please enter a valid phone number"),
   // body("unit").optional(),
   body("address")
     .isLength({ min: 1 })
@@ -46,7 +42,6 @@ exports.free_quote_post = [
       delete item.param;
       errorsObj[id] = item;
     });
-    console.log(errorsObj);
 
     if (!errors.isEmpty()) {
       res.render("quote", {
@@ -61,15 +56,14 @@ exports.free_quote_post = [
       // Data from form IS valid
       const output = `
         <p>You have a new quote request!</p>
-        <h3>Contact Information -</h3>
+        <h3>Contact Information:</h3>
         <ul>  
-          <li>Name: ${req.body.firstName} ${req.body.lastName}</li>
+          <li>Name: ${req.body.name}</li>
           <li>Email: ${req.body.email}</li>
           <li>Phone: ${req.body.phone}</li>
         </ul>
-        <h3>Property Information -</h3>
+        <h3>Property Information:</h3>
         <ul>
-          <li>Unit: ${req.body.unit}</li>
           <li>Address: ${req.body.address}</li>
           <li>Postal Code: ${req.body.postal}</li>
           <li>Type of Property: ${req.body.propertyType}</li>
@@ -92,7 +86,7 @@ exports.free_quote_post = [
       // step 2
       let mailOptions = {
         from: process.env.EMAIL,
-        to: "jacksonmayhew9@gmail.com", // 'precisionappraisalgroup@shaw.ca' WHEN READY FOR PRODUCTION
+        to: "jacksonmayhew9@gmail.com", // 'precisionappraisalgroup@shaw.ca' WHEN READY FOR DEPLOYMENT
         subject: "Free Quote Inquiry",
         html: output,
       };
