@@ -135,7 +135,7 @@ Meet Our CEO            </h2>
         <div class="connect__center center">
           <h2 class="connect__title title">let’s connect</h2>
           <div class="connect__info">Fill in the form below and we'll be in touch with you shortly, <br> or call us at <a href="tel:1-250-897-5046">250-897-5046</a>.</div>
-          <div class="sent"><%= locals.sent %></div>
+            <div class="sent"><%= locals.sent %></div>
         </div>
       </div>
       <div class="connect__body">
@@ -169,8 +169,8 @@ Meet Our CEO            </h2>
                       <% } %>
                   </div>
                   <div class="connect__field field">
-                    <div class="field__label">your message*</div>
-                    <div class="field__wrap"><input class="field__input" type="text" name="message" placeholder="Your message here..." value="<%= locals.form? form.message : '' %>"></input>
+                    <div class="field__label" id="wtf">your message*</div>
+                    <div class="field__wrap"><textarea class="field__input" id="theText" type="text" name="message" placeholder="Your message here..." ><%= locals.form? form.message : '' %></textarea>
                     <!-- message error message from server side validation -->
                     <% if (locals.errors && errors.message) { %>
                       <div class="error"><%= errors.message.msg %></div>

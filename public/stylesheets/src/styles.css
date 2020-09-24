@@ -718,6 +718,20 @@ a.btn {
   color: #fff;
 }
 
+/*  ADDED TEXT AREA HERE */
+
+#wtf {
+  padding-bottom: 15px;
+}
+
+#theText {
+  min-height: 150px;
+  max-height: 300px;
+  max-width: 100%;
+  min-width: 100%;
+  outline: none;
+}
+
 .field__input {
   width: 100%;
   height: 80px;
@@ -1183,7 +1197,7 @@ a.btn {
   -ms-transform: scale(0.95);
   transform: scale(0.95);
   border-radius: 50%;
-  background: rgba(12, 12, 12, 0.1);
+  background: rgba(5, 5, 5, 0.1);
   -webkit-animation: marker 4s infinite;
   animation: marker 4s infinite;
 }
@@ -2505,12 +2519,12 @@ a:hover {
     left: auto;
   }
   .error {
-    color: rgb(138, 0, 0);
+    color: #fff;
   }
 
   .sent {
     margin-top: 15px;
-    color: rgb(138, 0, 0);
+    color: #fff;
   }
   .details__wrap {
     width: auto;
@@ -2519,9 +2533,10 @@ a:hover {
   }
 }
 
-/* .sent {
+.sent {
   margin-top: 10px;
-} */
+  font-size: 20px;
+}
 
 
 
