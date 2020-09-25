@@ -2579,14 +2579,12 @@ a:hover {
 .input-text {
   background-color: transparent;
   color: #d1d1d1;
-  /* -webkit-transition: border-color 0.25s;
-    -o-transition: border-color 0.25s;
-    transition: border-color 0.25s; */
+  -webkit-appearance: none;
 }
 
 .input-text:focus {
   border-color: #fff;
-  /* transition: 0.25s; */
+
 }
 
 #info {
