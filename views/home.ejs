@@ -8,24 +8,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merienda+One&family=Russo+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
   </head>
   <body>
-
     <div class="page">
       <div class="main" id="home">
         <div class="header js-header">
-          <div class="header__center center"><a class="header__logo" id="mainLogo" href="#"><img class="header__pic" src="images/loggin.png" alt=""></a>
+          <div class="header__center center"><a class="header__logo" href="#"><img class="header__pic" id="mainLogo" src="images/loggin.png" alt=""></a>
             <div class="header__wrap js-header-wrap">
-              <nav class="header__nav"><a class="header__link js-link" id="homee" href="#">home</a><a class="header__link js-link" id="servicess" href="#services">services</a><a class="header__link js-link" id="team" href="#details">our team</a><a class="header__link js-link contact" id="con" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
+              <nav class="header__nav"><a class="header__link js-link" id="homee" href="#">home</a><a class="header__link js-link" id="servicess" href="#details">services</a><a class="header__link js-link" id="teamlink" href="#team">our team</a><a class="header__link js-link" id="con" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
             </div><button class="header__burger js-header-burger"></button>
           </div>
           <div class="header__bg js-header-bg"></div>
         </div>
         <div class="main__center center">
           <div data-aos="fade-up" class="main__wrap">
-            <h1 class="main__title">PRECISION<br>APPRAISALS</h1>
-            <div class="main__info">Proudly Serving The Comox Valley Since 2013 </div>
-            <div class="main__btns"><a href="/free-quote" class="main__btn btn btn_primary">Free Quote</a><a href="#contact" id="con2" class="main__btn btn btn_secondary">Contact Us</a></div>
+            <h1 class="main__title" data-aos="animation-scale-x">PRECISION<br>APPRAISALS</h1>
+            <div class="main__info" data-aos="animation-scale-x" data-aos-delay="200">Proudly Serving The Comox Valley Since 2013 </div>
+            <div class="main__btns" data-aos="animation-scale-x" data-aos-delay="400"><a href="/free-quote" class="main__btn btn btn_primary">Free Quote</a><a href="#contact" id="con2" class="main__btn btn btn_secondary">Contact Us</a></div>
           </div>
         </div>
         <div class="main__circles">
@@ -40,9 +41,9 @@
       <div class="skills" id="services">
         <div class="skills__head">
           <div class="skills__center center">
-            <div data-aos-delay="250"  class="skills__row">
-              <div data-aos="fade-up" class="skills__col">
-                <h2 class="skills__title title">What does Precision Appraisal Group do?</h2><a class="skills__link" id="arrow" href="#contact">contact us with any questions<svg class="icon icon-arrow-right">
+            <div class="skills__row">
+              <div  data-aos="fade-up" class="skills__col">
+                <h2 class="skills__title title">What does Precision Appraisal Group do?</h2><a class="skills__link" id="arrow" href="#connect">contact us with any questions<svg class="icon icon-arrow-right">
                     <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
                   </svg></a>
               </div> 
@@ -79,8 +80,8 @@
                   <div class="skills__preview">
                     <div class="skills__icon"><img class="skills__pic" src="images/legal.png" alt=""></div>
                   </div>
-                  <div class="skills__category">Legal & Appeal.</div>
-                  <div class="skills__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.  nim obcaecati repellat doloremque, inventore qui minus velit necessitatibus quisquam hic accusamus cum at voluptas ratione ab!</div>
+                  <div class="skills__category">Legal / appeal</div>
+                  <div class="skills__text">Whether ordered by a lawyer, accountant, executor or family member, precision appraisal group provides trusted advice and reports to our clients needs during a difficult time</div>
                 </div>
               </div>
             </div>
@@ -89,9 +90,8 @@
       </div>
       </div>
     </div>
-
-    <div class="details" id="details">
-      <div data-aos="fade-up" class="details__center center">
+    <div class="details" id="team">
+      <div class="details__center center">
         <div class="details__item">
           <div class="details__preview"></div>
         </div>
@@ -110,12 +110,12 @@ Meet Our CEO            </h2>
               Mike began his appraisal career in 2006 with a strong background in business (BCom) and a Post Graduate Certificate in Real Property Valuation from UBC.
             </div>
             <a class="details__more" id="get" href="#contact"
-              >get in contact<svg class="icon icon-arrow-right">
+              >Get in contact<svg class="icon icon-arrow-right">
                 <use xlink:href="images/sprite.svg#icon-arrow-right"></use></svg></a>
           </div>
           <div class="details__preview">
             <div class="details__photo">
-              <img  data-aos="fade-up" class="details__pic" src="images/miker.png" alt="" />
+              <img class="details__pic" src="images/miker.png" alt="" />
             </div>
             <div
               class="details__bg"
@@ -129,13 +129,12 @@ Meet Our CEO            </h2>
         </div>
       </div>
     </div>
-
     <div class="connect" id="contact">
-      <div data-aos="fade-down"  data-aos-delay="250" class="connect__head" >
+      <div data-aos="fade-up" class="connect__head" >
         <div class="connect__center center">
           <h2 class="connect__title title">let’s connect</h2>
           <div class="connect__info">Fill in the form below and we'll be in touch with you shortly, <br> or call us at <a href="tel:1-250-897-5046">250-897-5046</a>.</div>
-            <div class="sent"><%= locals.sent %></div>
+          <div class="sent"><%= locals.sent %></div>
         </div>
       </div>
       <div class="connect__body">
@@ -154,7 +153,7 @@ Meet Our CEO            </h2>
                   </div>
                   <div class="connect__field field">
                     <div class="field__label">email address*</div>
-                    <div class="field__wrap"><input class="field__input" type="text" name="email" placeholder="Your email here..." value="<%= locals.form? form.email : '' %>"></div>
+                    <div class="field__wrap"><input class="field__input" type="text" name="email" placeholder="Your email here..."></div>
                     <!-- name error message from server side validation -->
                     <% if (locals.errors && errors.email) { %>
                       <div class="error"><%= errors.email.msg %></div>
@@ -162,136 +161,108 @@ Meet Our CEO            </h2>
                   </div>
                   <div class="connect__field field">
                     <div class="field__label">phone number*</div>
-                    <div class="field__wrap"><input class="field__input" type="tel" name="phone" placeholder="Your number here..." value="<%= locals.form? form.phone : '' %>"></div>
+                    <div class="field__wrap"><input class="field__input" type="tel" name="phone" placeholder="Your number here..."></div>
                     <!-- phone error message from server side validation (its an optional field, but it checks that its numeric) -->
                     <% if (locals.errors && errors.phone) { %>
                       <div class="error"><%= errors.phone.msg %></div>
                       <% } %>
                   </div>
-                  <div class="connect__field field">
-                    <div class="field__label" id="wtf">your message*</div>
-                    <div class="field__wrap"><textarea class="field__input" id="theText" type="text" name="message" placeholder="Your message here..." ><%= locals.form? form.message : '' %></textarea>
-                    <!-- message error message from server side validation -->
-                    <% if (locals.errors && errors.message) { %>
-                      <div class="error"><%= errors.message.msg %></div>
-                      <% } %>
+                    <!-- change these -->
+                     <!-- change these -->
+                      <!-- change these -->
+                      <div class="connect__field field">
+                        <div class="field__label" id="wtf">your message*</div>
+                        <div class="field__wrap"><textarea class="field__input" id="theText" type="text" name="message" placeholder="Your message here..." ><%= locals.form? form.message : '' %></textarea>
+                        <!-- message error message from server side validation -->
+                        <% if (locals.errors && errors.message) { %>
+                          <div class="error"><%= errors.message.msg %></div>
+                          <% } %>
+                      </div>
                   </div>
-                </div><button type="submit" id="subButt" class="connect__btn btn btn_primary">send message</button>
+                </div><button type="submit" class="connect__btn btn btn_primary">send message</button>
               </div>
             </div>
             <div class="connect__map"><img class="connect__pic" src="images/map.png" alt="">
               <div class="connect__marker">
-                  <div class="connect__circle"></div>
-                  <div class="connect__circle"></div>
-                  <div class="connect__circle"></div>
-                  <div class="connect__circle"></div>
-                </div>
+                <div class="connect__circle"></div>
+                <div class="connect__circle"></div>
+                <div class="connect__circle"></div>
+                <div class="connect__circle"></div>
+              </div>
             </div>
           </div>
         </form>
       </div>
     </div>
-
-    <footer>
-      <nav class="footer-inner">
-        <section class="footer-item">
-          <h1>PRECISION</h1>
-          
-          <h2>Proudly serving the Comox Valley.<br>We also offer our services to: <br> Bowser, Fanny Bay, Buckley Bay,<br> Union Bay, Cumberland, Royston <br> Merville, Black Creek, Campbell River, <br> Hornby Island and Denmand Island, <br> and anywhere else in-between.  <br><b class="color">Please email us with any questions <br> in regards to the locations of our services.</b></h2>
-        </section>
-            
-        <section class="footer-item">
-          <h3>Explore</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#details">Our Team</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="/free-quote">Free Quote</a></li>
-            </ul>
-        </section>
-              
-        <section class="footer-item">
-          <h3>Location</h3>
-            
-            <p class="location">Comox British Columbia,</p>
-            <p class="location">301 Curtis Road, V9M 3W1</p>
-            
-                
-          <h3 class="desktop">Contact Us</h3>
-            <p class="desktop"><a href="mailto:precisionappraisalgroup@shaw.ca ">precisionappraisalgroup@shaw.ca</a></p>
-            <p class="desktop"><a href="tel:1-250-897-5046">250-897-5046</a></p>
-        </section>
-        
-    
-        <!-- <section class="footer-item">
-        
-        </section> -->
-            
-      
-                
-        <section class="footer-item">
-            <a href="/free-quote" class="footer-button">Free Quotes</a>
-        </section>
-      </nav>
-    </footer>
-
+    <div class="footer">
+      <div class="footer__center center">
+        <div class="footer__row"><a class="footer__logo" href="#"><img class="footer__pic" src="images/loggin.png" alt=""></a>
+          <div class="footer__menu"><a class="footer__link js-link" href="#main"> <a class="footer__link js-link" href="#team">home</a>
+              </svg></a><a class="footer__link js-link" href="#services">services</a><a class="footer__link js-link" href="#team">Our Team</a><a class="footer__link" href="#team">Email us</a><a class="footer__link" href="tel:1-250-897-5046">Call Us</a></div><button class="footer__btn btn btn_sm btn_border-white">request a quote</button>
+        </div>
+        <div class="footer__copyright">© Copyright 2020, Power Creative.
+      </div>
+    </div>
   
-    <script>
-      // jump scroll
-        let home = document.getElementById('homee');
-        let services = document.getElementById('servicess');
-        let team = document.getElementById('team');
-        let contact = document.getElementById('con');
-        let contact2 = document.getElementById('con2');
-        let arrow = document.getElementById('arrow');
-        let get = document.getElementById('get');
-        let mainLogo = document.getElementById('mainLogo');
-       
-        // let subButt = document.getElementById('subButt');
+  <script src="/public/javascripts/app.js"></script>
+  <script src="/public/javascripts/common.js"></script>
+  <script src="/public/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-      home.addEventListener('click', () => {
-        Jump('#home')
-      })
-      
-      servicess.addEventListener('click', () => {
-        Jump('#services')
-      })
-      
-      arrow.addEventListener('click', () => {
-        Jump('#contact')
-      })
-      
-      team.addEventListener('click', () => {
-        Jump('#details')
-      })
-      
-      contact.addEventListener('click', () => {
-        Jump('#contact')
-      })
+<script>
+  // jump scroll
+    let home = document.getElementById('homee');
+    let services = document.getElementById('servicess');
+    let teamm = document.getElementById('teamlink');
+    let contact = document.getElementById('con');
+    let contact2 = document.getElementById('con2');
+    let arrow = document.getElementById('arrow');
+    let get = document.getElementById('get');
+    let mainLogo = document.getElementById('mainLogo');
+   
+    // let subButt = document.getElementById('subButt');
 
-      contact2.addEventListener('click', () => {
-        Jump('#contact')
-      })
+  home.addEventListener('click', () => {
+    Jump('#home')
+  })
+  
+  servicess.addEventListener('click', () => {
+    Jump('#services')
+  })
+  
+  arrow.addEventListener('click', () => {
+    Jump('#contact')
+  })
+  
+  teamm.addEventListener('click', () => {
+    Jump('#team')
+  })
+  
+  contact.addEventListener('click', () => {
+    Jump('#contact')
+  })
 
-      get.addEventListener('click', () => {
-        Jump('#contact')
-      })
+  contact2.addEventListener('click', () => {
+    Jump('#contact')
+  })
 
-      mainLogo.addEventListener('click', () => {
-        Jump('#home')
-      })
-      
-      // subButt.addEventListener('click', () => {
-      //   Jump('#subButt')
-      // })
-      
-      </script>
-      
-      <script>
-          // text/element fade effect CDN init
-        AOS.init();
-      </script>
-      <script src="javascripts/main.js"></script>
+  get.addEventListener('click', () => {
+    Jump('#contact')
+  })
+
+  mainLogo.addEventListener('click', () => {
+    Jump('#home')
+  })
+  
+  // subButt.addEventListener('click', () => {
+  //   Jump('#subButt')
+  // })
+  
+  </script>
+
+
+
 </body>
 </html>
