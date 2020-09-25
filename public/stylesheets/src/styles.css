@@ -2629,6 +2629,7 @@ a:hover {
 #quotesub {
   margin-top: 30px;
   width: 100%;
+  -webkit-appearance: none;
   /* display: flex; */
 }
 .getcha-quote {
