@@ -2629,7 +2629,8 @@ a:hover {
   width: 100%;
   -webkit-appearance: none;
   display: flex;
-  
+  justify-content: center;
+  text-align: center;
  
 }
 
