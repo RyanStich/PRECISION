@@ -2580,6 +2580,7 @@ a:hover {
   background-color: transparent;
   color: #d1d1d1;
   -webkit-appearance: none;
+  outline: none;
 }
 
 .input-text:focus {
@@ -2625,7 +2626,7 @@ a:hover {
 
 
 #quotesub {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 100%;
   -webkit-appearance: none;
   display: flex;
