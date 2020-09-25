@@ -17,15 +17,11 @@ exports.home = function (req, res) {
     .withMessage("Please enter your name"),
   body("email")
     .isEmail()
-    .withMessage("Please enter a valid email")
-    .isLength({ min: 1})
-    .withMessage('Please enter your email adress'),
+    .withMessage("Please enter a valid email"),
   body("phone")
     // .optional({checkFalsy: true}) if it was an optional field
     .isNumeric()
-    .withMessage('Invalid phone number')
-    .isLength({ min: 1})
-    .withMessage('Please enter your phone number'),
+    .withMessage('Please enter a valid phone number'),
     body("message")
     .isLength({min: 1})
     .withMessage('Please enter your message'),
@@ -44,6 +40,7 @@ exports.home = function (req, res) {
           delete item.param;
           errorsObj[id] = item;
         });
+     
         // if errors, rerender form 
         if (!errors.isEmpty()) {
           res.render("home", {

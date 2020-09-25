@@ -101,7 +101,7 @@ exports.free_quote_post = [
           console.log("Error! Email was not sent :(");
         });
 
-      res.render("quote", { sent: "Free Appraisal Quote Sent!" });
+      res.render("quote", { sent: "Your Quote Request Was Sent!" });
     }
   },
 ];

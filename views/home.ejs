@@ -64,7 +64,7 @@
                     <div class="skills__icon"><img class="skills__pic" src="/images/glober.png" alt=""></div>
                   </div>
                   <div class="skills__category">residential.</div>
-                  <div class="skills__text">Our fully qualified and designated appraisal staff have completed a countless number of residential appraisals over past 15 years. Single family homes, strata condominiums, acrage properties & much more.</div>
+                  <div class="skills__text">Our fully qualified and designated appraisal staff have completed a countless number of residential appraisals over past 15 years. Single family homes, strata condominiums, acreage properties & much more.</div>
                 </div>
               </div>
               <div class="skills__item">
@@ -154,7 +154,7 @@ Meet Our CEO            </h2>
                   </div>
                   <div class="connect__field field">
                     <div class="field__label">email address*</div>
-                    <div class="field__wrap"><input class="field__input" type="text" name="email" placeholder="Your email here..."></div>
+                    <div class="field__wrap"><input class="field__input" type="text" name="email" placeholder="Your email here..." value="<%= locals.form? form.email : '' %>"></div>
                     <!-- name error message from server side validation -->
                     <% if (locals.errors && errors.email) { %>
                       <div class="error"><%= errors.email.msg %></div>
@@ -162,7 +162,7 @@ Meet Our CEO            </h2>
                   </div>
                   <div class="connect__field field">
                     <div class="field__label">phone number*</div>
-                    <div class="field__wrap"><input class="field__input" type="tel" name="phone" placeholder="Your number here..."></div>
+                    <div class="field__wrap"><input class="field__input" type="tel" name="phone" placeholder="Your number here..." value="<%= locals.form? form.phone : '' %>"></div>
                     <!-- phone error message from server side validation (its an optional field, but it checks that its numeric) -->
                     <% if (locals.errors && errors.phone) { %>
                       <div class="error"><%= errors.phone.msg %></div>

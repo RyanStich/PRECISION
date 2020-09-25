@@ -2639,11 +2639,11 @@ a:hover {
   background-image: linear-gradient(180deg, #373981 0%, #6d7dad 60%);
 }
 
-/*   THIS IS NOT ACTUALLY CENTERED    */
+
 
 #quotesub {
   width: 100%;
-  display: flex;
+  /* display: flex; */
 }
 .getcha-quote {
   margin-top: 10rem;
