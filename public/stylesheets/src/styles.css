@@ -2662,3 +2662,12 @@ a:hover {
 #wtf {
   padding-bottom: 15px;
 }
+
+select {
+  background-color: transparent;
+outline: none;
+  border: none;
+border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 14px;
+}
