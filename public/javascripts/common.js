@@ -160,7 +160,7 @@ var navArrows = ['\n    <svg class="icon icon-arrow-prev">\n        <use xmlns:x
     link.on('click', function (e) {
         // e.preventDefault();
         // var id = $(this).attr('href');
-            // top = $(id).offset().top;
+        //     top = $(id).offset().top;
         // $('body,html').animate({ scrollTop: top }, 1500);
         burger.removeClass('active');
         wrap.removeClass('visible');

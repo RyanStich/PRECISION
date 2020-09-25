@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Precision Appraisal Group - Comox Valley</title>
+    <link rel="shortcut icon" href="images/02.png" type="image/x-icon">
     <link rel="stylesheet" href="stylesheets/src/styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -17,7 +18,7 @@
         <div class="header js-header">
           <div class="header__center center"><a class="header__logo" href="#"><img class="header__pic" id="mainLogo" src="images/loggin.png" alt=""></a>
             <div class="header__wrap js-header-wrap">
-              <nav class="header__nav"><a class="header__link js-link" id="homee" href="#">home</a><a class="header__link js-link" id="servicess" href="#details">services</a><a class="header__link js-link" id="teamlink" href="#team">our team</a><a class="header__link js-link" id="con" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
+              <nav class="header__nav"><a class="header__link js-link" id="homee" href="#">home</a><a class="header__link js-link" id="servicess" href="#services">services</a><a class="header__link js-link" id="teamlink" href="#team">our team</a><a class="header__link js-link" id="con" href="#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
             </div><button class="header__burger js-header-burger"></button>
           </div>
           <div class="header__bg js-header-bg"></div>
@@ -63,7 +64,7 @@
                     <div class="skills__icon"><img class="skills__pic" src="/images/glober.png" alt=""></div>
                   </div>
                   <div class="skills__category">residential.</div>
-                  <div class="skills__text">Our fully qualified and designated appraisal staff have completed a countless number of residential appraisals over past 15 years. single family homes, strata condominiums, acrage properties & more</div>
+                  <div class="skills__text">Our fully qualified and designated appraisal staff have completed a countless number of residential appraisals over past 15 years. Single family homes, strata condominiums, acrage properties & much more.</div>
                 </div>
               </div>
               <div class="skills__item">
@@ -81,7 +82,7 @@
                     <div class="skills__icon"><img class="skills__pic" src="images/legal.png" alt=""></div>
                   </div>
                   <div class="skills__category">Legal / appeal</div>
-                  <div class="skills__text">Whether ordered by a lawyer, accountant, executor or family member, precision appraisal group provides trusted advice and reports to our clients needs during a difficult time</div>
+                  <div class="skills__text">Whether ordered by a lawyer, accountant, executor or family member, precision appraisal group provides trusted advice and reports to our clients needs during a difficult time.</div>
                 </div>
               </div>
             </div>
@@ -91,7 +92,7 @@
       </div>
     </div>
     <div class="details" id="team">
-      <div class="details__center center">
+      <div data-aos="fade-up" class="details__center center">
         <div class="details__item">
           <div class="details__preview"></div>
         </div>
@@ -196,9 +197,9 @@ Meet Our CEO            </h2>
     </div>
     <div class="footer">
       <div class="footer__center center">
-        <div class="footer__row"><a class="footer__logo" href="#"><img class="footer__pic" src="images/loggin.png" alt=""></a>
-          <div class="footer__menu"><a class="footer__link js-link" href="#main"> <a class="footer__link js-link" href="#team">home</a>
-              </svg></a><a class="footer__link js-link" href="#services">services</a><a class="footer__link js-link" href="#team">Our Team</a><a class="footer__link" href="#team">Email us</a><a class="footer__link" href="tel:1-250-897-5046">Call Us</a></div><a href="/free-quote" class="footer__btn btn btn_sm btn_border-white">request a quote</a>
+        <div class="footer__row"><a class="footer__logo" id="logo2" href="#"><img class="footer__pic" src="images/loggin.png" alt=""></a>
+          <div class="footer__menu"><a class="footer__link js-link" href="#main"> <a class="footer__link js-link" id="homie" href="#">home</a>
+              </svg></a><a class="footer__link js-link" id="survices" href="#services">services</a><a class="footer__link js-link" id="teamteam" href="#team">Our Team</a><a class="footer__link" href="mailto:precisionappraisalgroup@shaw.ca">Email us</a><a class="footer__link" href="tel:1-250-897-5046">Call Us</a></div><a href="/free-quote" class="footer__btn btn btn_sm btn_border-white">request a quote</a>
         </div>
         <div class="footer__copyright">© Copyright 2020, Power Creative.
       </div>
@@ -206,7 +207,7 @@ Meet Our CEO            </h2>
   
   <script src="/public/javascripts/app.js"></script>
   <script src="/public/javascripts/common.js"></script>
-  <script src="/public/main.js"></script>
+  <script src="/public/javascripts/main.js"></script>
   <script>
     AOS.init();
   </script>
@@ -214,20 +215,32 @@ Meet Our CEO            </h2>
 <script>
   // jump scroll
     let home = document.getElementById('homee');
+    let homie = document.getElementById('homie');
     let services = document.getElementById('servicess');
-    let teamm = document.getElementById('teamlink');
+    let survices = document.getElementById('survices');
+    let teamm = document.getElementById('teamteam');
+    let teamteam = document.getElementById('teamlink');
     let contact = document.getElementById('con');
     let contact2 = document.getElementById('con2');
     let arrow = document.getElementById('arrow');
     let get = document.getElementById('get');
     let mainLogo = document.getElementById('mainLogo');
+    let logo2 = document.getElementById('logo2');
    
     // let subButt = document.getElementById('subButt');
 
   home.addEventListener('click', () => {
     Jump('#home')
   })
-  
+
+  homie.addEventListener('click', () => {
+    Jump('#home')
+  })
+
+  survices.addEventListener('click', () => {
+    Jump('#services')
+  })
+
   servicess.addEventListener('click', () => {
     Jump('#services')
   })
@@ -239,7 +252,11 @@ Meet Our CEO            </h2>
   teamm.addEventListener('click', () => {
     Jump('#team')
   })
-  
+
+  teamteam.addEventListener('click', () => {
+    Jump('#team')
+  })
+
   contact.addEventListener('click', () => {
     Jump('#contact')
   })
@@ -255,6 +272,11 @@ Meet Our CEO            </h2>
   mainLogo.addEventListener('click', () => {
     Jump('#home')
   })
+
+  logo2.addEventListener('click', () => {
+    Jump('#home')
+  })
+  
   
   // subButt.addEventListener('click', () => {
   //   Jump('#subButt')

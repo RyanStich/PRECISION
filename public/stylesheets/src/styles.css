@@ -109,7 +109,7 @@ a.btn {
 }
 
 .btn_primary {
-  background: rgba(24, 24, 24, 0.9);
+  background: rgba(10, 10, 10, 0.9);
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
@@ -129,17 +129,9 @@ a.btn {
   left: 0;
   right: 0;
   z-index: 20;
-  padding: 25px 0;
+  padding: 15px 0;
 }
-/*
-  .header-onscroll
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    padding: 48px 0;
-    */
+
 
 .header__center {
   display: -webkit-box;
@@ -680,7 +672,7 @@ a.btn {
 
 .skills__icon .skills__pic {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .skills__category {
@@ -1860,6 +1852,10 @@ a:hover {
   .title {
     font-size: 44px;
   }
+  .skills {
+    padding-bottom: 0px;
+  }
+  
   .skills__row {
     display: block;
     margin: 0;
@@ -1872,7 +1868,7 @@ a:hover {
     margin-bottom: 32px;
   }
   .skills__title {
-    margin: 0;
+    margin: 35px 0 0 0;
   }
   .skills__link {
     display: none;
@@ -2469,12 +2465,12 @@ a:hover {
     left: auto;
   }
   .error {
-    color: rgb(138, 0, 0);
+    color: #fff;
   }
 
   .sent {
     margin-top: 15px;
-    color: rgb(138, 0, 0);
+    color: #fff;
   }
   .details__wrap {
     width: auto;
@@ -2665,9 +2661,13 @@ a:hover {
 
 select {
   background-color: transparent;
-outline: none;
+  outline: none;
   border: none;
-border: 1px solid #ffffff;
+  border: 1px solid #d1d1d1;
   color: #ffffff;
   font-size: 14px;
+}
+
+.the-title {
+  margin-top: 8rem;
 }
