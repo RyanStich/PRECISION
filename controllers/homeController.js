@@ -74,7 +74,7 @@ exports.home = function (req, res) {
           // step 2
           let mailOptions = {
             from: process.env.EMAIL,
-            to: "jacksonmayhew9@gmail.com", // 'precisionappraisalgroup@shaw.ca' WHEN READY FOR DEPLOYMENT
+            to: process.env.SENDTO, // 'precisionappraisalgroup@shaw.ca' WHEN READY FOR DEPLOYMENT
             subject: "Contact Request",
             html: output,
           };

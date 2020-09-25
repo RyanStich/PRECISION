@@ -2630,8 +2630,11 @@ a:hover {
   margin-top: 30px;
   width: 100%;
   -webkit-appearance: none;
-  /* display: flex; */
+  display: flex;
+  
+ 
 }
+
 .getcha-quote {
   margin-top: 10rem;
 }
