@@ -1,8 +1,6 @@
-var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
 require("dotenv").config();
 const { body, sanitizeBody, validationResult, Result } = require("express-validator");
-
 
 // get home page
 exports.home = function (req, res) {
@@ -17,11 +15,11 @@ exports.home = function (req, res) {
     .withMessage("Please enter your name"),
   body("email")
     .isEmail()
-    .withMessage("Please enter a valid email"),
+    .withMessage("Invalid email address"),
   body("phone")
     // .optional({checkFalsy: true}) if it was an optional field
     .isNumeric()
-    .withMessage('Please enter a valid phone number'),
+    .withMessage('Invalid phone number'),
     body("message")
     .isLength({min: 1})
     .withMessage('Please enter your message'),

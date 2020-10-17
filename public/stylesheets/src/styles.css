@@ -126,14 +126,19 @@ a.btn {
 
 .header {
   position: fixed;
-  background: rgba(10, 10, 10, 0.9);
+  background: rgb(39, 39, 39);
+
   top: 0;
   left: 0;
   right: 0;
   z-index: 20;
-  padding: 18px 0;
+  padding: 20px 0;
 }
 
+/* .header a {
+  color: black;
+
+} */
 
 .header__center {
   display: -webkit-box;
@@ -292,7 +297,7 @@ a.btn {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  min-height: 852px;
+  min-height: 800px;
   padding-top: 168px;
   padding-bottom: 128px;
   text-align: center;
@@ -305,7 +310,7 @@ a.btn {
 
 .main__title {
   margin-bottom: 48px;
-  font-size: 128px;
+  font-size: 100px;
   font-weight: 900;
   text-transform: uppercase;
   line-height: 0.9375;
@@ -495,7 +500,7 @@ a.btn {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   height: 338px;
-  background: url("../img/polygon.svg") no-repeat 100% 0/100% auto;
+  /* background: url("../img/polygon.svg") no-repeat 100% 0/100% auto; */
 }
 
 .skills__head {
@@ -2657,12 +2662,20 @@ a:hover {
   margin-top: 10rem;
 }
 #theText {
-  min-height: 150px;
-  max-height: 300px;
+  min-height: 200px;
+  max-height: 200px;
   max-width: 100%;
   min-width: 100%;
   outline: none;
+  resize: none;
+  padding-right: 3%;
+  overflow: overlay;
 }
+
+#theText p {
+  color: red;
+}
+
 #wtf {
   padding-bottom: 15px;
 }

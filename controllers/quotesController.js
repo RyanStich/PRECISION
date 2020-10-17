@@ -1,7 +1,5 @@
-var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
 require("dotenv").config();
-const validator = require("express-validator");
 const { body, sanitizeBody, validationResult, Result} = require("express-validator");
 
 // get free quote
@@ -15,12 +13,10 @@ exports.free_quote_post = [
     .isLength({ min: 1 })
     .trim()
     .withMessage("Please enter your name"),
-  body("email").isEmail().withMessage("Please enter a valid email"),
+  body("email").isEmail().withMessage("Invalid email address"),
   body("phone")
-    // .optional({ checkFalsy: true })
     .isNumeric()
-    .withMessage("Please enter a valid phone number"),
-  // body("unit").optional(),
+    .withMessage("Invalid phone number"),
   body("address")
     .isLength({ min: 1 })
     .trim()
@@ -47,7 +43,6 @@ exports.free_quote_post = [
       res.render("quote", {
         form: req.body,
         errors: errorsObj,
-        // errors.array(),
         selected: req.body.propertyType,
         selected2: req.body.purpose,
       });
@@ -68,7 +63,6 @@ exports.free_quote_post = [
           <li>Postal Code: ${req.body.postal}</li>
           <li>Type of Property: ${req.body.propertyType}</li>
           <li>Purpose of Appraisal: ${req.body.purpose}</li>
-  
         </ul>
           <h3>Additional Information:</h3>
         <p> ${req.body.info}</p>
@@ -100,7 +94,6 @@ exports.free_quote_post = [
         .catch(function (error) {
           console.log("Error! Email was not sent :(");
         });
-
       res.render("quote", { sent: "Your Quote Request Was Sent!" });
     }
   },

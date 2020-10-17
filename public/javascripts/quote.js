@@ -1,6 +1,3 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-
-    $('.js-input').addClass('not-empty');
-
+window.addEventListener("DOMContentLoaded", (event) => {
+  $(".js-input").addClass("not-empty");
 });
-

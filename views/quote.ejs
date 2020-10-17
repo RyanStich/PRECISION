@@ -1,182 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/src/styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/house.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/src/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/house.png" type="image/x-icon" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <title>Precision Appraisal Group - Comox Valley - Free Quote</title>
-</head>
-<body class="poo">
+    <title>Precision Appraisal Group - Comox Valley - Free Quote - Real Estate Appraisals</title>
+  </head>
+  <body class="poo">
     <div class="header js-header">
-        <div class="header__center center"><a class="header__logo" id="mainLogo" href="/"><img class="header__pic" src="images/loggin.png" alt=""></a>
-          <div class="header__wrap js-header-wrap">
-            <nav class="header__nav"><a class="header__link js-link" id="homee" href="/">home</a><a class="header__link js-link" id="servicess" href="/#services">services</a><a class="header__link js-link" id="team" href="/#team">our team</a><a class="header__link js-link contact" id="con" href="/#contact">contact</a><a class="header__link js-link" href="/free-quote">free quote</a></nav>
-          </div><button class="header__burger js-header-burger"></button>
+      <div class="header__center center">
+        <a class="header__logo" id="mainLogo" aria-label="Link to homepage" href="/"
+          ><img class="header__pic" src="images/loggin.png" alt="Precison Appraisal Groups Logo"
+        /></a>
+        <div class="header__wrap js-header-wrap">
+          <nav class="header__nav">
+            <a class="header__link js-link" id="homee" aria-label="Link to homepage" href="/">home</a
+            ><a class="header__link js-link" id="servicess" aria-label="Link to services section" href="/#services"
+              >services</a
+            ><a class="header__link js-link" id="team" aria-label="Link to team section" href="/#team">our team</a
+            ><a class="header__link js-link contact" id="con" aria-label="Link to contact section" href="/#contact"
+              >contact</a
+            ><a class="header__link js-link" aria-label="Link to free quote" href="/free-quote">free quote</a>
+          </nav>
         </div>
-        <div class="header__bg js-header-bg"></div>
+        <button aria-label="Mobile menu button" class="header__burger js-header-burger"></button>
       </div>
+      <div class="header__bg js-header-bg"></div>
+    </div>
 
+    <section data-aos="fade-up" data-aos-delay="300" class="get-in-touch">
+      <p class="the-title title">
+        Get a free <br />
+        quote
+      </p>
+      <div class="sentty"><%= locals.sent %></div>
+      <form method="POST" class="contact-form row">
+        <div class="form-field col x-100">
+          <input
+            name="name"
+            id="name"
+            class="input-text js-input"
+            type="text"
+            value="<%= locals.form? form.name : '' %>"
+          />
+          <label class="label" for="name">Name*</label>
+        </div>
+        <% if (locals.errors && errors.name) { %>
+        <div class="error2"><%= errors.name.msg %></div>
+        <% } %>
 
-    <section data-aos="fade-up" data-aos-delay="300"  class="get-in-touch">
-        <p class="the-title title">
-            Get a free <br />
-            quote
-          </p>
-          <div class="sentty"><%= locals.sent %></div>
-        <form method="POST" class="contact-form row">
+        <div class="form-field col x-100">
+          <input
+            name="email"
+            id="email"
+            class="input-text js-input"
+            type="text"
+            value="<%= locals.form? form.email : '' %>"
+          />
+          <label class="label" for="email">Email*</label>
+        </div>
 
+        <% if (locals.errors && errors.email) { %>
+        <div class="error2"><%= errors.email.msg %></div>
+        <% } %>
 
-           <div class="form-field col x-100">
-              <input
-              name="name"
-              id="name"
-              class="input-text js-input"
-              type="text" 
-              value="<%= locals.form? form.name : '' %>">
-              <label class="label" for="name">Name*</label>
-             
-            </div>
-            <% if (locals.errors && errors.name) { %>
-            <div class="error2"><%= errors.name.msg %></div>
-            <% } %>
-        
-
-           <div class="form-field col x-100">
-              <input
-              name="email"
-              id="email"
-              class="input-text js-input"
-              type="text"
-              value="<%= locals.form? form.email : '' %>">
-              <label class="label" for="email">Email*</label>
-           </div>
-
-           <% if (locals.errors && errors.email) { %>
-            <div class="error2"><%= errors.email.msg %></div>
-            <% } %>
-
-           <div class="form-field col x-100">
-            <input
+        <div class="form-field col x-100">
+          <input
             name="phone"
             id="phone"
             class="input-text js-input"
             type="tel"
-            value="<%= locals.form? form.phone : '' %>">
-            <label class="label" for="phone">Phone*</label>
-         </div>
+            value="<%= locals.form? form.phone : '' %>"
+          />
+          <label class="label" for="phone">Phone*</label>
+        </div>
 
-         <% if (locals.errors && errors.phone) { %>
-            <div class="error2"><%= errors.phone.msg %></div>
-            <% } %>
+        <% if (locals.errors && errors.phone) { %>
+        <div class="error2"><%= errors.phone.msg %></div>
+        <% } %>
 
-         <div class="form-field col x-100">
-            <input
+        <div class="form-field col x-100">
+          <input
             name="address"
             id="address"
             class="input-text js-input"
             type="text"
-            value="<%= locals.form? form.address : '' %>">
-            <label class="label" for="address">Address*</label>
-         </div>
+            value="<%= locals.form? form.address : '' %>"
+          />
+          <label class="label" for="address">Address*</label>
+        </div>
 
-         <% if (locals.errors && errors.address) { %>
-            <div class="error2"><%= errors.address.msg %></div>
-            <% } %>
+        <% if (locals.errors && errors.address) { %>
+        <div class="error2"><%= errors.address.msg %></div>
+        <% } %>
 
-         <div class="form-field col x-100">
-            <input
+        <div class="form-field col x-100">
+          <input
             name="postal"
             id="postal"
             class="input-text js-input"
             type="text"
-            value="<%= locals.form? form.postal : '' %>">
-            <label class="label" for="postal">Postal Code</label>
-         </div>
+            value="<%= locals.form? form.postal : '' %>"
+          />
+          <label class="label" for="postal">Postal Code</label>
+        </div>
 
+        <div class="form-field col x-100">
+          <select class="custom-select" id="types" name="propertyType">
+            <option value="Family Home">Family Home</option>
+            <option value="Building Lot / Acreage">
+              Building Lot / Acreage
+            </option>
+            <option value="Condo / Appartment">Condo / Appartment</option>
+            <option value="Duplex">Duplex</option>
+            <option value="Townhouse / Patio home">Townhouse / Patio home</option>
+            <option value="Other">Other</option>
+          </select>
+          <label class="label" id="type" for="propertyType"
+            >Type Of Property*</label
+          >
+        </div>
 
-         <div class="form-field col x-100">
-            <select class="custom-select" id="types" name="propertyType">
-                <option value="Family Home">Family Home</option>
-                <option value="Building Lot / Acreage">Building Lot / Acreage</option>
-                <option value="Condo / Appartment">Condo / Appartment</option>
-                <option value="Duplex">Duplex</option>
-                <option value="Co-op">Co-op (Owned)</option>
-                <option value="Other">Other</option>
-              </select>
-            <label class="label" id="type" for="propertyType">Type Of Property*</label>
-         </div>
+        <div class="form-field col x-100">
+          <select class="custom-select" id="purpose" name="purpose">
+            <option value="Purchase">Purchase</option>
+            <option value="For Sale / Pre-listing / Market Value">
+              For Sale / Pre-listing / Market Value
+            </option>
+            <option value="Estate / Probate/ Will">
+              Estate / Probate / Will
+            </option>
+            <option value="Market Rent">Market Rent</option>
+            <option value="Mortgage Financing">Mortgage Financing</option>
+            <option value="Division of Assests">Division of Assets</option>
+            <option value="Litigation">Litigation</option>
+            <option value="Capital Gains">Capital Gains</option>
+            <option value="Other">Other</option>
+          </select>
+          <label class="label" id="purp" for="purpose"
+            >Purpose Of Appraisal*</label
+          >
+        </div>
 
+        <div class="form-field col x-100">
+          <label class="l" for="info">Additional Information:</label>
+          <textarea class="input-text js-input" name="info" id="info">
+<%= locals.form? form.info : '' %></textarea
+          >
+        </div>
 
-         <div class="form-field col x-100">
+        <div class="form-field col x-100 align-center">
+          <input
+            aria-label="Sumbit form"
+            class="main__btn btn btn_primary"
+            id="quotesub"
+            type="submit"
+            value="Submit"
+          />
+        </div>
+      </form>
+    </section>
 
-            <select class="custom-select" id="purpose" name="purpose">
-              <option value="Insurance">Insurance Appraisal</option>
-              <option value="Purchase">Purchase</option>
-              <option value="For Sale / Pre-listing / Market Value">For Sale / Pre-listing / Market Value</option>
-              <option value="Estate / Probate/ Will">Estate / Probate / Will</option>
-              <option value="Market Rent">Market Rent</option>
-              <option value="Mortgage Financing">Mortgage Financing</option>
-              <option value="Division of Assests">Division of Assets</option>
-              <option value="Litigation">Litigation</option>
-              <option value="Capital Gains">Capital Gains</option>
-              <option value="Depreciation Report">Depreciation Report</option>
-              <option value="Other">Other</option>
-              </select>
-            <label class="label" id="purp" for="purpose">Purpose Of Appraisal*</label>
-         </div>
+    <% if (locals.errors) { %>
+    <!-- save selected options  -->
+    <script>
+      var selectedInput = "<%= selected %>";
+      var options = document.querySelector('[name="propertyType"]');
+      for (var i = 0; i < options.length; i++) {
+        if (selectedInput === options[i].value) {
+          options[i].selected = "selected";
+          break;
+        }
+      }
+      var selectedInput2 = "<%= selected2 %>";
+      var options = document.querySelector('[name="purpose"]');
+      for (var i = 0; i < options.length; i++) {
+        if (selectedInput2 === options[i].value) {
+          options[i].selected = "selected";
+          break;
+        }
+      }
+    </script>
+    <% } %>
+    <script src="/public/javascripts/app.js"></script>
+    <script src="/public/javascripts/common.js"></script>
+    <script src="javascripts/quote.js"></script>
+    <script>
+      AOS.init();
+    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
-
-         <div class="form-field col x-100">
-              <label class="l" for="info">Additional Information:</label>
-            <textarea class="input-text js-input" name="info" id="info"><%= locals.form? form.info : '' %></textarea> 
-           
-         </div>
-
-         
-
-           <div class="form-field col x-100 align-center">
-              <input class="main__btn btn btn_primary" id="quotesub" type="submit" value="Submit">
-           </div>
-
-        </form>
-     </section>
-
-     <% if (locals.errors) { %>
-        <!-- save selected options  -->
-        <script>
-          var selectedInput = "<%= selected %>";
-          var options = document.querySelector('[name="propertyType"]');
-          for (var i = 0; i < options.length; i++) {
-            if (selectedInput === options[i].value) {
-              options[i].selected = "selected";
-              break;
-            }
-          }
-          var selectedInput2 = "<%= selected2 %>";
-          var options = document.querySelector('[name="purpose"]');
-          for (var i = 0; i < options.length; i++) {
-            if (selectedInput2 === options[i].value) {
-              options[i].selected = "selected";
-              break;
-            }
-          }
-        </script>
-        <% } %>
-
-
-
-
-
-
-<script src="/public/javascripts/app.js"></script>
-<script src="/public/javascripts/common.js"></script>
-<script src="javascripts/quote.js"></script>
-<script>
-  AOS.init();
-</script>
-</body>
+  </body>
 </html>
