@@ -18,6 +18,15 @@ html.no-scroll {
   overflow: hidden;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff;
+    caret-color: #fff;
+}
+
 body {
   min-width: 375px;
   font-family: "Montserrat", sans-serif;
@@ -48,6 +57,10 @@ body.no-scroll {
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+button {
+  outline: none;
 }
 
 a.btn {
@@ -111,7 +124,7 @@ a.btn {
 }
 
 .btn_primary {
-  background: rgba(10, 10, 10, 0.9);
+  background: rgba(10, 10, 10, 0.7);
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
@@ -125,20 +138,21 @@ a.btn {
 }
 
 .header {
-  position: fixed;
- 
+  /* position: fixed; */
+
 
   top: 0;
   left: 0;
   right: 0;
+  height: 100px;
   z-index: 20;
   padding: 20px 0;
 }
 
-/* .header a {
-  color: black;
-
-} */
+.header a {
+z-index: 21;
+text-align: center;
+}
 
 .header__center {
   display: -webkit-box;
@@ -297,7 +311,7 @@ a.btn {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  min-height: 800px;
+  min-height: 200px;
   padding-top: 168px;
   padding-bottom: 128px;
   text-align: center;
@@ -1466,6 +1480,7 @@ a:hover {
 }
 
 @media only screen and (min-width: 1930px) {
+ 
   .skills {
     padding-bottom: 300px;
   }
@@ -1648,9 +1663,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 1199px) {
-  .header {
-    padding: 18px 0;
-  }
+
   .header__link:not(:last-child) {
     margin-right: 40px;
   }
@@ -1660,7 +1673,8 @@ a:hover {
   }
 
   .main__center {
-    padding-top: 150px;
+    padding-top: 80px;
+
   }
   .main__title {
     font-size: 84px;
@@ -2053,7 +2067,8 @@ a:hover {
   .main__center {
     display: block;
     min-height: auto;
-    padding: 136px 0 70px;
+    padding: 70px 0 120px;
+    /* padding-bottom: 100px;padding: 136px 0 70px; */
   }
   .main__title {
     margin-bottom: 24px;
@@ -2072,6 +2087,7 @@ a:hover {
     display: block;
     max-width: 300px;
     margin: 0 auto;
+    
   }
   .main__btn {
     min-width: 100%;
@@ -2655,7 +2671,7 @@ a:hover {
   display: flex;
   justify-content: center;
   text-align: center;
- 
+ outline: none;
 }
 
 .getcha-quote {

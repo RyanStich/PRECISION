@@ -169,3 +169,88 @@ var navArrows = ['\n    <svg class="icon icon-arrow-prev">\n        <use xmlns:x
 })();
 
 AOS.init();
+
+
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    $(".js-input").addClass("not-empty");
+  });
+
+// stop 'confirm form resubmission'
+if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
+
+ // jump scroll
+ let home = document.getElementById('homee');
+ let homie = document.getElementById('homie');
+ let services = document.getElementById('servicess');
+ let survices = document.getElementById('survices');
+ let teamm = document.getElementById('teamteam');
+ let teamteam = document.getElementById('teamlink');
+ let contact = document.getElementById('con');
+ let contact2 = document.getElementById('con2');
+ let arrow = document.getElementById('arrow');
+ let get = document.getElementById('get');
+ let mainLogo = document.getElementById('mainLogo');
+ let logo2 = document.getElementById('logo2');
+
+home.addEventListener('click', () => {
+ Jump('#home')
+ event.preventDefault();
+})
+
+homie.addEventListener('click', () => {
+ Jump('#home')
+ event.preventDefault();
+})
+
+survices.addEventListener('click', () => {
+ Jump('#services')
+ event.preventDefault();
+})
+
+servicess.addEventListener('click', () => {
+ Jump('#services')
+ event.preventDefault();
+})
+
+arrow.addEventListener('click', () => {
+ Jump('#contact')
+ event.preventDefault();
+})
+
+teamm.addEventListener('click', () => {
+ Jump('#team')
+ event.preventDefault();
+})
+
+teamteam.addEventListener('click', () => {
+ Jump('#team')
+ event.preventDefault();
+})
+
+contact.addEventListener('click', () => {
+ Jump('#contact')
+ event.preventDefault();
+})
+
+contact2.addEventListener('click', () => {
+ Jump('#contact')
+ event.preventDefault();
+})
+
+get.addEventListener('click', () => {
+ Jump('#contact')
+ event.preventDefault();
+})
+
+mainLogo.addEventListener('click', () => {
+ Jump('#home')
+ event.preventDefault();
+})
+
+logo2.addEventListener('click', () => {
+ Jump('#home')
+ event.preventDefault();
+})

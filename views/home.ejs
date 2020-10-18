@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Precision Appraisal Group - Comox Valley - Real Estate Appraisals</title>
     <link rel="shortcut icon" href="images/house.png" type="image/x-icon">
-    <link rel="stylesheet" href="stylesheets/src/styles.css" />
+    <link rel="stylesheet" href="stylesheets/dist/styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>
@@ -56,6 +56,7 @@
         <div class="skills__body">
           <div class="skills__center center">
             <div class="skills__list js-owl" data-items-mobile-portrait="1" data-items-mobile-album="1" data-autoheight>
+
               <div class="skills__item">
                 <div class="skills__details">
                   <div class="skills__preview" >
@@ -71,10 +72,22 @@
                   <div class="skills__preview">
                     <div class="skills__icon"><img class="skills__pic" src="images/legal.webp" alt="Small icon of a legal folder"></div>
                   </div>
-                  <div class="skills__category">Legal / Appeal</div>
+                  <div class="skills__category">Legal assignments</div>
                   <div class="skills__text">Whether ordered by a lawyer, accountant, bank, family member or yourself, Precision Appraisal Group provides trusted advice and reports to satisfy our clients' needs.</div>
                 </div>
               </div>
+
+              <div class="skills__item">
+                <div class="skills__details">
+                  <div class="skills__preview" >
+                    <div class="skills__icon"><img class="skills__pic" src="/images/glober.webp" alt="Small icon of a globe"></div>
+                  </div>
+                  <div class="skills__category">Appeal assignments</div>
+                  <div class="skills__text">Our fully qualified and designated appraisal staff have completed a countless number of residential appraisals over the past 7 years. Single family homes, town homes, acreage properties & more.</div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -99,8 +112,8 @@
               Mike began his professional career as a Canadian Military Search and Rescue helicopter pilot. Upon retiring from this rewarding experience, 
               Mike began his appraisal career in 2006 with a strong background in business (BCom) and a Post Graduate Certificate in Real Property Valuation from UBC.
             </div>
-            <a class="details__more" id="get" aria-label="Link to contact section" href="#contact"
-              >Get in contact<svg class="icon icon-arrow-right">
+            <a class="details__more" id="get" aria-label="Link to quote page" href="/free-quote"
+              >Request a quote<svg class="icon icon-arrow-right">
                 <use xlink:href="images/sprite.svg#icon-arrow-right"></use></svg></a>
           </div>
           <div class="details__preview">
@@ -134,31 +147,31 @@
               <div class="connect__box">
                 <div class="connect__fieldset">
                   <div  class="connect__field field">
-                    <label for="name" class="field__label">full name*</label>
-                    <div class="field__wrap"><input class="field__input" type="text" id="name" name="name" value="<%= locals.form? form.name : '' %>"></div>
+                    <label for="name" class="field__label">full name*
+                    <div class="field__wrap"><input class="field__input" type="text" id="name" name="name" value="<%= locals.form? form.name : '' %>"></label>  </div>
                    <% if (locals.errors && errors.name) { %>
                     <div class="error"><%= errors.name.msg %></div>
                     <% } %>
                   </div>
                   <div class="connect__field field">
-                    <label for="email" class="field__label">email address*</label>
-                    <div class="field__wrap"><input class="field__input" type="text" name="email" value="<%= locals.form? form.email : '' %>"></div>
+                    <label for="email" class="field__label">email address*
+                    <div class="field__wrap"><input class="field__input" type="text" name="email" value="<%= locals.form? form.email : '' %>"> </label>  </div>
                     <% if (locals.errors && errors.email) { %>
                       <div class="error"><%= errors.email.msg %></div>
                       <% } %>
                   </div>
                   
                   <div class="connect__field field">
-                    <label for="phone" class="field__label">phone number*</label>
-                    <div class="field__wrap"><input class="field__input" type="tel" name="phone"  value="<%= locals.form? form.phone : '' %>"></div>
+                    <label for="phone" class="field__label">phone number*
+                    <div class="field__wrap"><input class="field__input" type="tel" name="phone"  value="<%= locals.form? form.phone : '' %>"></label>   </div>
                     <% if (locals.errors && errors.phone) { %>
                       <div class="error"><%= errors.phone.msg %></div>
                       <% } %>
                   </div>
                   
                       <div class="connect__field field">
-                        <label for="message" class="field__label" id="wtf">your message*</label>
-                        <div class="field__wrap"><textarea class="field__input" id="theText" type="text" name="message"><%= locals.form? form.message : '' %></textarea>
+                        <label for="message" class="field__label" id="wtf">your message*
+                        <div class="field__wrap"><textarea class="field__input" id="theText" type="text" name="message"><%= locals.form? form.message : '' %></textarea></label>
                        
                         <% if (locals.errors && errors.message) { %>
                           <div class="error"><%= errors.message.msg %></div>
@@ -186,79 +199,12 @@
           <div class="footer__menu"><a class="footer__link js-link" aria-label="Link to home section" href="#main"><a class="footer__link js-link" aria-label="Link to home section" id="homie" href="#">home</a>
               </svg></a><a class="footer__link js-link" id="survices" aria-label="Link to services section" href="#services">services</a><a class="footer__link js-link" id="teamteam" aria-label="Link to team section" href="#team">Our Team</a><a class="footer__link" aria-label="Link to email us" href="mailto:precisionappraisalgroup@shaw.ca">Email us</a><a class="footer__link" aria-label="Link to call us" href="tel:1-250-897-5046">Call Us</a></div><a href="/free-quote" aria-label="Link to quote page" class="footer__btn btn btn_sm btn_border-white">request a quote</a>
         </div>
-        <div class="footer__copyright">© Copyright 2020, Our Name.
+        <div class="footer__copyright">© Copyright 2020, Power Creative.
       </div>
     </div>
   
   <script src="/public/javascripts/app.js"></script>
   <script src="/public/javascripts/common.js"></script>
-  <script src="/public/javascripts/main.js"></script>
-
-
-<script>
-  // jump scroll
-    let home = document.getElementById('homee');
-    let homie = document.getElementById('homie');
-    let services = document.getElementById('servicess');
-    let survices = document.getElementById('survices');
-    let teamm = document.getElementById('teamteam');
-    let teamteam = document.getElementById('teamlink');
-    let contact = document.getElementById('con');
-    let contact2 = document.getElementById('con2');
-    let arrow = document.getElementById('arrow');
-    let get = document.getElementById('get');
-    let mainLogo = document.getElementById('mainLogo');
-    let logo2 = document.getElementById('logo2');
-
-  home.addEventListener('click', () => {
-    Jump('#home')
-  })
-
-  homie.addEventListener('click', () => {
-    Jump('#home')
-  })
-
-  survices.addEventListener('click', () => {
-    Jump('#services')
-  })
-
-  servicess.addEventListener('click', () => {
-    Jump('#services')
-  })
-  
-  arrow.addEventListener('click', () => {
-    Jump('#contact')
-  })
-  
-  teamm.addEventListener('click', () => {
-    Jump('#team')
-  })
-
-  teamteam.addEventListener('click', () => {
-    Jump('#team')
-  })
-
-  contact.addEventListener('click', () => {
-    Jump('#contact')
-  })
-
-  contact2.addEventListener('click', () => {
-    Jump('#contact')
-  })
-
-  get.addEventListener('click', () => {
-    Jump('#contact')
-  })
-
-  mainLogo.addEventListener('click', () => {
-    Jump('#home')
-  })
-
-  logo2.addEventListener('click', () => {
-    Jump('#home')
-  })
-  
-</script>
 
 
 </body>
