@@ -172,9 +172,7 @@ AOS.init();
 
 
 
-window.addEventListener("DOMContentLoaded", (event) => {
-    $(".js-input").addClass("not-empty");
-  });
+
 
 // stop 'confirm form resubmission'
 if (window.history.replaceState) {

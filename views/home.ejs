@@ -3,21 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <title>Precision Appraisal Group - Comox Valley - Real Estate Appraisals</title>
+    <!-- <link rel="preload" href="../public/stylesheets/src/fonts/Montserrat-UltraLight.woff" as="font" crossorigin="anonymous" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Precision Appraisal Group has been providing accurate real estate appraisals to clients in the Comox Valle since 2013.">
+    <meta name="description" content="Precision Appraisal Group has been providing accurate real estate appraisals to clients in the Comox Valley since 2013.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="theme-color" content="#ff0000">
+    <meta name="theme-color" content="#141414">
     <link rel="shortcut icon" href="images/house.png" type="image/x-icon">
-    <link rel="stylesheet" href="stylesheets/dist/styles.css" />
+    <link rel="stylesheet" href="stylesheets/styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script> -->
   </head>
   <body>
     <div class="page">
       <div class="main" id="home">
         <div class="header js-header">
-          <div class="header__center center"><a class="header__logo" aria-label="Link to home section" href="#"><img class="header__pic" id="mainLogo" src="images/loggin.png" alt=""></a>
+          <div class="header__center center"><a class="header__logo" aria-label="Link to home section" href="#">
+            <picture>
+              <source class="header__pic" id="mainLogo" srcset="images/logo.webp" type="image/webp">
+              <source class="header__pic" id="mainLogo" srcset="images/logo.png" type="image/png">
+              <img class="header__pic" id="mainLogo" src="images/logo.png" alt="Precision Appraisal Groups logo">
+            </picture>
+            </a>
             <div class="header__wrap js-header-wrap">
               <nav class="header__nav"><a class="header__link js-link" id="homee" aria-label="Link to home section" href="#">home</a><a class="header__link js-link" id="servicess" aria-label="Link to services section" href="#services">services</a><a class="header__link js-link" id="teamlink" aria-label="Link to team section" href="#team">our team</a><a class="header__link js-link" id="con" aria-label="Link to contact section" href="#contact">contact</a><a class="header__link js-link" aria-label="Link to quote page" href="/free-quote">free quote</a></nav>
             </div><button class="header__burger js-header-burger" aria-label="Open mobile menu"></button>
@@ -28,7 +35,7 @@
           <div data-aos="fade-up" class="main__wrap">
             <h1 class="main__title" data-aos="animation-scale-x">PRECISION<br>APPRAISAL GROUP</h1>
             <div class="main__info" data-aos="animation-scale-x" data-aos-delay="200">Proudly Serving The Comox Valley Since 2013 </div>
-            <div class="main__btns" data-aos="animation-scale-x" data-aos-delay="400"><a href="/free-quote" aria-label="Link to quote page" class="main__btn btn btn_primary">Free Quote</a><a href="#contact" id="con2" aria-label="Link to contact section" class="main__btn btn btn_secondary">Contact Us</a></div>
+            <div class="main__btns" data-aos="animation-scale-x" data-aos-delay="400"><a href="/free-quote" aria-label="Link to quote page" class="main__btn btn btn_primary free">Free Quote</a><a href="#contact" id="con2" aria-label="Link to contact section" class="main__btn btn btn_secondary">Contact Us</a></div>
           </div>
         </div>
         <div class="main__circles">
@@ -62,8 +69,14 @@
 
               <div class="skills__item">
                 <div class="skills__details">
-                  <div class="skills__preview" >
-                    <div class="skills__icon"><img class="skills__pic" src="/images/glober.png" alt="Small icon of a globe"></div>
+                  <div class="skills__preview">
+                    <div class="skills__icon">
+                      <picture>
+                        <source class="skills__pic" srcset="images/glober.webp" type="image/webp">
+                        <source class="skills__pic" srcset="images/glober.png" type="image/png">
+                         <img class="skills__pic" src="images/glober.png" alt="Small icon of a globe">
+                      </picture>
+                     </div>
                   </div>
                   <div class="skills__category">residential</div>
                   <div class="skills__text">Our fully qualified and designated appraisal staff have completed a countless number of residential appraisals over the past 7 years. Single family homes, town homes, acreage properties & more.</div>
@@ -73,7 +86,13 @@
               <div class="skills__item">
                 <div class="skills__details" >
                   <div class="skills__preview">
-                    <div class="skills__icon"><img class="skills__pic" src="images/legal.png" alt="Small icon of a legal folder"></div>
+                    <div class="skills__icon">
+                      <picture>
+                        <source class="skills__pic" srcset="images/shield.webp" type="image/webp">
+                        <source class="skills__pic" srcset="images/shield.png" type="image/png">
+                         <img class="skills__pic" src="images/shield.png" alt="Small icon of a legal folder">
+                      </picture>
+                    </div>
                   </div>
                   <div class="skills__category">Legal assignments</div>
                   <div class="skills__text">Whether ordered by a lawyer, accountant, bank, family member or yourself, Precision Appraisal Group provides trusted advice and reports to satisfy our clients' needs.</div>
@@ -83,14 +102,20 @@
               <div class="skills__item">
                 <div class="skills__details">
                   <div class="skills__preview" >
-                    <div class="skills__icon"><img class="skills__pic" src="/images/glober.png" alt="Small icon of a globe"></div>
+                    <div class="skills__icon">
+                      <picture>
+                        <source class="skills__pic" srcset="/images/legal.webp" type="image/webp">
+                        <source class="skills__pic" srcset="/images/legal.png" type="image/png">
+                        <img class="skills__pic" src="/images/legal.png" alt="Small icon of a globe">
+                      </picture>
+                    </div>
                   </div>
                   <div class="skills__category">Appeal assignments</div>
                   <div class="skills__text">Our fully qualified and designated appraisal staff have completed a countless number of residential appraisals over the past 7 years. Single family homes, town homes, acreage properties & more.</div>
                 </div>
               </div>
 
-
+           
             </div>
           </div>
         </div>
@@ -121,15 +146,22 @@
           </div>
           <div class="details__preview">
             <div class="details__photo">
-              <img class="details__pic" src="images/Miker.png" alt="Portait of Mike, the company owner. Portait is taken outside, with mountains in the background." />
+              <picture>
+                <source class="details__pic" srcset="/images/Miker.webp" type="image/webp">
+                <source class="details__pic" srcset="/images/Miker.png" type="image/png">
+                <img class="details__pic" src="images/Miker.png" alt="Portait of Mike, the company owner. Portait is taken outside, with mountains in the background." />
+              </picture>
             </div>
             <div
               class="details__bg"
               data-aos="animation-custom"
               data-aos-duration="1500"
-              data-aos-offset="0"
-            >
-              <img class="details__pic" src="images/photo-8.png" alt="Background image, mountains, trees and an orange sky." />
+              data-aos-offset="0">
+              <picture>
+                <source srcset="images/photo-8.webp" type="image/webp">
+                <source srcset="images/photo-8.png" type="image/png">
+                <img class="details__pic" src="images/photo-8.png" alt="Background image, mountains, trees and an orange sky." />
+              </picture>
             </div>
           </div>
         </div>
@@ -181,16 +213,21 @@
                           <% } %>
                       </div>
                   </div>
-                </div><button type="submit" aria-label="Send message" class="connect__btn btn btn_primary">send message</button>
+                </div><button type="submit" aria-label="Send message" id="sendIt" class="connect__btn btn btn_primary">send message</button>
               </div>
             </div>
-            <div class="connect__map"><img class="connect__pic" src="images/map.png" alt="">
-              <div class="connect__marker">
+            <div class="connect__map">
+              <picture>
+                <source class="connect__pic" srcset="images/map.webp" type="image/webp">
+                <source class="connect__pic" srcset="images/map.png" type="image/png">
+                <img class="connect__pic" src="images/map.png" alt="Picture of a map">
+              </picture>
+                <div class="connect__marker">
                 <div class="connect__circle"></div>
                 <div class="connect__circle"></div>
                 <div class="connect__circle"></div>
                 <div class="connect__circle"></div>
-              </div>
+              </div> 
             </div>
           </div>
         </form>
@@ -198,7 +235,13 @@
     </div>
     <div class="footer">
       <div class="footer__center center">
-        <div class="footer__row"><a class="footer__logo" id="logo2" aria-label="Link to home section" href="#"><img class="footer__pic" src="images/loggin.png" alt="Precison Appraisal Groups Logo"></a>
+        <div class="footer__row"><a class="footer__logo" id="logo2" aria-label="Link to home section" href="#">
+          <picture>
+            <source class="footer__pic" srcset="images/logo.webp" type="image/webp">
+            <source class="footer__pic" srcset="images/logo.png" type="image/png">
+            <img class="footer__pic" src="images/logo.png" alt="Precison Appraisal Groups Logo">
+          </picture>
+          </a>
           <div class="footer__menu"><a class="footer__link js-link" aria-label="Link to home section" href="#main"><a class="footer__link js-link" aria-label="Link to home section" id="homie" href="#">home</a>
               </svg></a><a class="footer__link js-link" id="survices" aria-label="Link to services section" href="#services">services</a><a class="footer__link js-link" id="teamteam" aria-label="Link to team section" href="#team">Our Team</a><a class="footer__link" aria-label="Link to email us" href="mailto:precisionappraisalgroup@shaw.ca">Email us</a><a class="footer__link" aria-label="Link to call us" href="tel:1-250-897-5046">Call Us</a></div><a href="/free-quote" aria-label="Link to quote page" class="footer__btn btn btn_sm btn_border-white">request a quote</a>
         </div>
@@ -208,6 +251,7 @@
   
   <script src="/public/javascripts/app.js"></script>
   <script src="/public/javascripts/common.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>
 
 
 </body>
