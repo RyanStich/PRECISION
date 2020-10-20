@@ -784,8 +784,17 @@ a.btn {
   -o-transition: border-color 0.25s;
   transition: border-color 0.25s;
   outline-width: 0;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
+ 
 
+}
+
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
 }
 
 .field__input::-webkit-input-placeholder {
@@ -1925,9 +1934,9 @@ a:hover {
   .skills__col:not(:last-child) {
     margin-bottom: 32px;
   }
-  .skills__title {
+  /* .skills__title {
     margin: 35px 0 0 0;
-  }
+  } */
   .skills__link {
     display: none;
   }
