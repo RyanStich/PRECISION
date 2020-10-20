@@ -18,8 +18,13 @@
 <body class="poo">
   <div class="header js-header">
     <div class="header__center center">
-      <a class="header__logo" id="mainLogo" aria-label="Link to homepage" href="/"><img class="header__pic"
-          src="images/loggin.png" alt="Precison Appraisal Groups Logo" /></a>
+      <a class="header__logo" id="mainLogo" aria-label="Link to homepage" href="/">
+        <picture>
+          <source class="header__pic" id="mainLogo" srcset="images/logo.webp" type="image/webp">
+          <source class="header__pic" id="mainLogo" srcset="images/logo.png" type="image/png">
+          <img class="header__pic" id="mainLogo" src="images/logo.png" alt="Precision Appraisal Groups logo">
+        </picture>
+      </a>
       <div class="header__wrap js-header-wrap">
         <nav class="header__nav">
           <a class="header__link js-link" id="homee" aria-label="Link to homepage" href="/">home</a><a
@@ -127,7 +132,7 @@
       </div>
 
       <div class="form-field col x-100 align-center">
-        <input aria-label="Sumbit form" class="main__btn btn btn_primary" id="quotesub" type="submit" value="Submit" />
+        <input aria-label="Sumbit form" class="main__btn btn btn_primary sendIt" id="quotesub" type="submit" value="Submit" />
       </div>
     </form>
   </section>
@@ -153,8 +158,8 @@
     }
   </script>
   <% } %>
-  <script src="/public/javascripts/app.js"></script>
-  <script src="/public/javascripts/common.js"></script>
+  <script src="/public/javascripts/app.min.js"></script>
+  <script src="/public/javascripts/common.min.js"></script>
  
 
  
