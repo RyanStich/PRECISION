@@ -189,7 +189,6 @@ if (window.history.replaceState) {
  let contact = document.getElementById('con');
  let contact2 = document.getElementById('con2');
  let arrow = document.getElementById('arrow');
- let get = document.getElementById('get');
  let mainLogo = document.getElementById('mainLogo');
  let logo2 = document.getElementById('logo2');
 
@@ -238,10 +237,6 @@ contact2.addEventListener('click', () => {
  event.preventDefault();
 })
 
-get.addEventListener('click', () => {
- Jump('#contact')
- event.preventDefault();
-})
 
 mainLogo.addEventListener('click', () => {
  Jump('#home')
