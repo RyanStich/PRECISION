@@ -180,7 +180,7 @@ if (window.history.replaceState) {
   }
 
  // jump scroll
- let home = document.getElementById('homee');
+ 
  let homie = document.getElementById('homie');
  let services = document.getElementById('servicess');
  let survices = document.getElementById('survices');
@@ -192,10 +192,7 @@ if (window.history.replaceState) {
  let mainLogo = document.getElementById('mainLogo');
  let logo2 = document.getElementById('logo2');
 
-home.addEventListener('click', () => {
- Jump('#home')
- event.preventDefault();
-})
+
 
 homie.addEventListener('click', () => {
  Jump('#home')
