@@ -13,10 +13,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
+
+
     <div class="page">
       <div class="main" id="home">
         <div class="header js-header">
-          <div class="header__center center"><a class="header__logo" aria-label="Link to home section" href="#">
+          <div class="header__center center"><a class="header__logo" id="tohome" aria-label="Link to home section" href="">
             <picture>
               <source class="header__pic" id="mainLogo" srcset="images/logo.webp" type="image/webp">
               <source class="header__pic" id="mainLogo" srcset="images/logo.png" type="image/png">
@@ -24,7 +26,7 @@
             </picture>
             </a>
             <div class="header__wrap js-header-wrap">
-              <nav class="header__nav"><a class="header__link js-link" id="servicess" aria-label="Link to services section" href="#services">services</a><a class="header__link js-link" id="teamlink" aria-label="Link to team section" href="#team">our team</a><a class="header__link js-link" id="con" aria-label="Link to contact section" href="#contact">contact</a><a class="header__link js-link" aria-label="Link to quote page" href="/free-quote">free quote</a></nav>
+              <nav class="header__nav"> <a class="header__link js-link" id="homee" aria-label="Link to home section" href="">home</a> <a class="header__link js-link" id="servicess" aria-label="Link to services section" href="">services</a><a class="header__link js-link" id="teamlink" aria-label="Link to team section" href="">our team</a><a class="header__link js-link" id="con" aria-label="Link to contact section" href="">contact</a><a class="header__link js-link quoteLink" aria-label="Link to quote page" href="/free-quote">free quote</a></nav>
             </div><button class="header__burger js-header-burger" aria-label="Open mobile menu"></button>
           </div>
           <div class="header__bg js-header-bg"></div>
@@ -50,7 +52,7 @@
           <div class="skills__center center">
             <div class="skills__row">
               <div  data-aos="fade-up" class="skills__col">
-                <h2 class="skills__title title">What does Precision Appraisal Group do?</h2><a class="skills__link" id="arrow" aria-label="Link to contact section" href="#connect">contact us with any questions<svg class="icon icon-arrow-right">
+                <h2 class="skills__title title">What does Precision Appraisal Group do?</h2><a class="skills__link" id="arrow" aria-label="Link to contact section" href="">contact us with any questions<svg class="icon icon-arrow-right">
                     <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
                   </svg></a>
               </div> 
@@ -165,16 +167,23 @@
         </div>
       </div>
     </div>
+
+
     <div class="connect" id="contact">
       <div data-aos="fade-up" class="connect__head" >
         <div class="connect__center center">
           <h2 class="connect__title title">let’s connect</h2>
-          <div class="connect__info">Fill in the form below and we'll be in touch with you shortly, <br> or call us at <a aria-label="Link to call us" href="tel:1-250-897-5046">250-897-5046</a>.</div>
-          <div class="sent"><%= locals.sent %></div>
-        </div>
+          <div id="connect__infoo" class="connect__info">Fill in the form below and we'll be in touch with you shortly, <br> or call us at <a aria-label="Link to call us" href="tel:1-250-897-5046">250-897-5046</a>.</div>
+         
+
+
       </div>
+   
       <div class="connect__body">
+     
         <form method="POST" action="#contact" class="connect__form">
+             <div class="sentt"><%= locals.sent %></div>
+              <div class="sentt"><%= locals.errorMsg %></div> 
           <div class="connect__row">
             <div class="connect__wrap">
               <div class="connect__box">
@@ -214,7 +223,12 @@
                 </div><button type="submit" aria-label="Send message" id="sendIt" class="connect__btn btn btn_primary">send message</button>
               </div>
             </div>
-            <div class="connect__map">
+            <div class="connect__shit"> 
+              <div class="conrow">precisionappraisalgroup@shaw.ca</div>  
+              <div class="conrow">301 Curtis Road,</div>  
+              <div class="conrow">Comox, British Columbia</div>  
+            </div>
+              <div class="connect__map">
               <picture>
                 <source class="connect__pic" srcset="images/map.webp" type="image/webp">
                 <source class="connect__pic" srcset="images/map.png" type="image/png">
@@ -231,22 +245,29 @@
         </form>
       </div>
     </div>
+</div>
+</div>
     <div class="footer">
       <div class="footer__center center">
-        <div class="footer__row"><a class="footer__logo" id="logo2" aria-label="Link to home section" href="#">
+        <div class="footer__row"><a class="footer__logo" id="logo2" aria-label="Link to home section" href="">
           <picture>
             <source class="footer__pic" srcset="images/logo.webp" type="image/webp">
             <source class="footer__pic" srcset="images/logo.png" type="image/png">
             <img class="footer__pic" src="images/logo.png" alt="Precison Appraisal Groups Logo">
           </picture>
           </a>
-          <div class="footer__menu"><a class="footer__link js-link" aria-label="Link to home section" href="#main"><a class="footer__link js-link" aria-label="Link to home section" id="homie" href="#">home</a>
-              </svg></a><a class="footer__link js-link" id="survices" aria-label="Link to services section" href="#services">services</a><a class="footer__link js-link" id="teamteam" aria-label="Link to team section" href="#team">Our Team</a><a class="footer__link" aria-label="Link to email us" href="mailto:precisionappraisalgroup@shaw.ca">Email us</a><a class="footer__link" aria-label="Link to call us" href="tel:1-250-897-5046">Call Us</a></div><a href="/free-quote" aria-label="Link to quote page" class="footer__btn btn btn_sm btn_border-white">request a quote</a>
+          <div class="footer__menu"><a class="footer__link js-link" aria-label="Link to home section" href=""><a class="footer__link js-link" aria-label="Link to home section" id="homie" href="">home</a>
+              </svg></a><a class="footer__link js-link" id="survices" aria-label="Link to services section" href="">services</a><a class="footer__link js-link" id="teamteam" aria-label="Link to team section" href="">Our Team</a><a class="footer__link" id="footContact" aria-label="Link to contact section" href="">Contact</a><a class="footer__link" aria-label="Link to quote page" href="/free-quote">Free Qoute</a></div><a href="/free-quote" aria-label="Link to quote page" class="footer__btn btn btn_sm btn_border-white">request a quote</a>
         </div>
         <div class="footer__copyright">© Copyright 2020, Power Creative.
       </div>
     </div>
-  
+
+  <script>
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+    } 
+    </script>
   <script src="/public/javascripts/app.min.js"></script>
   <script src="/public/javascripts/common.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>

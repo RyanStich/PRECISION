@@ -19,6 +19,7 @@
 
 html.no-scroll {
   overflow: hidden;
+  overflow-x: hidden;
 }
 
 
@@ -188,6 +189,7 @@ a.btn {
 .header__logo {
   font-size: 0;
   position: relative;
+  z-index: 100;
 }
 
 .header__logo .header__pic {
@@ -782,7 +784,7 @@ a.btn {
 .field__input {
   width: 100%;
   height: 80px;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   font-family: "Montserrat-UltraLight", serif;
   font-size: 32px;
   line-height: 1;
@@ -1019,6 +1021,7 @@ a.btn {
 }
 
 .connect {
+ 
   border-top: 0.5px solid rgba(255, 255, 255, 0.2);
   padding: 60px 0 130px;
   background-image: -webkit-gradient(
@@ -1035,9 +1038,11 @@ a.btn {
 }
 .connect__head {
   margin-bottom: 4px;
+  /* text-align: center; */
+}
+.connect__center {
   text-align: center;
 }
-
 .connect__title {
   margin-bottom: 24px;
   /* margin-top: 10px; */
@@ -1050,12 +1055,20 @@ a.btn {
   opacity: 0.7;
 }
 
+
+
+#quote__info {
+  padding-bottom: .5%;
+
+}
+
 .connect__form {
   position: relative;
   padding-top: 66px;
 }
 
 .connect__form:before {
+  /* margin-top: 5%; */
   content: "";
   position: absolute;
   top: 0;
@@ -1068,42 +1081,6 @@ a.btn {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* .connect__category {
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 24px;
-    line-height: 1.20833;
-    letter-spacing: 2px;
-    font-weight: 900;
-    text-transform: uppercase;
-  } */
-
-/* .connect__variants {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-bottom: 128px;
-  }
-  
-  .connect__variant {
-    min-width: 180px;
-    display: inline-block;
-    text-align: center;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  
-  .connect__variant:not(:last-child) {
-    margin-right: 40px;
-  } */
 
 .connect__radio {
   position: absolute;
@@ -1215,19 +1192,46 @@ a.btn {
 
 .connect__map {
   position: absolute;
-  top: 0;
+  top: 13.5%;
   right: calc(50% + 115px);
   -webkit-box-shadow: 0 40px 40px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 40px 40px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px 20px 20px 20px;
   overflow: hidden;
   font-size: 0;
 }
 
 
+
 .connect__map .connect__pic {
-  width: 845px;
+  width: 785px;
 }
+
+
+.connect__shit {
+  position: absolute;
+  top: 1.5%;
+  right: calc(62% + 115px);
+  overflow: hidden;
+  
+}
+
+.connect__shit .conrow {
+  
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.connect__shit .conrow:first-child {
+  margin-bottom: 3%;
+
+}
+
+
+
 
 .connect__marker {
   position: absolute;
@@ -1702,6 +1706,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 1199px) {
+ 
 
   .header__link:not(:last-child) {
     margin-right: 40px;
@@ -1726,7 +1731,7 @@ a:hover {
     height: 270px;
   }
   .skills__head {
-    margin-bottom: 64px;
+    /* margin-bottom: 64px; */
     padding: 100px 0 64px;
   }
   .skills__title {
@@ -1777,6 +1782,7 @@ a:hover {
   .connect__wrap {
     padding-left: 55%;
   }
+ 
   .connect__map {
     right: 50%;
   }
@@ -1820,6 +1826,9 @@ a:hover {
   }
 }
 @media only screen and (max-width: 1023px) {
+
+
+
   .footer__row {
     display: block;
     text-align: center;
@@ -2014,7 +2023,6 @@ a:hover {
   }
   .field__input {
     height: 60px;
-    padding-bottom: 8px;
     font-size: 18px;
   }
   .connect__row {
@@ -2055,6 +2063,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 767px) {
+
+  
+
+
   .footer {
     padding: 48px 0 64px;
   }
@@ -2483,6 +2495,7 @@ a:hover {
     margin-bottom: 34px;
     padding-left: 0;
   }
+ 
   .connect__map {
     top: auto;
     right: auto;
@@ -2507,6 +2520,12 @@ a:hover {
   .connect__field:not(:last-child) {
     margin-bottom: 32px;
   }
+
+  .connect__field:first-child {
+    
+margin-top: 12.5%;
+  }
+
   .connect__btn {
     min-width: 100%;
   }
@@ -2519,6 +2538,21 @@ a:hover {
 }
 
 @media only screen and (max-width: 474px) {
+  .connect__shit {
+   top: 100%;
+   width: 90%;
+   margin-top: 5%;
+   margin-right: -320px;
+   text-align: center;
+  
+  }
+
+  .conrow {
+    font-size: 13px!important;
+  }
+  #connect__infoo {
+    margin-bottom: 10%;
+  }
   .header__nav {
     margin-bottom: 40px;
   }
@@ -2559,16 +2593,14 @@ a:hover {
   .sent {
     margin-top: 15px;
     color: #fff;
+    font-size: 16px;
+    text-align: center;
   }
   .details__wrap {
     width: auto;
     padding-top: 8px;
     color: #fff;
   }
-}
-.sent {
-  margin-top: 10px;
-  font-size: 20px;
 }
 
 .row {
@@ -2676,6 +2708,7 @@ a:hover {
 
 }
 
+
 #info {
   min-height: 100px;
   max-height: 500px;
@@ -2707,12 +2740,16 @@ a:hover {
   color: #ffffff;
 }
 
-.poo {
-  background-image: linear-gradient(180deg, #373981 0%, #6d7dad 60%);
+.sentt {
+  position: absolute;
+  color: black;
+  text-align: center;
+  width: 100%;
+  margin-top: -3%;
 }
-
-
-
+.sent {
+  color: blakc;
+}
 #quotesub {
   margin-top: 10px;
   width: 100%;
@@ -2734,12 +2771,12 @@ a:hover {
   outline: none;
   resize: none;
   padding-right: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   overflow: overlay;
 }
 
-#theText p {
-  color: red;
-}
+
 
 #wtf {
   padding-bottom: 15px;
@@ -2757,4 +2794,60 @@ select {
 .the-title {
   margin-top: 8rem;
   font-weight: 500;
+}
+
+
+
+
+.quoteLink {
+  cursor: pointer
+}
+
+
+#centerIt {
+
+  text-align: center;
+  
+}
+
+.connect__wrapp {
+  /* THIS NEEDS TO BE CENTERED PROPERLY */
+  width: 100%;
+  margin-left: 30%;
+}
+
+#connect__infoo {
+  margin-bottom: 1%;
+}
+
+.error {
+  color: rgb(0, 0, 0);
+  font-weight: normal;
+}
+
+
+
+#quote__wrap {
+ 
+  padding-left: none!important;
+}
+
+.quoteConnect {
+  border-top: none!important;
+}
+
+#conn {
+
+background-image: linear-gradient(180deg, #373981 10%, #6d7dad 60%);
+color: #fff;
+}
+
+
+.quo {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: black;
+  margin-top: 1.5%;
+ 
 }

@@ -17,13 +17,12 @@ exports.home = function (req, res) {
     .isEmail()
     .withMessage("Invalid email address"),
   body("phone")
-    // .optional({checkFalsy: true}) if it was an optional field
-    .isNumeric()
+    .isMobilePhone()
     .withMessage('Invalid phone number'),
     body("message")
     .isLength({min: 1})
     .withMessage('Please enter your message'),
-
+ // .optional({checkFalsy: true}) if it was an optional field
     sanitizeBody('*').escape(),
     
       
@@ -44,6 +43,7 @@ exports.home = function (req, res) {
           res.render("home", {
             form: req.body, 
             errors: errorsObj,
+            errorMsg: 'Please check the form for errors.'
           });
           return;
         } else {
@@ -90,4 +90,6 @@ exports.home = function (req, res) {
           res.render("home", {sent: "Your email was sent!" });
         }
       },
+
+
 ]

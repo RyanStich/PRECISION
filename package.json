@@ -11,6 +11,7 @@
     "serverstart": "DEBUG=proj:* npm run devstart"
   },
   "dependencies": {
+    "@swup/js-plugin": "^1.0.4",
     "aos": "^2.3.4",
     "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",

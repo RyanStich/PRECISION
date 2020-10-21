@@ -15,7 +15,7 @@
   
 </head> 
 
-<body class="poo">
+<body id="conn">
   <div class="header js-header">
     <div class="header__center center">
       <a class="header__logo" id="mainLogo" aria-label="Link to homepage" href="/">
@@ -40,127 +40,153 @@
     <div class="header__bg js-header-bg"></div>
   </div>
 
-  <section data-aos="fade-up" data-aos-delay="300" class="get-in-touch">
-    <h2 class="the-title title">
-      Get a free <br />
-      quote
-    </h2>
-    <div class="sentty"><%= locals.sent %></div>
-    <form method="POST" class="contact-form row">
-      <div class="form-field col x-100">
-        <input name="name" id="name" class="input-text js-input not-empty" type="text"
-          value="<%= locals.form? form.name : '' %>" />
-        <label class="label" for="name">Name*</label>
+
+
+ <div id="quote" data-aos="fade-up" class="connect quoteConnect">
+      <div class="connect__head">
+        <div class="connect__center center">
+          <h2 class="connect__title title">Request a quote</h2>
+          <div id="quote__info" class="connect__info">Fill in the form below to request a free quote.</div>                                    
+        </div>
       </div>
-      <% if (locals.errors && errors.name) { %>
-      <div class="error2"><%= errors.name.msg %></div>
-      <% } %>
+      <div class="connect__body">
+        <div class="sent quo"><%= locals.errorMsg %></div>  
+          <div class="sent quo"><%= locals.sent %></div> 
+        <form method="POST" class="connect__form">
+          
+          <div id="quote__row" class="connect__row">
+            <div id="quote__wrap" class="connect__wrapp">
+              <div class="connect__box">
+                <div class="connect__fieldset">
 
-      <div class="form-field col x-100">
-        <input name="email" id="email" class="input-text js-input not-empty" type="text"
-          value="<%= locals.form? form.email : '' %>" />
-        <label class="label" for="email">Email*</label>
+                  <div class="connect__field field">
+                    <label for="name" class="field__label">full name*
+                    <div class="field__wrap"><input class="field__input" type="text" id="name" name="name" value="<%= locals.form? form.name : '' %>"></label>  </div>
+                    <% if (locals.errors && errors.name) { %>
+                      <div class="error"><%= errors.name.msg %></div>
+                      <% } %>
+                    </div>
+
+                    <div class="connect__field field">
+                      <label for="email" class="field__label">email address*
+                      <div class="field__wrap"><input class="field__input" type="text" name="email" value="<%= locals.form? form.email : '' %>"> </label>  </div>
+                      <% if (locals.errors && errors.email) { %>
+                        <div class="error"><%= errors.email.msg %></div>
+                        <% } %>
+                    </div>
+                    
+                    <div class="connect__field field">
+                      <label id="quotePhone" for="phone" class="field__label">phone number*
+                      <div class="field__wrap"><input class="field__input" type="tel" name="phone"  value="<%= locals.form? form.phone : '' %>"></label>   </div>
+                      <% if (locals.errors && errors.phone) { %>
+                        <div class="error"><%= errors.phone.msg %></div>
+                        <% } %>
+                    </div>
+                    
+                    <div  class="connect__field field">
+                      <label for="phone" class="field__label">Property Address*
+                      <div class="field__wrap"><input  class="field__input" type="text" name="address"  value="<%= locals.form? form.address : '' %>"></label>   </div>
+                      <% if (locals.errors && errors.address) { %>
+                        <div class="error"><%= errors.address.msg %></div>
+                        <% } %>
+                    </div>
+  
+  
+  
+                    <div class="connect__field field">
+                      <label class="label" id="type" for="propertyType">TYPE OF PROPERTY*</label> <br>
+                      <select class="custom-select" id="types" name="propertyType">
+                        <option value="Family Home">Family Home</option>
+                        <option value="Building Lot or Acreage">Building Lot / Acreage</option>
+                        <option value="Condo or Appartment">Condo / Appartment</option>
+                        <option value="Duplex">Duplex</option>
+                        <option value="Townhouse or Patio Home">Townhouse / Patio Home</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+              
+  
+  
+                    <div class="connect__field field">
+                      <label class="label" id="purp" for="purpose">PURPOSE OF APPRAISAL*</label> <br>
+                      <select class="custom-select" id="purpose" name="purpose">
+                        <option value="Purchase">Purchase</option>
+                        <option value="For Sale or Pre-listing or Market Value">For Sale / Pre-listing / Market Value</option>
+                        <option value="Estate or Probate or Will">Estate / Probate / Will</option>
+                        <option value="Market Rent">Market Rent</option>
+                        <option value="Mortgage Financing">Mortgage Financing</option>
+                        <option value="Division of Assests">Division of Assets</option>
+                        <option value="Litigation">Litigation</option>
+                        <option value="Capital Gains">Capital Gains</option>
+                        <option value="Other">Other</option>
+                      </select>
+                   
+                    </div>
+  
+                        <div class="connect__field field">
+                          <label for="message" class="field__label" id="wtf">Additional Infromation
+                          <div class="field__wrap"><textarea class="field__input" id="theText" type="text" name="message"><%= locals.form? form.message : '' %></textarea></label>
+                          <% if (locals.errors && errors.message) { %>
+                            <div class="error"><%= errors.message.msg %></div>
+                            <% } %>
+                        </div>
+                    </div>
+  
+                    
+                  </div><button type="submit" aria-label="Send message" id="sendIt" class="connect__btn btn btn_primary">send message</button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
       </div>
-
-      <% if (locals.errors && errors.email) { %>
-      <div class="error2"><%= errors.email.msg %></div>
-      <% } %>
-
-      <div class="form-field col x-100">
-        <input name="phone" id="phone" class="input-text js-input not-empty" type="tel"
-          value="<%= locals.form? form.phone : '' %>" />
-        <label class="label" for="phone">Phone*</label>
-      </div>
-
-      <% if (locals.errors && errors.phone) { %>
-      <div class="error2"><%= errors.phone.msg %></div>
-      <% } %>
-
-      <div class="form-field col x-100">
-        <input name="address" id="address" class="input-text js-input not-empty" type="text"
-          value="<%= locals.form? form.address : '' %>" />
-        <label class="label" for="address">Address*</label>
-      </div>
-
-      <% if (locals.errors && errors.address) { %>
-      <div class="error2"><%= errors.address.msg %></div>x
-      <% } %>
-
-      <div class="form-field col x-100">
-        <input name="postal" id="postal" class="input-text js-input not-empty" type="text"
-          value="<%= locals.form? form.postal : '' %>" />
-        <label class="label" for="postal">Postal Code</label>
-      </div>
-
-      <div class="form-field col x-100">
-        <select class="custom-select" id="types" name="propertyType">
-          <option value="Family Home">Family Home</option>
-          <option value="Building Lot / Acreage">
-            Building Lot / Acreage
-          </option>
-          <option value="Condo / Appartment">Condo / Appartment</option>
-          <option value="Duplex">Duplex</option>
-          <option value="Townhouse / Patio home">Townhouse / Patio home</option>
-          <option value="Other">Other</option>
-        </select>
-        <label class="label" id="type" for="propertyType">Type Of Property*</label>
-      </div>
-
-      <div class="form-field col x-100">
-        <select class="custom-select" id="purpose" name="purpose">
-          <option value="Purchase">Purchase</option>
-          <option value="For Sale / Pre-listing / Market Value">
-            For Sale / Pre-listing / Market Value
-          </option>
-          <option value="Estate / Probate/ Will">
-            Estate / Probate / Will
-          </option>
-          <option value="Market Rent">Market Rent</option>
-          <option value="Mortgage Financing">Mortgage Financing</option>
-          <option value="Division of Assests">Division of Assets</option>
-          <option value="Litigation">Litigation</option>
-          <option value="Capital Gains">Capital Gains</option>
-          <option value="Other">Other</option>
-        </select>
-        <label class="label" id="purp" for="purpose">Purpose Of Appraisal*</label>
-      </div>
-
-      <div class="form-field col x-100">
-        <label class="l" for="info">Additional Information:</label>
-        <textarea class="input-text js-input not-empty" name="info" id="info">
-<%= locals.form? form.info : '' %></textarea>
-      </div>
-
-      <div class="form-field col x-100 align-center">
-        <input aria-label="Sumbit form" class="main__btn btn btn_primary sendIt" id="quotesub" type="submit" value="Submit" />
-      </div>
-    </form>
-  </section>
-
-  <% if (locals.errors) { %>
+  
   <!-- save selected options  -->
-  <script>
-    var selectedInput = "<%= selected %>";
-    var options = document.querySelector('[name="propertyType"]');
-    for (var i = 0; i < options.length; i++) {
-      if (selectedInput === options[i].value) {
-        options[i].selected = "selected";
-        break;
-      }
-    }
-    var selectedInput2 = "<%= selected2 %>";
-    var options = document.querySelector('[name="purpose"]');
-    for (var i = 0; i < options.length; i++) {
-      if (selectedInput2 === options[i].value) {
-        options[i].selected = "selected";
-        break;
-      }
-    }
-  </script>
+  <% if (locals.errors) { %>
+    <script>
+          var selectedInput = "<%= selected %>";
+          var options = document.querySelector('[name="propertyType"]');
+          for (var i = 0; i < options.length; i++) {
+            if (selectedInput === options[i].value) {
+              options[i].selected = "selected";
+              break;
+            }
+          }
+          var selectedInput2 = "<%= selected2 %>";
+          var options2 = document.querySelector('[name="purpose"]');
+          for (var i = 0; i < options2.length; i++) {
+            if (selectedInput2 === options2[i].value) {
+              options2[i].selected = "selected";
+              break;
+            }
+          }
+    </script>
   <% } %>
+
+
+
+  <div class="footer">
+  <div class="footer__center center">
+      <div class="footer__row"><a class="footer__logo" id="logo2" aria-label="Link to home section" href="/">
+        <picture>
+          <source class="footer__pic" srcset="images/logo.webp" type="image/webp">
+          <source class="footer__pic" srcset="images/logo.png" type="image/png">
+          <img class="footer__pic" src="images/logo.png" alt="Precison Appraisal Groups Logo">
+        </picture>
+        </a>
+        <div class="footer__menu"><a class="footer__link js-link" aria-label="Link to home section" href="/"></a><a class="footer__link js-link" aria-label="Link to home section" id="homie" href="/">home</a>
+            </svg></a><a class="footer__link js-link" id="survices" aria-label="Link to services section" href="/#services">services</a><a class="footer__link js-link" id="teamteam" aria-label="Link to team section" href="/#team">Our Team</a><a class="footer__link" aria-label="Link to contact section" href="/#contact">Contact</a><a class="footer__link" id="footQuote" aria-label="Link to free qutoe section" href="">Free Quote</a></div><a href="" id="footQuote2" aria-label="Link to quote page" class="footer__btn btn btn_sm btn_border-white">request a quote</a>
+      </div>
+      <div class="footer__copyright">© Copyright 2020, Power Creative.
+    </div>
+  </div>
+
+
   <script src="/public/javascripts/app.min.js"></script>
-  <script src="/public/javascripts/common.min.js"></script>
- 
+<script src="/public/javascripts/common.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>
+
 
  
 </body>

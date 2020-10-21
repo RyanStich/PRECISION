@@ -13,18 +13,19 @@ exports.free_quote_post = [
     .isLength({ min: 1 })
     .trim()
     .withMessage("Please enter your name"),
-  body("email").isEmail().withMessage("Invalid email address"),
+  body("email")
+    .isEmail()
+    .withMessage("Invalid email address"),
   body("phone")
-    .isNumeric()
+    .isMobilePhone()
     .withMessage("Invalid phone number"),
   body("address")
     .isLength({ min: 1 })
     .trim()
     .withMessage("Please enter your address"),
-  body("postal").optional(),
   body("propertyType").isString(),
   body("purpose").isString(),
-  body("info").optional(),
+  body("message").optional(),
 
   sanitizeBody("*").escape(),
 
@@ -42,10 +43,12 @@ exports.free_quote_post = [
     if (!errors.isEmpty()) {
       res.render("quote", {
         form: req.body,
+        errorMsg: 'Please check the form for errors.',
         errors: errorsObj,
         selected: req.body.propertyType,
         selected2: req.body.purpose,
       });
+      console.log(req.body.propertyType)
       return;
     } else {
       // Data from form IS valid
@@ -60,12 +63,11 @@ exports.free_quote_post = [
         <h3>Property Information:</h3>
         <ul>
           <li>Address: ${req.body.address}</li>
-          <li>Postal Code: ${req.body.postal}</li>
           <li>Type of Property: ${req.body.propertyType}</li>
           <li>Purpose of Appraisal: ${req.body.purpose}</li>
         </ul>
           <h3>Additional Information:</h3>
-        <p> ${req.body.info}</p>
+        <p> ${req.body.message}</p>
      `;
 
       // step 1
@@ -94,7 +96,7 @@ exports.free_quote_post = [
         .catch(function (error) {
           console.log("Error! Email was not sent :(");
         });
-      res.render("quote", { sent: "Your Quote Request Was Sent!" });
+      res.render("quote", { sent: "Your request was sent! We'll be in touch with you shortly." });
     }
   },
 ];
