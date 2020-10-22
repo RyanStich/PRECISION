@@ -2820,7 +2820,7 @@ margin-top: 12.5%;
   display: flex;
   justify-content: center;
   text-align: center;
- outline: none;
+  outline: none;
 }
 
 .getcha-quote {
@@ -2853,9 +2853,10 @@ select {
   color: #ffffff;
   font-size: 14px;
   padding-left: 1%;
-  -moz-appearance: menulist ; appearance: menulist ;
-   /* -webkit-appearance: menulist; */
-  /* -moz-appearance: none; */
+  padding-right: 1%;
+  
+   -webkit-appearance: none;
+   -moz-appearance: none;
  /* appearance: none; */
 
 }
