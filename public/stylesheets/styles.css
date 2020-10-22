@@ -1520,6 +1520,7 @@ a:hover {
     display: none;
   }
  
+ 
 }
 
 @media only screen and (min-width: 1930px) {
@@ -1541,24 +1542,36 @@ a:hover {
 }
 
 @media only screen and (max-width: 1899px) {
+  #connect__infoo {
+    margin-bottom: 1%;
+  }
   .main__circle:nth-child(2) {
     left: -100px;
   }
 }
 
 @media only screen and (max-width: 1799px) {
+  #connect__infoo {
+    margin-bottom: 1%;
+  }
   .showcase__wrapper {
     padding-right: 300px;
   }
 }
 
 @media only screen and (max-width: 1699px) {
+  #connect__infoo {
+    margin-bottom: 1%;
+  }
   .showcase__title {
     margin-top: -100px;
   }
 }
 
 @media only screen and (max-width: 1599px) {
+  #connect__infoo {
+    margin-bottom: 1%;
+  }
   .showcase__wrapper {
     padding-right: 200px;
   }
@@ -1568,6 +1581,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 1439px) {
+  #connect__infoo {
+    margin-bottom: 1%;
+  }
+  
   .main__center {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1638,6 +1655,9 @@ a:hover {
 }
 
 @media only screen and (max-width: 1365px) {
+  #connect__infoo {
+    margin-bottom: 1%;
+  }
   .footer__link:not(:last-child) {
     margin-right: 40px;
   }
@@ -1706,7 +1726,9 @@ a:hover {
 }
 
 @media only screen and (max-width: 1199px) {
- 
+  #connect__infoo {
+    margin-bottom: 1%;
+  }
 
   .header__link:not(:last-child) {
     margin-right: 40px;
@@ -1826,7 +1848,9 @@ a:hover {
   }
 }
 @media only screen and (max-width: 1023px) {
-
+  #connect__infoo {
+    margin-bottom: 1%;
+  }
 
 
   .footer__row {
@@ -2062,10 +2086,19 @@ a:hover {
   fill: #fff;
 }
 
+/* #connect__infoo {
+  width: 60%;
+  margin: auto;
+} */
+
 @media only screen and (max-width: 767px) {
 
-  
-
+  #connect__infoo {
+    margin-bottom: 1%;
+  }
+  .quo {
+    margin-top: 4% !important;
+  }
 
   .footer {
     padding: 48px 0 64px;
@@ -2547,6 +2580,10 @@ margin-top: 12.5%;
   
   }
 
+  .quo {
+    margin-top: 4% !important;
+  }
+
   .conrow {
     font-size: 13px!important;
   }
@@ -2746,6 +2783,7 @@ margin-top: 12.5%;
   text-align: center;
   width: 100%;
   margin-top: -3%;
+  font-size: 20px;
 }
 .sent {
   color: blakc;
@@ -2813,19 +2851,19 @@ select {
 .connect__wrapp {
   /* THIS NEEDS TO BE CENTERED PROPERLY */
   width: 100%;
-  margin-left: 30%;
+  margin: auto;
 }
 
-#connect__infoo {
-  margin-bottom: 1%;
-}
+
 
 .error {
   color: rgb(0, 0, 0);
   font-weight: normal;
 }
 
-
+#quote__box {
+  margin: auto;
+}
 
 #quote__wrap {
  
@@ -2849,5 +2887,5 @@ color: #fff;
   width: 100%;
   color: black;
   margin-top: 1.5%;
- 
+  font-size: 20px;
 }
