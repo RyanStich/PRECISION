@@ -12,10 +12,10 @@
   <link rel="shortcut icon" href="images/house.png" type="image/x-icon" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
 </head> 
 
-<body id="conn">
+<body>
+  <div id="page2">
   <div class="header js-header">
     <div class="header__center center">
       <a class="header__logo" id="mainLogo" aria-label="Link to homepage" href="/">
@@ -35,10 +35,11 @@
             aria-label="Link to free quote" href="/free-quote">free quote</a>
         </nav>
       </div>
-      <button aria-label="Mobile menu button" class="header__burger js-header-burger"></button>
+      
+      <button class="header__burger js-header-burger" aria-label="Open mobile menu"></button>
+          </div>
+          <div class="header__bg js-header-bg"></div>
     </div>
-    <div class="header__bg js-header-bg"></div>
-  </div>
 
 
 
@@ -94,22 +95,27 @@
   
   
                     <div class="connect__field field">
-                      <label class="label" id="type" for="propertyType">TYPE OF PROPERTY*</label> <br>
+                      <label class="label" id="type" for="propertyType">TYPE OF PROPERTY* <br>
                       <select class="custom-select" id="types" name="propertyType">
+                        <option disabled selected value="Default">&#8212; Select An Option &#8212;</option>
                         <option value="Family Home">Family Home</option>
                         <option value="Building Lot or Acreage">Building Lot / Acreage</option>
                         <option value="Condo or Appartment">Condo / Appartment</option>
                         <option value="Duplex">Duplex</option>
                         <option value="Townhouse or Patio Home">Townhouse / Patio Home</option>
                         <option value="Other">Other</option>
-                      </select>
+                      </select></label>
+                       <% if (locals.errors && errors.propertyType) { %>
+                      <div class="error"><%= errors.propertyType.msg %></div>
+                      <% } %>
                     </div>
-              
+                 
   
   
                     <div class="connect__field field">
-                      <label class="label" id="purp" for="purpose">PURPOSE OF APPRAISAL*</label> <br>
+                      <label class="label" id="purp" for="purpose">PURPOSE OF APPRAISAL* <br>
                       <select class="custom-select" id="purpose" name="purpose">
+                        <option disabled selected value="Default">&#8212; Select An Option  &#8212;</option>
                         <option value="Purchase">Purchase</option>
                         <option value="For Sale or Pre-listing or Market Value">For Sale / Pre-listing / Market Value</option>
                         <option value="Estate or Probate or Will">Estate / Probate / Will</option>
@@ -119,8 +125,11 @@
                         <option value="Litigation">Litigation</option>
                         <option value="Capital Gains">Capital Gains</option>
                         <option value="Other">Other</option>
-                      </select>
-                   
+                        
+                      </select></label>
+                   <% if (locals.errors && errors.purpose) { %>
+                          <div class="error"><%= errors.purpose.msg %></div>
+                          <% } %>
                     </div>
   
                         <div class="connect__field field">
@@ -141,7 +150,7 @@
           </form>
         </div>
       </div>
-  
+ 
   <!-- save selected options  -->
   <% if (locals.errors) { %>
     <script>
@@ -182,13 +191,13 @@
     </div>
   </div>
 
+</div>
 
-  <script src="/public/javascripts/app.min.js"></script>
+
+
+<script src="/public/javascripts/app.min.js"></script>
 <script src="/public/javascripts/common.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>
 
-
- 
 </body>
-
 </html>

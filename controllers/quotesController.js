@@ -48,7 +48,6 @@ exports.free_quote_post = [
         selected: req.body.propertyType,
         selected2: req.body.purpose,
       });
-      console.log(req.body.propertyType)
       return;
     } else {
       // Data from form IS valid

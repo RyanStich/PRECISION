@@ -281,3 +281,5 @@ logo2.addEventListener("click", () => {
   Jump("#home");
   event.preventDefault();
 });
+
+

@@ -13,8 +13,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-
-
     <div class="page">
       <div class="main" id="home">
         <div class="header js-header">
@@ -27,7 +25,9 @@
             </a>
             <div class="header__wrap js-header-wrap">
               <nav class="header__nav"> <a class="header__link js-link" id="homee" aria-label="Link to home section" href="">home</a> <a class="header__link js-link" id="servicess" aria-label="Link to services section" href="">services</a><a class="header__link js-link" id="teamlink" aria-label="Link to team section" href="">our team</a><a class="header__link js-link" id="con" aria-label="Link to contact section" href="">contact</a><a class="header__link js-link quoteLink" aria-label="Link to quote page" href="/free-quote">free quote</a></nav>
-            </div><button class="header__burger js-header-burger" aria-label="Open mobile menu"></button>
+            </div>
+            
+            <button class="header__burger js-header-burger" aria-label="Open mobile menu"></button>
           </div>
           <div class="header__bg js-header-bg"></div>
         </div>
@@ -79,7 +79,7 @@
                      </div>
                   </div>
                   <div class="skills__category">residential appraisal</div>
-                  <div class="skills__text">Our fully qualified and designated appraisal staff have completed a countless number of residential appraisals over the past 7 years. Single family homes, town homes, acreage properties & more.</div>
+                  <div class="skills__text">Our fully qualified and designated appraisal team have completed a countless number of residential appraisals over the past 7 years. Single family homes, town homes, acreage properties & more.</div>
                 </div>
               </div>
            
@@ -100,7 +100,7 @@
               </div>
 
               <div class="skills__item">
-                <div class="skills__details">
+                <div id="skills__last" class="skills__details">
                   <div class="skills__preview" >
                     <div class="skills__icon">
                       <picture>
@@ -174,13 +174,15 @@
         <div class="connect__center center">
           <h2 class="connect__title title">let’s connect</h2>
           <div id="connect__infoo" class="connect__info">Fill in the form below and we'll be in touch with you shortly, <br> or call us at <a aria-label="Link to call us" href="tel:1-250-897-5046">250-897-5046</a>.</div>
-         
-
-
+          
+          <div class="connect__shit"> 
+            <div class="conrow">precisionappraisalgroup@shaw.ca</div>  
+            <div class="conrow">301 Curtis Road,</div>  
+            <div class="conrow">Comox, British Columbia</div>  
+          </div>
       </div>
    
       <div class="connect__body">
-     
         <form method="POST" action="#contact" class="connect__form">
              <div class="sentt"><%= locals.sent %></div>
               <div class="sentt"><%= locals.errorMsg %></div> 
@@ -222,11 +224,6 @@
                   </div>
                 </div><button type="submit" aria-label="Send message" id="sendIt" class="connect__btn btn btn_primary">send message</button>
               </div>
-            </div>
-            <div class="connect__shit"> 
-              <div class="conrow">precisionappraisalgroup@shaw.ca</div>  
-              <div class="conrow">301 Curtis Road,</div>  
-              <div class="conrow">Comox, British Columbia</div>  
             </div>
               <div class="connect__map">
               <picture>

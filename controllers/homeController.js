@@ -28,7 +28,6 @@ exports.home = function (req, res) {
       
     (req, res, next) => {
         const errors = validationResult(req);
-
         // manipulate validation results array so that we can display them individually
         let errArray = errors.array()
         let errorsObj = {};
@@ -87,7 +86,7 @@ exports.home = function (req, res) {
               console.log("Error! Email was not sent :(");
             });
     
-          res.render("home", {sent: "Your email was sent!" });
+          res.render("home", {sent: "Your email was sent! We'll be in touch shortly." });
         }
       },
 
