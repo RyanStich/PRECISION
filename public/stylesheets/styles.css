@@ -2852,7 +2852,14 @@ select {
   border: 1px solid #d1d1d1;
   color: #ffffff;
   font-size: 14px;
+  padding-left: 1%;
+  -moz-appearance: menulist ; appearance: menulist ;
+   /* -webkit-appearance: menulist; */
+  /* -moz-appearance: none; */
+ /* appearance: none; */
+
 }
+
 
 .the-title {
   margin-top: 8rem;
