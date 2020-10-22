@@ -2102,7 +2102,9 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
 
- 
+  #home__form:before {
+    margin-top: 3%;
+  }
 
   #skills__last {
     padding-bottom: 20%;
