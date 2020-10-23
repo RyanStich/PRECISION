@@ -97,13 +97,14 @@
                     <div class="connect__field field">
                       <label class="label" id="type" for="propertyType">TYPE OF PROPERTY* <br>
                       <select class="custom-select" id="types" name="propertyType">
-                        <option disabled selected value="Default">&#8212; Select An Option &#8212;</option>
+                        <option disabled selected value="Default">&#8212; Select An Option &#8212;  <span class="drop__option">↓</span></option>
                         <option value="Family Home">Family Home</option>
                         <option value="Building Lot or Acreage">Building Lot / Acreage</option>
                         <option value="Condo or Appartment">Condo / Appartment</option>
                         <option value="Duplex">Duplex</option>
-                        <option value="Townhouse or Patio Home">Townhouse / Patio Home</option>
-                        <option value="Other">Other</option>
+                        <option value="Townhouse">Townhouse</option>
+                        <option value="Patio Home">Patio Home</option>
+                        <option value="Other">Other (Please Specify)</option>
                       </select></label>
                        <% if (locals.errors && errors.propertyType) { %>
                       <div class="error"><%= errors.propertyType.msg %></div>
@@ -114,23 +115,24 @@
                     <div class="connect__field field">
                       <label class="label" id="purp" for="purpose">PURPOSE OF APPRAISAL* <br>
                       <select class="custom-select" id="purpose" name="purpose">
-                        <option disabled selected value="Default">&#8212; Select An Option  &#8212;</option>
+                        <option disabled selected value="Default">&#8212; Select An Option &#8212; ↓ </option>
                         <option value="Purchase">Purchase</option>
-                        <option value="For Sale or Pre-listing or Market Value">For Sale / Pre-listing / Market Value</option>
+                        <option value="For Sale or Pre-listing or Market Value">For Sale / Market Value</option>
                         <option value="Estate or Probate or Will">Estate / Probate / Will</option>
                         <option value="Market Rent">Market Rent</option>
                         <option value="Mortgage Financing">Mortgage Financing</option>
                         <option value="Division of Assests">Division of Assets</option>
                         <option value="Litigation">Litigation</option>
                         <option value="Capital Gains">Capital Gains</option>
-                        <option value="Other">Other</option>
-                        
+                        <option value="Other">Other (Please Specify)</option>
+           
                       </select></label>
                    <% if (locals.errors && errors.purpose) { %>
                           <div class="error"><%= errors.purpose.msg %></div>
                           <% } %>
                     </div>
-  
+ 
+
                         <div class="connect__field field">
                           <label for="message" class="field__label" id="wtf">Additional Infromation
                           <div class="field__wrap"><textarea class="field__input" id="theText" type="text" name="message"><%= locals.form? form.message : '' %></textarea></label>

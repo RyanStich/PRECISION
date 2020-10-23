@@ -2788,6 +2788,8 @@ margin-top: 12.5%;
   margin-top: 1%;
 }
 
+
+
 .custom-select {
   font-family: "Montserrat", sans-serif;
 }
@@ -2854,12 +2856,14 @@ select {
   font-size: 14px;
   padding-left: 1%;
   padding-right: 1%;
-  
    -webkit-appearance: none;
-   -moz-appearance: none;
- /* appearance: none; */
+   -moz-appearance: none; 
+    appearance: none;
 
 }
+
+
+
 
 
 .the-title {
@@ -2920,4 +2924,10 @@ select {
   color: black;
   margin-top: 1.5%;
   font-size: 20px;
+}
+
+
+
+.drop__option {
+ margin-left: 100px !important;
 }

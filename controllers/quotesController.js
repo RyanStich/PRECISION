@@ -23,8 +23,12 @@ exports.free_quote_post = [
     .isLength({ min: 1 })
     .trim()
     .withMessage("Please enter your address"),
-  body("propertyType").isString(),
-  body("purpose").isString(),
+  body("propertyType")
+    .isString()
+    .withMessage('INVALID OPTION'),
+  body("purpose")
+    .isString()
+    .withMessage('INVALID OPTION'),
   body("message").optional(),
 
   sanitizeBody("*").escape(),
