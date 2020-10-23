@@ -2102,6 +2102,10 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
 
+  .connect__shit {
+    display: none;
+  }
+
   #home__form:before {
     margin-top: 3%;
   }
@@ -2591,6 +2595,10 @@ margin-top: 12.5%;
 
 @media only screen and (max-width: 474px) {
  
+  .connect__shit {
+    display: none;
+  }
+
   .quo {
     margin-top: 4% !important;
   }
@@ -2859,7 +2867,7 @@ select {
    -webkit-appearance: none;
    -moz-appearance: none; 
     appearance: none;
-
+ 
 }
 
 
