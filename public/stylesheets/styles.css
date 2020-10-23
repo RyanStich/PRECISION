@@ -2102,6 +2102,11 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
 
+  #type,
+  #purp {
+    font-size: 14px !important;
+  }
+
   .connect__shit {
     display: none;
   }
@@ -2594,6 +2599,11 @@ margin-top: 12.5%;
 }
 
 @media only screen and (max-width: 474px) {
+
+  #type,
+#purp {
+  font-size: 14px !important;
+}
  
   .connect__shit {
     display: none;
@@ -2788,7 +2798,7 @@ margin-top: 12.5%;
 
 #type,
 #purp {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #purpose,
