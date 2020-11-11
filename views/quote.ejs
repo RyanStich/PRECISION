@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="stylesheets/styles.css" />
   <link rel="shortcut icon" href="images/house.png" type="image/x-icon" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 </head> 
 
 <body>
@@ -134,7 +134,7 @@
  
 
                         <div class="connect__field field">
-                          <label for="message" class="field__label" id="wtf">Additional Infromation
+                          <label for="message" class="field__label" id="wtf">Additional Information
                           <div class="field__wrap"><textarea class="field__input" id="theText" type="text" name="message"><%= locals.form? form.message : '' %></textarea></label>
                           <% if (locals.errors && errors.message) { %>
                             <div class="error"><%= errors.message.msg %></div>
@@ -199,6 +199,6 @@
 <script src="/public/javascripts/app.min.js"></script>
 <script src="/public/javascripts/common.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

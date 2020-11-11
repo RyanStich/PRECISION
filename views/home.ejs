@@ -9,8 +9,8 @@
     <meta name="theme-color" content="#141414">
     <link rel="shortcut icon" href="images/house.png" type="image/x-icon">
     <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link rel="stylesheet" href="stylesheets/contact.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <div class="page">
@@ -114,8 +114,6 @@
                   <div class="skills__text">Our fully qualified and designated appraisal staff have completed a countless number of residential appraisals over the past 7 years. Single family homes, town homes, acreage properties & more.</div>
                 </div>
               </div>
-
-           
             </div>
           </div>
         </div>
@@ -167,8 +165,6 @@
         </div>
       </div>
     </div>
-
-
     <div class="connect" id="contact">
       <div data-aos="fade-up" class="connect__head" >
         <div class="connect__center center">
@@ -182,65 +178,78 @@
           </div> -->
       </div>
    
-      <div class="connect__body">
-        <form method="POST" action="#contact" id="home__form"  class="connect__form">
-             <div class="sentt"><%= locals.sent %></div>
-              <div class="sentt"><%= locals.errorMsg %></div> 
-          <div class="connect__row">
-            <div class="connect__wrap">
-              <div class="connect__box">
-                <div class="connect__fieldset">
-                  <div  class="connect__field field">
-                    <label for="name" class="field__label">full name*
-                    <div class="field__wrap"><input class="field__input" type="text" id="name" name="name" value="<%= locals.form? form.name : '' %>"></label>  </div>
-                   <% if (locals.errors && errors.name) { %>
-                    <div class="error"><%= errors.name.msg %></div>
-                    <% } %>
+ 
+      <div class="contacts">
+        <div class="contacts__center center">
+          <div class="contacts__container">
+            <div class="contacts__row">
+              <div class="contacts__details" data-aos="animation-translate-y"><a class="contacts__line" href="mailto:hello@ui8.net">
+                  <div class="contacts__icon"><svg class="icon icon-email">
+                      <use xlink:href="img/sprite.svg#icon-email"></use>
+                    </svg></div>
+                    <p class="myText">+44 123 654 7890</p>
+                </a>
+                <div class="contacts__line">
+                  <div class="contacts__icon"><svg class="icon icon-place">
+                      <use xlink:href="img/sprite.svg#icon-place"></use>
+                    </svg></div>
+                  <div class="contacts__text">
+                    <p class="myText">+44 123 654 7890</p>
                   </div>
-                  <div class="connect__field field">
-                    <label for="email" class="field__label">email address*
-                    <div class="field__wrap"><input class="field__input" type="text" name="email" value="<%= locals.form? form.email : '' %>"> </label>  </div>
-                    <% if (locals.errors && errors.email) { %>
-                      <div class="error"><%= errors.email.msg %></div>
-                      <% } %>
-                  </div>
-                  
-                  <div class="connect__field field">
-                    <label for="phone" class="field__label">phone number*
-                    <div class="field__wrap"><input class="field__input" type="tel" name="phone"  value="<%= locals.form? form.phone : '' %>"></label>   </div>
-                    <% if (locals.errors && errors.phone) { %>
-                      <div class="error"><%= errors.phone.msg %></div>
-                      <% } %>
-                  </div>
-                  
-                      <div class="connect__field field">
-                        <label for="message" class="field__label" id="wtf">your message*
-                        <div class="field__wrap"><textarea class="field__input" id="theText" type="text" name="message"><%= locals.form? form.message : '' %></textarea></label>
-                       
-                        <% if (locals.errors && errors.message) { %>
-                          <div class="error"><%= errors.message.msg %></div>
-                          <% } %>
-                      </div>
-                  </div>
-                </div><button type="submit" aria-label="Send message" id="sendIt" class="connect__btn btn btn_primary">send message</button>
+                </div><a class="contacts__line" href="tel:+441236547890">
+                  <div class="contacts__icon"><svg class="icon icon-phone">
+                      <use xlink:href="img/sprite.svg#icon-phone"></use>
+                    </svg></div>
+                    <p class="myText">+44 123 654 7890</p>
+                </a>
               </div>
+              <form class="contacts__form" data-aos="animation-translate-y" data-aos-delay="200" action="#contact">
+                <div class="contacts__field field">
+                  <div class="field__wrap"><input class="field__input" type="text" name="name" placeholder="Name" />
+                    <div class="field__icon"><svg class="icon icon-profile">
+                        <use xlink:href="img/sprite.svg#icon-profile"></use>
+                      </svg></div>
+                  </div>
+                </div>
+                <div class="contacts__field field">
+                  <div class="field__wrap"><input class="field__input" type="email" name="email" placeholder="Email" />
+                    <div class="field__icon"><svg class="icon icon-send">
+                        <use xlink:href="img/sprite.svg#icon-send"></use>
+                      </svg></div>
+                  </div>
+                </div>
+                <div class="contacts__field field">
+                  <div class="field__wrap"><select class="field__select" name="question">
+                      <option>What are you working on?</option>
+                      <option>What are you working on? 2</option>
+                    </select>
+                    <div class="field__icon"><svg class="icon icon-arrows">
+                        <use xlink:href="img/sprite.svg#icon-arrows"></use>
+                      </svg></div>
+                  </div>
+                  <div class="field__wrap"><select class="field__select" name="question">
+                    <option>What are you working on?</option>
+                    <option>What are you working on? 2</option>
+                  </select>
+                  <div class="field__icon"><svg class="icon icon-arrows">
+                      <use xlink:href="img/sprite.svg#icon-arrows"></use>
+                    </svg></div>
+                </div>
+
+                </div>
+                <div class="contacts__field field field_textarea">
+                  <div class="field__wrap"><textarea class="field__textarea" name="message" placeholder="Message"></textarea>
+                    <div class="field__icon"><svg class="icon icon-message">
+                        <use xlink:href="img/sprite.svg#icon-message"></use>
+                      </svg></div>
+                  </div>
+
+                </div>
+                <div class="contacts__btn"><button class="btn btn_purple mybutt"><span class="btn__text">Let’s Talk</span><svg class="icon icon-arrow-right">
+                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                    </svg></button></div>
+              </form>
             </div>
-              <div class="connect__map">
-              <picture>
-                <source class="connect__pic" srcset="images/map.webp" type="image/webp">
-                <source class="connect__pic" srcset="images/map.png" type="image/png">
-                <img class="connect__pic" src="images/map.png" alt="Picture of a map">
-              </picture>
-                <div class="connect__marker">
-                <div class="connect__circle"></div>
-                <div class="connect__circle"></div>
-                <div class="connect__circle"></div>
-                <div class="connect__circle"></div>
-              </div> 
-            </div>
-          </div>
-        </form>
-      </div>
     </div>
 </div>
 </div>
@@ -254,17 +263,17 @@
           </picture>
           </a>
           <div class="footer__menu"><a class="footer__link js-link" aria-label="Link to home section" href=""><a class="footer__link js-link" aria-label="Link to home section" id="homie" href="">home</a>
-              </svg></a><a class="footer__link js-link" id="survices" aria-label="Link to services section" href="">services</a><a class="footer__link js-link" id="teamteam" aria-label="Link to team section" href="">Our Team</a><a class="footer__link" id="footContact" aria-label="Link to contact section" href="">Contact</a><a class="footer__link" aria-label="Link to quote page" href="/free-quote">Free Qoute</a></div><a href="/free-quote" aria-label="Link to quote page" class="footer__btn btn btn_sm btn_border-white">request a quote</a>
+              </svg></a><a class="footer__link js-link" id="survices" aria-label="Link to services section" href="">services</a><a class="footer__link js-link" id="teamteam" aria-label="Link to team section" href="">Our Team</a><a class="footer__link" id="footContact" aria-label="Link to contact section" href="">Contact</a><a class="footer__link" aria-label="Link to quote page" href="/free-quote">Free Quote</a></div><a href="/free-quote" aria-label="Link to quote page" class="footer__btn btn btn_sm btn_border-white">request a quote</a>
         </div>
         <div class="footer__copyright">© Copyright 2020, Power Creative.
       </div>
     </div>
-
   <script>
     if (window.history.replaceState) {
       window.history.replaceState(null, null, window.location.href);
     } 
     </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="/public/javascripts/app.min.js"></script>
   <script src="/public/javascripts/common.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous"></script>
